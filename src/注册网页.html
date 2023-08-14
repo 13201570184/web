@@ -1,0 +1,133 @@
+<!-- 以上代码是 HTML5 的文档类型声明 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title表示显示的网页标题 -->
+  <title>青春不常在，抓紧谈恋爱</title>
+</head>
+<body>
+  <!-- 网页内容的二级标题为婚姻介绍所 -->
+  <h2>婚姻介绍所</h2></h2>
+  <!-- table width 表示表格的宽度为600 -->
+  <table width="600">
+    <tr>
+      <td>性别：</td>
+      <td>
+        <!-- input插入单选框男或者女，label标签使用户点击文字或者标识图，可以勾选对应的单选框 -->
+        <input type="radio" name="sex" id="nan" ><label for="nan"><img src="../imgs/nan.jpg">男</label></input>
+        <input type="radio" name="sex" id="nv"><label for="nv"><img src="../imgs/nv.jpg">女</label></input>
+      </td>
+    </tr>
+    <tr>
+      <td>生日:</td>
+      <td>
+        <!-- select下拉表单里，可以选择表单里符合用户的信息 -->
+        <select>
+          <option>--请选择年份--</option>
+          <option>2005</option>
+          <option>2004</option>
+          <option>2003</option>
+          <option>2002</option>
+          <option>2001</option>
+          <option>2000</option>
+        </select>  
+        <select>
+          <option>--请选择月份</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
+        <select>
+          <option>--请选择日期--</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
+
+      </td>
+    </tr>
+    <tr>
+      <td>所在地区:</td>
+      <!-- input text 插入文本框，输入相应信息。value给这个文本框里输入提示 -->
+      <td> <input type="text" value="请输入所在省份"></input></td>
+    </tr>
+    <tr>
+      <td>婚姻状况:</td>
+      <!-- input插入单选框未婚，已婚或者离婚，label标签使用户点击文字，可以勾选对应的单选框 checker在未婚一栏，表示默认未婚-->
+      <td><input type="radio" name="hunyin" id="weihun" checked="checked"><label for="weihun">未婚</label></input>
+        <input type="radio" name="hunyin" id="yihun"><label for="yihun">已婚</label></input>
+        <input type="radio" name="hunyin" id="lihun"><label for="lihun">离婚</label></input>
+      </td>
+    </tr>
+    <tr>
+      <td>学历:</td>
+      <td>
+        <!-- select在下拉表单里选择用户的真实学历 -->
+        <select>
+          <option>--请选择学历--</option>
+          <option>小学</option>
+          <option>初中</option>
+          <option>高中</option>
+          <option>大学</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>喜欢的类型:</td>
+      <td>
+        <!-- checkbox表示插入复选框，可以选择下列四个选项的1~4个 -->
+      <input type="checkbox" name="leixing" id="haokande"><label for="haokande">好看的</label></input>
+      <input type="checkbox" name="leixing" id="nankande"><label for="nankande">难看的</label></input>
+      <input type="checkbox" name="leixing" id="pangde"><label for="pangde">胖的</label></input>
+      <input type="checkbox" name="leixing" id="shoude"><label for="shoude">瘦的</label></input>
+      </td>
+    </tr>
+    <tr>
+      <td>自我介绍</td>
+      <td>
+    <!-- textarea表示用户可以输入文本内容，且可以大量输入文本信息 -->
+        <textarea>自我介绍</textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <!-- submit表示建立一个可以点击的按钮，value给这个按钮里定义名字 -->
+      <td>  
+        <input type="submit" value="免费注册"></input>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <!-- 复选框里默认选择已同意注册条款 -->
+      <td> 
+        <input type="checkbox" checked="checked">我同意注册条款和会员加入标准</input>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <!-- 建立一个空白网页，点击我是会员，立即登录跳转 -->
+      <td><a href="#">我是会员，立即登录</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+      <!-- 无序列表，给出标题和内容 -->
+      <ul>
+        <h3>我承诺</h3>
+        <li>年满18岁，单身</li>
+        <li>抱着严肃的态度</li>
+        <li>真诚寻找另一半</li>
+      </ul>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
