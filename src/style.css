@@ -1,0 +1,79 @@
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.w{
+  width: 1150px;
+  margin: auto ;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background-color: #f3f5f7;
+}
+.header{
+  height: 44px;
+  /* background-color: skyblue; */
+  margin: 30px auto;
+}
+.photo{
+  float: left;
+  width: 200px;
+  height: 44px;
+  /* background-color: brown; */
+}
+.nav ul li{
+  float: left;
+  margin: 0 20px;
+}
+.nav ul li a{
+  display: block;
+  height: 44px;
+  padding: 0 10px;
+  line-height: 44px;
+  font-size: 20px;
+  /* color: salmon; */
+}
+.nav ul li a:hover{
+  border-bottom: 2px solid blue;
+  color: orange;
+}
+ .sousuo{
+  float: left;
+  width: 370px;
+  height: 44px;
+  line-height: 44px;
+  /* background-color: aqua; */
+  margin-left: 78px;
+}
+.sousuo input{
+  float: left;
+  width: 300px;
+  height: 42px;
+  border: 1px solid blue ;
+  border-right: 0;
+  color: gray;
+  font-size: 16px;
+  padding-left: 14px;
+}
+.sousuo button{
+  float: left;
+width: 55px;
+height:44px;
+/* background-color: blue; */
+border: 0 ;
+background: url(../imgs/search.jpg);
+}
+.user {
+  float: right;
+  height: 44px;
+ font-size: 14px;
+ line-height: 44px;
+ margin-right: 40px;
+  /* background-color: skyblue; */
+}
