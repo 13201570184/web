@@ -1,49 +1,68 @@
-
+/* 设置全篇内容默认内边距外边距为0 */
 *{
   padding: 0px;
   margin: 0px;
 }
+/* w标签设置宽度为1200像素，默认块级元素水平居中 */
 .w{
-  width: 1150px;
+  width: 1200px;
   margin: auto ;
 }
+/* 取消无序列表的li标签前的小圆点 */
 li{
   list-style: none;
 }
+/* 所有链接的下划线清除掉 */
 a{
   text-decoration: none;
 }
+/* 清除浮动，给父级添加双伪元素 */
+.clearfix:before,.clearfix:after{
+    content:"";
+   display:table;
+  }
+   .clearfix:after{
+     clear:both;
+   }
+   .clearfix{
+     * zoom: 1;
+   } 
+  /* 网页主体背景颜色为下面的白色，网页内容高度为3000像素 */
 body{
   background-color: #f3f5f7;
+  height: 3000px;
 }
+/* header内容部分高度为44像素，上下外边距为30像素，水平居中 */
 .header{
   height: 44px;
-  /* background-color: skyblue; */
   margin: 30px auto;
 }
+/* photo内容部分水平向左浮动，宽度为200像素，高度为44像素 */
 .photo{
   float: left;
   width: 200px;
   height: 44px;
-  /* background-color: brown; */
 }
+/* nav部分表格单元格水平向左浮动,上下外边距为0,左右外边距为20像素 */
 .nav ul li{
   float: left;
   margin: 0 20px;
 }
+/* nav部分表格单元格的链接转为块元素,高度为44像素,上下内边距为0,左右内边距为10像素 */
 .nav ul li a{
   display: block;
   height: 44px;
   padding: 0 10px;
   line-height: 44px;
   font-size: 20px;
-  /* color: salmon; */
 }
+/* nav部分表格单元格的链接下边框为2像素的蓝色实线,鼠标放上面显示颜色为橘色 */
 .nav ul li a:hover{
   border-bottom: 2px solid blue;
   color: orange;
 }
- .sousuo{
+/* search部分水平向左浮动,宽度为370像素,高度为44像素,行高设置为44像素，左边的外边距为78像素 */
+ .search{
   float: left;
   width: 370px;
   height: 44px;
@@ -51,7 +70,9 @@ body{
   /* background-color: aqua; */
   margin-left: 78px;
 }
-.sousuo input{
+/* search部分输入表单元素水平向左浮动，宽度为300像素，高度为42像素，边框为1像素蓝色实线，右边框为0 */
+/* 颜色为灰色，字体大小为16像素，左边内边距为14像素 */
+.search input{
   float: left;
   width: 300px;
   height: 42px;
@@ -61,19 +82,260 @@ body{
   font-size: 16px;
   padding-left: 14px;
 }
-.sousuo button{
+/* search部分的按钮为向左浮动，宽度为55像素，高度为44像素，背景色为白色，无边框，插入图片search.jpg */
+.search button{
   float: left;
 width: 55px;
 height:44px;
-/* background-color: blue; */
+background-color:#fff;
 border: 0 ;
 background: url(../imgs/search.jpg);
 }
+/* user部分水平向右浮动，高度为44像素，字体大小为14像素，行高设置为44像素，右边的外边距为40像素 */
 .user {
   float: right;
   height: 44px;
  font-size: 14px;
  line-height: 44px;
  margin-right: 40px;
-  /* background-color: skyblue; */
+}
+banner部分高度为421像素
+.banner{
+  height: 421px;
+}
+/* banner部分插入图片99big.jpg,并且图片不平铺 */
+.banner .w {
+  height: 421px;
+  background-image: url(../imgs/99big.jpg);
+  background-repeat: no-repeat;
+}
+/* subnav部分水平向左浮动，宽度为190，高度为421，背景颜色为透明黑色 */
+.subnav{
+  float: left;
+  width: 190px;
+  height: 421px;
+  background:rgba(0,0,0,.3)
+}
+/* subnav部分里的无序列表水平向左浮动 */
+.subnav ul{
+  float: left;
+}
+/* subnav部分的单元格高度为45像素，行高设置为45像素，上下内边距为0，左右内边距为20像素 */
+.subnav ul li{
+height:45px;
+line-height:45px;
+padding:0 20px;
+}
+/* subnav部分单元格上的链接字体大小为14像素，颜色为白色 */
+.subnav ul li a {
+  font-size: 14px; 
+  color: chartreuse;
+}
+/* subnav单元格里链接行元素是水平向右浮动 */
+.subnav ul li a span{
+  float: right;
+}
+/* subnav单元格里链接行元素鼠标悬浮在上面显色蓝色 */
+.subnav ul li a:hover{
+  color: blue;
+}
+/* course部分内容水平向右浮动，宽度为230像素，高度为300像素，背景颜色为白色，上外边距为50像素 */
+.course{
+  float: right;
+  width: 230px;
+  height: 300px;
+  background-color: #fff;
+  margin-top: 50px;
+}
+/* course上的二级标题高度为48像素，背景颜色为蓝色(aque色)文本居中行高设置为48像素字体大小为18像素颜色为#fff */
+.course h2{
+  height: 48px;
+  background-color: aqua;
+  text-align: center;
+  line-height: 48px;
+  font-size: 18px;
+  color:#fff;
+}
+/* bd部分的上下内边距为0，左右内边距为20像素 */
+.bd{
+  padding: 0 20px;
+}
+/* bd部分里的单元格之间上下内边距为14像素，左右内边距为0，下边框为1像素粗的实线颜色为#ccc */
+.bd ul li{
+  padding: 14px 0;
+  border-bottom: 1px solid #ccc;
+  
+}
+/* bd部分里的单元格里的4级标题字体大小为16像素，字体颜色为#4e4e4e */
+.bd ul li h4 {
+  font-size: 16px;
+  color: #4e4e4e;
+}
+/* bd部分里的单元格里的段落字体大小为12像素，颜色为#a5a5a5 */
+.bd ul li p {
+  font-size: 12px;
+  color: #a5a5a5;
+}
+/* bd部分里对more部分内容设置为块级元素，内容高度设置为38像素，边框为1像素粗的实线颜色为blue， */
+/* 上外边距为5像素，文本居中对齐，行高设置为38像素，颜色为#fff，字体大小为16像素，字体加粗 */
+.bd .more{
+  display: block;
+  height: 38px;
+  border: 1px solid blue;
+  margin-top: 5px ;
+  text-align: center;
+  line-height: 38px;
+  color:#fff
+  font-size 16px;
+  font-weight: 700;
+}
+/* goods部分内容高度为60像素，上外边距为10像素，背景颜色为#fff，盒子阴影为水平0像素，垂直2像素， */
+/* 模糊距离为3像素，阴影尺寸为3像素，颜色为半透明黑色，行高设置为60像素 */
+.goods{
+  height: 60px;
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
+  line-height: 60px;
+}
+/* goods部分的3级标题水平向左浮动，左外边距为30像素，字体大小为16像素，颜色为blue */
+.goods h3{
+  float:left;
+  margin-left: 30px;
+  font-size: 16px;
+  color: blue;
+}
+/* goods 部分里的表格水平向左对齐，左外边距为30像素 */
+.goods ul{ 
+  float:left;
+  margin-left: 30px;
+}
+/* goods部分表格里的单元格水平向左浮动 */
+.goods ul li{ 
+  float:left;
+}
+/* goods部分单元格里的链接内容上下内边距为0，左右内边距为30像素，字体大小为16像素，颜色为#050505 */
+/* 左边框为1像素实线，颜色为black */
+.goods ul li a{
+  padding: 0 30px;
+  font-size: 16px;
+  color: #050505;
+  border-left: 1px solid black;
+}
+/* mod部分内容水平向右浮动，右外边距为30像素。字体大小为14像素，颜色为blue */
+.mod{
+  float:right;
+  margin-right: 30px;
+  font-size: 14px;
+  color: blue;
+}
+/* box部分的上外边距为30像素 */
+.box{
+  margin-top: 30px;
+}
+/* box-hd部分的内容高度为45px */
+.box-hd{
+  height: 45px;
+}
+/* box-hd部分的三级标题内容水平向左浮动，字体大小为20像素，颜色为#494949 */
+.box-hd h3{
+float: left;
+font-size: 20px;
+color: #494949;
+}
+/* box-hd部分里的链接水平向右浮动，字体大小为12像素，颜色为#a5a5a5,上外边距为10像素，右外边距为30像素 */
+.box-hd a{
+float: right;
+font-size: 12px;
+color: #a5a5a5;
+margin-top: 10px;
+margin-right: 30px;
+}
+/* box-bd部分的无序列表宽度设置为1225像素 */
+.box-bd ul{
+  width: 1225px;
+}
+/* box-bd部分的无序列表里的单元格部分水平向左浮动，宽度为228像素，高度为270像素，背景颜色为#fff */
+/* 右外边距为15像素，下外边距为15像素 */
+.box-bd ul li{
+  float: left;
+  width: 228px;
+  height: 270px;
+  background-color: #fff;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+/* box-bd里的无序列表的单元格里填充图片的宽度铺满单元格的宽度 */
+.box-bd ul li img{
+  width: 100%; 
+}
+/* box-bd里的无序列表的单元格里4级标题上外边距为20像素，右外边距为20像素，下外边距为20像素，左外 */
+/* 边距为25像素，字体大小为14像素，颜色为#050505，字体不加粗 */
+.box-bd ul li h4{
+  margin: 20px 20px 20px 25px;
+  font-size: 14px;
+  color: #050505;
+  font-weight: 400;
+}
+/* box-bd里的info部分的上下外边距为0，右外边距为20像素，左外边距为25像素，字体大小为12像素， */
+/* 颜色为#999 */
+.box-bd .info{
+margin: 0 20px 0 25px;
+font-size: 12px;
+color: #999;
+}
+/* .box-bd部分里的info部分的行内元素颜色设置为#ff7c2d */
+.box-bd .info span{
+  color: #ff7c2d;
+}
+/* footer部分的内容高度设置为415像素 */
+.footer{
+  height: 415px;
+}
+/* footer内容部分设置上外边距为35像素 */
+.footer .w{
+  margin-top: 35px;
+}
+/* copyright部分内容为水平向左浮动 */
+.copyright{
+  float: left;
+}
+/* .copyright部分里的段落内容字体大小为12像素，颜色为#666，上外边距为20像素下外边距为15像素，左右 */
+/* 外边距为0 */
+.copyright p{
+font-size: 12px;
+color: #666;
+margin: 20px 0 15px 0;
+}
+/* .copyright里的app部分内容设置为块级元素，设置宽度为118像素，设置行高为33像素，边框设置为1像素粗 */
+/* 实线颜色为#00a4ff,文本内容为水平居中，设置行高为33像素，颜色为#00a4ff,字体大小为16像素 */
+.copyright .app{
+  display: block;
+  width: 118px;
+  height: 33px;
+  border: 1px solid #00a4ff;
+  text-align: center;
+  line-height: 33px;
+  color: #00a4ff;
+  font-size: 16px;
+}
+/* links部分内容水平向右浮动 */
+.links{
+  float: right;
+}
+/* links里的自定义列表内容水平向右浮动，左外边距为100像素 */
+.links dl{
+  float: left;
+  margin-left: 100px;
+}
+/* links部分的自定义列表的行首字体大小设置为16像素，颜色为#333,下外边距为5像素 */
+.links dl dt{
+font-size: 16px;
+color: #333;
+margin-bottom: 5px;
+}
+/* links部分的自定义列表里的单元格里的链接内容颜色为#333字体大小为12像素 */
+.links dl dd a{
+  color: #333;
+  font-size: 12px;
 }

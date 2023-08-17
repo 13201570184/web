@@ -1,31 +1,212 @@
+<!-- 以上代码是 HTML5 的文档类型声明 -->
 <!DOCTYPE html>
+<!-- 内容主题为英语 -->
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>学习网页</title>
+  <!-- link引入style.css链接，在style.css编辑本篇内容样式 -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- 插入类选择器header和w，w设置了宽度和外边距，header设置行高和修改新的外边距格式  w-->
   <div class="header w">  
+    <!-- 此处插入类选择器photo，photo设置了浮动方向，宽度和高度 -->
 <div class="photo">
+  <!-- 此处插入了图片99.jpg -->
   <img src="../imgs/99.jpg" alt="">
 </div>
+<!-- 此处插入了类选择器nav，nav里对无序列表里的单元格设置了浮动和外边距格式，将链接标签转换为块级元素，
+  以此对标签内容设置高度，内边距，行高和字体大小。并对链接设置下划线和下划线的颜色，设置鼠标放在链接内容上会变色 -->
 <div class="nav">
   <ul>
-    <li><a href="">首页</a></li>
-    <li><a href="">课程</a></li>
-    <li><a href="">职业规划</a></li>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">课程</a></li>
+    <li><a href="#">职业规划</a></li>
   </ul>
 </div>
-<div class="sousuo">
+<!-- 此处插入了类选择器search,search里内容设置浮动,宽度,高度,行高和外边距 -->
+<div class="search">
+  <!-- 此处插入表单元素,定义表单为当行输入的文本格式,value设值表单里面显示"请输入关键词" -->
   <input type="text" value="请输入关键词">
+  <!-- button表示按钮按键,button里面设置了浮动,宽度,高度,背景颜色,边框格式和插入此背景中的图片 -->
   <button></button>
 </div>
-<div class="user">
- <img src="../imgs/user.jpg" alt="">QQ-faker
+<!-- 此处插入类选择器user,user里面设置了浮动,高度,行高,字体大小和外边距 -->
+<!-- <div class="user">user.jpg 后面添加名称T1-Faker -->
+  <div class="user">
+<!-- 此处插入图片user.jpg -->
+ <img src="../imgs/user.jpg" alt="">T1-Faker
 </div>
   </div>
-
+  <!-- 此处插入类选择器banner,banner里设置了高度,插入了背景图片,并使背景图片不平铺 -->
+<div class="banner">
+  <!-- 此处插入了类选择器w,w里设置了宽度和外边距 -->
+  <div class="w">
+    <!-- 此处插入了类选择器subnav,subnav部分里设置了浮动,宽度,高度,背景颜色,对里面的单元格设置了高度,行高,
+    内边距,对单元格里的链接内容设置了字体大小和颜色,并设置使鼠标放到链接内容上会变色 -->
+    <div class="subnav">
+      <ul>
+      <!-- 此处插入空白链接前端开发并加入行内元素span添加内容>符号,是此符号和链接内容处于同一行,并对span内容设置浮动 -->
+        <li><a href="#">前端开发<span>></span></a></li>
+        <li><a href="#">后端开发<span>></span></a></li>
+        <li><a href="#">移动开发<span>></span></a></li>
+        <li><a href="#">人工智能<span>></span></a></li>
+        <li><a href="#">商业预测<span>></span></a></li>
+        <li><a href="#">云计算&大数据<span>></span></a></li>
+        <li><a href="#">运维&从测试<span>></span></a></li>
+        <li><a href="#">UI设计<span>></span></a></li>
+        <li><a href="#">产品<span>></span></a></a></li>
+      </ul>
+    </div>
+    <!-- 此处插入类选择器course,course里设置了浮动,宽度,高度,背景颜色和外边距.还设置了h2的高度,背景颜色,文本水平居中,
+      行高, 字体大小和颜色-->
+    <div class="course">
+      <!-- 此处插入二级标题:我的课程表 -->
+      <h2>我的课程表</h2>
+      <!-- 此处插入类选择器bd,bd里设置了内边距，对bd里无序列表里的单元格设置了内边距和边框，对单元格里的h4标题设置了
+        字体大小和颜色 ，对单元格里的段落p设置了字体大小和颜色-->
+      <div class="bd">
+      <ul>
+<li>
+  <h4>继续学习 程序语言设计</h4>
+  <p>正在学习-使用对象</p>
+</li>
+<li>
+  <h4>继续学习 程序语言设计</h4>
+  <p>正在学习-使用对象</p>
+</li>
+<li>
+  <h4>继续学习 程序语言设计</h4>
+  <p>正在学习-使用对象</p>
+</li>
+      </ul>
+  <!-- 在链家标签a上插入类选择器more，more上使链接内容转换为块级元素，
+    设置高度，边框，上边距，文本水平居中，行高字体大小和颜色，以及字体加不加粗 -->
+      <a href="#" class="more">全部课程</a>
+      </div>
+</div>
+    </div>
+  </div>
+  <!-- 插入类选择器goods和w,在w内容的基础上设置了高度，外边距，背景颜色，盒子阴影和行高，对h3标题部分设置了浮动，外边距，
+    字体大小和颜色。对无序列表设置了浮动，外边距，对无序列表的单元格设置了浮动 。对无序列表的单元格里的链接部分
+    设置了内边距，字体大小，颜色以及边框格式-->
+  <div class="goods w">
+    <h3>精品推荐</h3>
+<ul>
+  <li><a href="#">JQuery</a></li>
+  <li><a href="#">Spark</a></li>
+  <li><a href="#">MySQL</a></li>
+  <li><a href="#">JavaWeb</a></li>
+  <li><a href="#">MySQL</a></li> 
+  <li><a href="#">JavaWeb</a></li>
+</ul>
+<!-- 在链接标签a上插入了类选择器mod,mod上设置了浮动，外边距字体大小和颜色 -->
+<li><a href="#" class="mod">修改兴趣</a></li>
+  </div>
+  <!-- 此处插入类选择器box和w,在w内容的基础上设置了外边距 -->
+  <div class="box w">
+    <!-- 此处插入了类选择器box-hd，box-hd设置了高度，并对h3标题设置了浮动，字体大小和颜色。并对链接内容设置了浮动，
+    字体大小和颜色以及外边距 -->
+  <div class="box-hd">
+    <h3>精品推荐</h3>
+    <a href="#">查询全部</a>
+  </div>
+  <!-- 此处插入了类选择器box-bd,box-bd设置了无序列表的高度，设置了无序列表里单元格的浮动，宽度，高度，背景颜色和外边距，
+  设置单元格里插入的图片宽度填充单元格的宽度。设置了h4标题的外边距，字体大小和颜色，以及加不加粗。 -->
+  <div class="box-bd">
+    <!-- 此处插入类选择器clearfix,给父级加双伪元素，移除清除浮动 -->
+    <ul class="clearfix">
+      <!-- 此处插入图片111.jpg -->
+      <li><img src="../imgs/111.jpg" alt="">
+      <h4>好好学习，天天向上</h4>
+      <!-- 此处添加类选择器info，info里设置了外边距，字体大小和颜色，并且又设置了行内元素span的颜色 -->
+    <div class="info">
+      <span>高级</span>· 1225人正在学习</div></li>
+      <li><img src="../imgs/111.jpg" alt="">
+        <h4>好好学习，天天向上</h4>
+      <div class="info">
+        <span>高级</span>· 1225人正在学习</div></li>
+        <li><img src="../imgs/111.jpg" alt="">
+          <h4>好好学习，天天向上</h4>
+        <div class="info">
+          <span>高级</span>· 1225人正在学习</div></li>
+          <li><img src="../imgs/111.jpg" alt="">
+            <h4>好好学习，天天向上</h4>
+          <div class="info">
+            <span>高级</span>· 1225人正在学习</div></li>
+            <li><img src="../imgs/111.jpg" alt="">
+              <h4>好好学习，天天向上</h4>
+            <div class="info">
+              <span>高级</span>· 1225人正在学习</div></li>
+              <li><img src="../imgs/111.jpg" alt="">
+                <h4>好好学习，天天向上</h4>
+              <div class="info">
+                <span>高级</span>· 1225人正在学习</div></li>
+                <li><img src="../imgs/111.jpg" alt="">
+                  <h4>好好学习，天天向上</h4>
+                <div class="info">
+                  <span>高级</span>· 1225人正在学习</div></li>
+                  <li><img src="../imgs/111.jpg" alt="">
+                    <h4>好好学习，天天向上</h4>
+                  <div class="info">
+                    <span>高级</span>· 1225人正在学习</div></li>
+                    <li><img src="../imgs/111.jpg" alt="">
+                      <h4>好好学习，天天向上</h4>
+                    <div class="info">
+                      <span>高级</span>· 1225人正在学习</div></li>
+                      <li><img src="../imgs/111.jpg" alt="">
+                        <h4>好好学习，天天向上</h4>
+                      <div class="info">
+                        <span>高级</span>· 1225人正在学习</div></li>
+    </ul>
+  </div>
+</div>
+<!-- 此处插入了类选择器footer，footer里设置了高度 -->
+<div class="footer">
+  <!-- 此处插入了类选择器w,在原有的w属性上修改了外边距 -->
+  <div class="w">
+    <!-- 此处插入了类选择器copyright,copyright上设置了浮动，并对段落标签p设置了字体大小和颜色以及外边距 -->
+    <div class="copyright">
+    <!-- 此处插入了图片99.jpg -->
+      <img src="../imgs/99.jpg" alt="">
+      <p>九九乘法表，更好解决简单计算问题</p>
+    <!-- 在链接标签a上插入了类选择器app，在app上将a标签设置为了块元素，以此设置了宽度，高度，边框，
+      文本水平居中，行高和字体大小 -->
+      <a href="#" class="app">下载app</a>
+    </div>
+    <!-- 此处插入了类选择器links,在links上设置了浮动，对links上的自定义列表设置了浮动，外边距。并对首行内容设置了
+      字体大小，颜色和外边距，对自定义列表里的单元格里的链接设置了字体大小和颜色 -->
+    <div class="links">
+      <dl>
+        <!-- dt表示首行标签，内容为关于99乘法 -->
+        <dt>关于99乘法</dt>
+        <dd><a href="#">关于</a></dd>
+        <dd><a href="#">管理团队</a></dd>
+        <dd><a href="#">工作机会</a></dd>
+        <dd><a href="#">客户服务</a></dd>
+        <dd><a href="#">帮助</a></dd>
+      </dl>
+      <dl>
+        <dt>关于99乘法</dt>
+        <dd><a href="#">关于</a></dd>
+        <dd><a href="#">管理团队</a></dd>
+        <dd><a href="#">工作机会</a></dd>
+        <dd><a href="#">客户服务</a></dd>
+        <dd><a href="#">帮助</a></dd>
+      </dl>
+      <dl>
+        <dt>关于99乘法</dt>
+        <dd><a href="#">关于</a></dd>
+        <dd><a href="#">管理团队</a></dd>
+        <dd><a href="#">工作机会</a></dd>
+        <dd><a href="#">客户服务</a></dd>
+        <dd><a href="#">帮助</a></dd>
+      </dl>
+    </div>
+  </div>
+</div>
 </body>
 </html> 

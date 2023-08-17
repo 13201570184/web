@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+     list-style: none;
+    }
+    .photo{
+      position: relative;
+      margin: auto;
+      margin-top: 20px;
+      width: 960px;
+      height: 540px;
+      background-color: chartreuse;
+    }
+    .photo a{
+      text-decoration: none;
+    }
+    .box1{
+      position: absolute;
+      width: 45px;
+      height: 30px;
+      left: 0;
+      top: 50%;
+      margin-top: -15px;
+      text-align: center;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      line-height: 30px;
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, .1);
+    }
+    .box2{
+      position: absolute;
+      width: 45px;
+      height: 30px;
+      right: 0;
+      top: 50%;
+      margin-top: -15px;
+      text-align: center;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      line-height: 30px;
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, .1);
+    }
+    .sub-nav{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      margin-left: -60px;
+      width: 105px;
+      height: 20px;
+      background: rgba(232, 187, 5, 0.3);
+      border-radius: 10px;
+    }
+    .sub-nav li{
+      float: left;
+      width: 11px;
+      height: 11px;
+      background-color: blue;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+  .sub-nav .selected{
+      background-color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <div class="photo">
+    <img src="../imgs/bili.png" alt="">
+    <div class="box1">
+      <a href="#"><</a>
+    </div>
+    <div class="box2">
+      <a href="#">></a></a>
+    </div>
+ 
+      <ul class="sub-nav">
+        <li></li>
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+  </div>
+</body>
+</html>
