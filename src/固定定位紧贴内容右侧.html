@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /* 类选择器里，对photo里的内容设置为相对定位，设置宽度为800像素，高度为1000像素水平居中，设置背景颜色为chartreuse */
     .photo{
     position: relative;
       width: 800px;
@@ -12,6 +13,8 @@
       margin: auto;
       background-color: chartreuse;
     }
+    /* 类选择器里，对box里的内容设置为固定定位，设置宽度为30像素，高度为45像素，背景颜色为aqua.left:50%表示内容距左侧
+    为photo内容的一半宽度,处于页面水平中分线处，margin-left表示内容左侧距中分线405像素，正好处于内容主题的右侧多5像素处 */
     .box{
       position: fixed;
       width: 30px;
@@ -23,7 +26,9 @@
   </style>
 </head>
 <body>
+  <!-- 此处插入类选择器photo -->
   <div class="photo">
+    <!-- 此处插入类选择器box -->
 <div class="box"></div>
   </div>
 </body>

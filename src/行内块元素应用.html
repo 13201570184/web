@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    div{
+    float: left;
+    text-align: center;
+    margin-left: 200px;
+    }
+  div a{
+  float: left;
+  display: block;
+  text-decoration: none;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+  color: #333;
+  }
+  .prev{
+    width: 100px;
+  }
+  .next{
+    width: 100px;
+  }
+  .dangqian,.gengduo{
+    border: 0 ;
+    background-color: #fff;
+  }
+  .ye{
+    width: 34px;
+    height: 28px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  .anniu{
+  width: 50px;
+  height: 32px;
+  }
+  </style>
+</head>
+<body>
+<div>
+<a href="#" class="prev"><< 上一页</a>
+<a href="#">1</a>
+<a href="#" class="dangqian">2</a>
+<a href="#">3</a>
+<a href="#">4</a>
+<a href="#">5</a>
+<a href="#">6</a>
+<a href="#">7</a>
+<a href="#" class="gengduo">……</a>
+<a href="#" class="next">下一页 >></a>
+到第<input type="text" class="ye">页
+<button class="anniu">确定</button>
+</div>
+</body>
+</html>

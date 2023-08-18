@@ -99,7 +99,11 @@ background: url(../imgs/search.jpg);
  line-height: 44px;
  margin-right: 40px;
 }
-banner部分高度为421像素
+/* 此处使照片和文字垂直居中 */
+.user img{
+  vertical-align: middle;
+}
+/* banner部分高度为421像素 */
 .banner{
   height: 421px;
 }

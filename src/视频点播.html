@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+  /* photo部分内容设置为相对定位，设置宽度为500像素，高度为340像素，上下外边距为40像素，水平居中 */
    .photo{
     position: relative;
     width: 500px;
     height: 340px;
     margin: 40px auto;
-    /* background-color: crimson; */
    }
+   /* 此处为photo部分插入的img图片宽度高度为photo里设置的宽度高度 */
    .photo img{
     width: 100%;
     height: 100%;
    }
+   /* black内容里的内容隐藏，此类隐藏会失去原有位置，设置为绝对路径，宽度高度设置为photo的宽度高度，背景颜色为设置的半透明色，
+   并插入图片，选择图片不平铺且处于中心位置 */
    .black{
     display: none;
     position: absolute;
@@ -25,14 +28,18 @@
     height: 100%;
     background: rgba(0, 0, 0, .4) url(../imgs/start.jpg) no-repeat center;  
    }
+   /* 使鼠标放在photo内容里，显示出black设置的半透明色 */
    .photo:hover .black{
     display: block;
    }
   </style>
 </head>
 <body>
+  <!-- 此处插入类选择器photo -->
   <div class="photo">
+    <!-- 此处插入类选择器black -->
     <div class="black"></div>
+    <!-- 此处插入图片hy.jpg -->
     <img src="../imgs/hy.jpg" alt=""> 
   </div>
 </body>

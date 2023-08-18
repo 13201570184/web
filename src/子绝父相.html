@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /* 此处默认全篇内容内外边距为0 */
     *{
       margin: 0;
       padding: 0;
     }
+    /* 所有单元格内容前面的黑点符号取消 */
     li{
      list-style: none;
     }
+    /* photo部分设置为相对定位，水平外边距为水平居中，上边距为20像素。宽度为960像素，高度为540像素，背景颜色为chartreuse */
     .photo{
       position: relative;
       margin: auto;
@@ -20,9 +23,13 @@
       height: 540px;
       background-color: chartreuse;
     }
+    /* photo部分里的链接内容下划线取消掉 */
     .photo a{
       text-decoration: none;
     }
+    /* box1内容设置为绝对定位。宽度为45像素，高度为30像素距离左侧0像素，垂直方向位于photo内容的垂直中分线处，margin-top:15px */
+    /* 表示垂直向上调15像素，使box1内容处于垂直中点位置。文本内容居中，右侧边框设置为椭圆形，行高设置为30像素，字体大小为30像素， */
+    /* 背景颜色为黑色透明色 */
     .box1{
       position: absolute;
       width: 45px;
@@ -35,8 +42,9 @@
       border-bottom-right-radius: 15px;
       line-height: 30px;
       font-size: 30px;
-      background-color: rgba(0, 0, 0, .1);
+      background: rgba(0, 0, 0, .1);
     }
+    /* 此处同box1相似 */
     .box2{
       position: absolute;
       width: 45px;
@@ -49,8 +57,10 @@
       border-bottom-left-radius: 15px;
       line-height: 30px;
       font-size: 30px;
-      background-color: rgba(0, 0, 0, .1);
+      background: rgba(0, 0, 0, .1);
     }
+/* sub.nav表示底部导航栏部分，设置其为绝对定位，距离底部20像素，水平方向位于photo内容的水平中分线处，margin-left:-60px表示 
+向左偏移60像素，使其位于水平线中点位置，宽度设置为105像素，高度设置为20像素，背景颜色为下面显示的透明色，边框设置为椭圆形 */
     .sub-nav{
       position: absolute;
       bottom: 20px;
@@ -61,6 +71,8 @@
       background: rgba(232, 187, 5, 0.3);
       border-radius: 10px;
     }
+    /* sub-nav部分单元格向左浮动，宽度为11像素，高度为11像素，背景颜色为blue，上下外边距为5像素，左右外边距为2像素，
+    边框设置为圆形 */
     .sub-nav li{
       float: left;
       width: 11px;
@@ -69,23 +81,31 @@
       margin: 5px 2px;
       border-radius: 50%;
     }
+    /* 默认选择的背景颜色为hotpink */
   .sub-nav .selected{
       background-color: hotpink;
     }
   </style>
 </head>
 <body>
+  <!-- 此处插入类选择器photo -->
   <div class="photo">
+    <!-- 此处插入图片bili.png -->
     <img src="../imgs/bili.png" alt="">
+    <!-- 此处插入类选择器box1 -->
     <div class="box1">
+    <!-- 链接名称为< 此链接为空白链接 -->
       <a href="#"><</a>
     </div>
+    <!-- 此处插入类选择器box2 -->
     <div class="box2">
+       <!-- 链接名称为> 此链接为空白链接 -->
       <a href="#">></a></a>
     </div>
- 
+    <!-- 无序列表插入类选择器sub-nav -->
       <ul class="sub-nav">
         <li></li>
+        <!-- 此单元格插入类选择器selected -->
         <li class="selected"></li>
         <li></li>
         <li></li>
