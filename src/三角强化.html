@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+  /* 类选择器box1，宽度高度为0，右边款颜色为红色，其余为透明色，边框为实线，上边框宽度为100像素，右边框宽度为50像素，
+  下边框和左边框宽度为0 ，以此来设置直角三角形，直角边在右侧*/
   .box1{
     width: 0;
   height: 0;
@@ -12,6 +14,8 @@
   border-style: solid;
   border-width: 100px 50px 0 0;
   }
+  /* 类选择器price，宽度设置为160像素，高度设置为24像素，行高为24像素和高度一样，表示垂直居中，
+  边框设置为1像素红色实线，上下外边距为0，水平线居中 */
   .price{
     width: 160px;
     height: 24px;
@@ -19,6 +23,8 @@
     border: 1px solid red;
     margin: 0 auto;
   }
+  /* 类选择器miaosha,此内容设置为相对定位，向左浮动，保留其原有位置，宽度为90像素，高度为price的高度24像素，
+  背景颜色为红色，文本水平居中，颜色为#fff，字体加粗，右外边距为8像素 */
   .miaosha{
     position: relative;
     float: left;
@@ -30,6 +36,8 @@
     font-weight: 700;
     margin-right: 8px;
   }
+  /* miaosha里的i标签内容设置为绝对定位，位于右上角，宽度高度为0，边框颜色右侧为#fff色，上下左侧边框为透明色，边框为实线，
+  上边框宽度为24像素，右边款宽度为10像素，下左边框宽度为0 */
   .miaosha i{
     position: absolute;
     right: 0;
@@ -40,6 +48,7 @@
     border-style: solid;
     border-width: 24px 10px 0 0;
   }
+  /* 类选择器origin,设置字体大小为16像素，颜色为灰色，文本显示删除线 */
    .origin{
   font-size: 16px;
   color: gray;
@@ -48,11 +57,15 @@
   </style>
 </head>
 <body>
+<!-- 此处插入类选择器box1 -->
 <div class="box1"></div>
+<!-- 此处插入类选择器price -->
 <div class="price">
+  <!-- 此处插入类选择器miaosha -->
   <span class="miaosha">$9.99
     <i></i>
   </span>
+  <!-- 此处插入类选择origin -->
   <span class="origin">$999</span>
 </div>
 </body>

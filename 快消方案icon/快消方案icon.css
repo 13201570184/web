@@ -1,0 +1,57 @@
+/* 整篇内容的内外边距为0 */
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 内容部分的背景颜色为#f7f7fa */
+body{
+  background-color: #f7f7fa;
+}
+/* bkgd部分设置防止外边距塌陷，设置大小和位置 */
+.bkgd{
+  overflow: hidden;
+  width: 1440px;
+height: 259px;
+background: #ffffff;
+margin: 150px auto;
+}
+/* 设置内容的二级标题，向左浮动，设置大小位置，字体大小和种类和行高以及颜色 */
+h2{
+  float: left;
+  width: 425px;
+height: 79px;
+font-size: 60px;
+font-family: Helvetica;
+color: #222222;
+line-height: 79px;
+margin-top: 78px;
+margin-left: 114px;
+}
+/* 将上半箭头的p1标签设置到指定位置，和p2标签共同组合成一个整体 */
+.p1{
+  float: left;
+  width: 122px;
+  height: 2px;
+  background-color: #222222;
+  margin-top: 113px;
+  margin-left: 56px;
+}
+/* 将上半箭头的p2标签设置到指定位置，和p1标签共同组合成一个整体 */
+.p2{
+  float: left;
+  width: 22px;
+  height: 2px;
+  background-color: #222222;
+  margin-top: 108px;
+  margin-left: -22px;
+  transform: rotate(25deg);
+}
+/* 设置pic1图片位置 */
+.pic1{
+  margin-top: 103px;
+  margin-left: 89px;
+}
+/* 设置pic2图片位置 */
+.pic2{
+  margin-left: 11px;
+}

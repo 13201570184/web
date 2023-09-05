@@ -1,0 +1,982 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+.w{
+  width: 1920px;
+  margin: 0 auto;
+}
+.nav{
+  overflow: hidden;
+  height: 102px;
+  background: #f7f8fa;
+}
+.navp{
+  float: left;
+  width: 243px;
+height: 41px;
+margin-top: 35px;
+margin-left: 215px;
+}
+.navt{
+  float: left;
+  width: 666px;
+  height: 16px;
+  margin-left: 272px;
+}
+.navt ul{
+  overflow: hidden;
+  width: 708px;
+  height: 102px;
+  line-height: 102px;
+}
+.navt ul li{
+  float: left;
+  margin-right: 44px;
+}
+.denglu{
+  float: left;
+  width: 83px;
+height: 56px;
+border: 1px solid #4517AF;
+border-radius: 11px;
+margin-top: 23px;
+margin-left: 32px;
+}
+.denglu p{
+  width: 36px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+line-height: 56px;
+margin-left: 23px;
+}
+.shenqing{
+  float: left;
+  width: 122px;
+height: 56px;
+background: #4517AF;
+border-radius: 11px;
+margin-top: 23px;
+margin-left: 22px;
+}
+.shenqing p{
+  width: 71px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #FFFFFF;
+line-height: 56px;
+margin-left: 26px;
+}
+.header-hd{
+  overflow: hidden;
+height: 460px;
+background: mediumseagreen;
+opacity: 0.6;
+}
+.header-hd h2{
+  width: 815px;
+height: 47px;
+font-size: 50px;
+font-family: Source Han Sans CN;
+font-weight: 300;
+color: #FFFFFF;
+line-height: 70px;
+margin-top: 196px;
+margin-left: 552px;
+line-height: 47px;
+}
+.header-bd{
+  overflow: hidden;
+  height: 148px;
+  background: #f7f8fa;
+}
+.header-bd .itd{
+width: 165px;
+height: 18px;
+margin-top: 65px;
+margin-left: 499px;
+}
+.header-bd .itd ul li{
+  float: left;
+}
+.header-bd .itd ul li:nth-child(1){
+  width: 54px;
+  height: 18px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #121212;
+}
+.header-bd .itd ul li:nth-child(2){
+  width: 10px;
+  height: 17px;
+  margin-left: 16px;
+  margin-right: 13px;
+}
+.header-bd .itd ul li:nth-child(3){
+  width: 72px;
+  height: 18px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #4517AF;
+}
+.point{
+  width: 55px;
+  height: 26px;
+  margin-left: 1771px;
+  margin-top: -2px;
+}
+.point ul{
+  overflow: hidden;
+  width: 70px;
+  height: 36px;
+}
+.point ul li{
+  float: left;
+  width: 9px;
+height: 9px;
+background: #D3D3D3;
+border-radius: 50%;
+margin-right: 14px;
+margin-bottom: 8px;
+}
+.text{
+  overflow: hidden;
+  height: 4105px;
+  background: #f7f8fa;
+}
+.right{
+  float: right;
+  /* overflow: hidden; */
+  width: 274px;
+  height: 559px;
+  margin-right: 410px;
+}
+.right .label{
+  /* overflow: hidden; */
+  width: 274px;
+height: 158px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(185,185,185,0.21);
+border-radius: 10px;
+}
+.right .label .labelicon{
+  float: left;
+  margin-top: 16px;
+  margin-left: 20px;
+}
+.right .label p{
+  float: left;
+  width: 98px;
+height: 43px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+margin-top: 60px;
+margin-left: -12px;
+}
+.right .label .labelwx{
+  float: right;
+  margin-top: 28px;
+  margin-right: 29px;
+}
+.right .recommend{
+  width: 274px;
+  height: 370px;
+  margin-top: 31px;
+}
+.right .recommend ul{
+  overflow: hidden;
+  width: 274px;
+  height: 380px;
+}
+.right .recommend ul li{
+  overflow: hidden;
+  width: 274px;
+height: 56px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(185,185,185,0.21);
+border-radius: 10px;
+margin-bottom: 10px;
+}
+.right .recommend ul li:nth-child(1){
+  width: 274px;
+height: 106px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(185,185,185,0.21);
+border-radius: 10px;
+}
+.right .recommend ul li:nth-child(1) h5{
+  width: 73px;
+  height: 18px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #1F2329;
+  margin-top: 15px;
+  margin-left: 19px;
+}
+.right .recommend ul li:nth-child(1) span{
+  display: block;
+  width: 11px;
+height: 11px;
+background: #C01A1A;
+border-radius: 50%;
+margin-top: 26px;
+margin-left: 20px;
+}
+.right .recommend ul li:nth-child(1) p{
+  width: 206px;
+height: 33px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 19px;
+margin-left: 42px;
+margin-top: -15px;
+}
+.right .recommend ul li:nth-child(2) span{
+  float: left;
+  display: block;
+  width: 11px;
+height: 11px;
+background: #4517AF;
+border-radius: 50%;
+margin-top: 12px;
+margin-left: 20px;
+}
+.right .recommend ul li:nth-child(2) p{
+  float: left;
+  width: 203px;
+height: 33px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 19px;
+margin-top: 12px;
+margin-left: 11px;
+}
+.right .recommend ul li:nth-child(3) span{
+  float: left;
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: #8864DC;
+  border-radius: 50%;
+margin-top: 12px;
+margin-left: 20px;
+}
+.right .recommend ul li:nth-child(3) p{
+  float: left;
+  width: 203px;
+height: 33px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 19px;
+margin-top: 12px;
+margin-left: 11px;
+}
+.right .recommend ul li:nth-child(4) span{
+  float: left;
+  display: block;
+  width: 11px;
+height: 11px;
+background: #4517AF;
+border-radius: 50%;
+margin-top: 12px;
+margin-left: 20px;
+}
+.right .recommend ul li:nth-child(4) p{
+  float: left;
+  width: 203px;
+height: 33px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 19px;
+margin-top: 12px;
+margin-left: 11px;
+}
+.right .recommend ul li:nth-child(5) span{
+  float: left;
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: #8864DC;
+  border-radius: 50%;
+margin-top: 12px;
+margin-left: 20px;
+}
+.right .recommend ul li:nth-child(5) p{
+  float: left;
+  width: 203px;
+height: 33px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 19px;
+margin-top: 12px;
+margin-left: 11px;
+}
+.text .introduce{
+  overflow: hidden;
+  width: 795px;
+height: 3970px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(185,185,185,0.21);
+border-radius: 10px;
+margin-left: 410px;
+}
+.introduce .lbw{
+  overflow: hidden;
+  width: 735px;
+  height: 407px;
+  margin-top: 30px;
+  margin-left: 30px;
+  border-bottom: 1px solid #EAEAEA;;
+}
+.lbw .logo{
+  width: 206px;
+  height: 44px;
+}
+.lbw .logo ul{
+  overflow: hidden;
+  width: 270px;
+  height: 44px;
+}
+.lbw .logo ul li{
+  float: left;
+}
+.lbw .logo ul li:nth-child(2){
+  width: 72px;
+height: 22px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 5px;
+margin-left: 19px;
+}
+.lbw .logo ul li:nth-child(3){
+  width: 1px;
+  height: 23px;
+  background: #B9B9B9;
+  border: 1px solid #7B7E81;
+  border-radius: 1px;
+margin-left: 19px;
+margin-right: 16px;
+margin-top: 11px;
+}
+.lbw .logo ul li:nth-child(4){
+  width: 36px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+margin-top: 9px;
+}
+.pic{
+  float: right;
+  width: 179px;
+  height: 382px;
+  background:url(imgs/lbwpic.png)no-repeat;
+  margin-top: -44px;
+}
+.lbw h2{
+  width: 496px;
+  height: 76px;
+  font-size: 28px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #1F2329;
+margin-top: 40px;
+line-height: 38px;
+}
+.lbw h4{
+  width: 498px;
+  height: 50px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  line-height: 25px;
+margin-top: 44px;
+}
+.lbw .p1{
+  width: 45px;
+  height: 24px;
+  font-size: 30px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #1F2329;
+margin-top: 50px;
+margin-left: 9px;
+}
+.lbw .p2{
+  width: 68px;
+  height: 17px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  margin-top: 17px;
+  margin-left: 2px;
+}
+.lbw .p3{
+  width: 72px;
+  height: 24px;
+  font-size: 30px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #1F2329;
+  line-height: 24px;
+margin-top:-50px ;
+margin-left: 236px;
+}
+.lbw .p4{
+  width: 32px;
+height: 16px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 16px;
+margin-left: 313px;
+margin-top: -16px;
+}
+.lbw .p5{
+  width: 72px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 17px;
+margin-left: 246px;
+margin-top: 12px;
+}
+.introduce .p6{
+  width: 735px;
+  height: 106px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 35px;
+margin-top: 48px;
+margin-left: 30px;
+}
+.introduce .p8{
+  width: 736px;
+  height: 136px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 30px;
+margin-top: 50px;
+margin-left: 30px;
+}
+.introduce .pic2{
+  margin-top: 47px;
+  margin-left: 30px;
+}
+.introduce .p9{
+  width: 734px;
+  height: 106px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 30px;
+  margin-top: 47px;
+  margin-left: 30px;
+}
+.introduce .p10{
+  width: 734px;
+  height: 316px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 30px;
+margin-top: 45px;
+margin-left: 31px;
+}
+.introduce .p11{
+  width: 239px;
+  height: 18px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #4517AF;
+  line-height: 30px;
+margin-top: 51px;
+margin-left: 31px;
+}
+.introduce .p12{
+  width: 735px;
+  height: 380px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 30px;
+margin-top: 44px;
+margin-left: 30px;
+}
+.introduce .pic3{
+  margin-top: 55px;
+  margin-left: 31px;
+}
+.introduce .p13{
+  width: 736px;
+  height: 46px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 30px;
+margin-top: 60px;
+margin-left: 30px;
+}
+.introduce .p14{
+  width: 276px;
+  height: 19px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #4517AF;
+  line-height: 30px;
+margin-top: 61px;
+margin-left: 30px;
+}
+.introduce .p15{
+  width: 736px;
+  height: 286px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 30px;
+margin-top: 43px;
+margin-left: 30px;
+}
+.introduce .pic4{
+  margin-top: 30px;
+  margin-left: 31px;
+}
+.introduce .p16{
+  width: 735px;
+  height: 316px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+  line-height: 30px;
+margin-top: 30px;
+margin-left: 31px;
+}
+.last{
+  float: left;
+  width: 115px;
+  height: 18px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #121212;
+margin-top: 40px;
+margin-left: 440px;
+}
+.last::before{
+  content: url(imgs/last.png);
+  margin-right: 15px;
+}
+.next{
+  float: left;
+width: 115px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #121212;
+margin-top: 40px;
+margin-left: 505px;
+}
+.next::after{
+  content: url(imgs/next.png);
+  margin-left: 15px;
+}
+footer{
+  background-color: #f7f8fa;
+  width: 1920px;
+  margin: auto;
+}
+.bkgd{
+  overflow: hidden;
+  width: 1755px;
+  height: 263px;
+  margin: auto;
+  background: url(imgs/bkgd.png);
+}
+ .bkgd ul li:nth-child(1){
+  width: 30px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  margin-top: 33px;
+  margin-left: 861px;
+}
+ .bkgd ul li:nth-child(2){
+  width: 195px;
+  height: 31px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 19px;
+  margin-left: 777px;
+}
+ .bkgd ul li:nth-child(3){
+  width: 153px;
+  height: 17px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-top: 16px;
+  margin-left: 799px;
+}
+ .bkgd ul li:nth-child(4){
+  width: 83px;
+  height: 21px;
+  font-size: 20px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #4517AF;
+  line-height: 19px;
+  margin-top: 59px;
+  margin-left: 788px;
+  padding: 13px 48px 14px 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 13px 32px 0px rgba(69,23,175,0.23);
+  border-radius: 24px;
+}
+.footer{
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+height: 416px;
+background: #202328;
+margin-top: 79px;
+}
+.footer .box15 .p66 {
+  position: absolute;
+ width: 208px;
+ height: 35px;
+ top: 88px;
+ left: 361px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p67{
+  position: absolute;
+  width: 165px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 146px;
+left: 361px;
+}
+/* footer里的box15中的p标签全部设置为绝对定位,使其可以定位到box15的任意位置上 */
+.footer .box15 p{
+  position: absolute;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p68{
+  width: 224px;
+height: 16px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 172px;
+left: 361px;
+}
+/* footer里的box15中的p69,p70,p71,p72同时设置下列格式 */
+.footer .box15 .p69,.p70,.p71,.p72{
+width: 57px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p69{
+top: 92px;
+left: 675px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p70{
+top: 91px;
+left: 833px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p71{
+  top: 91px;
+  left: 991px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p72{
+  top: 91px;
+  left: 1147px;
+}
+/* footer里的box15中的p73,p74,p75,p76.p77,p78,p79,p80,p81同时设置下列格式 */
+.footer .box15 .p73,.p74,.p75,.p76,.p77,.p78,.p79,.p80,.p81{
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 10px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p73{
+  width: 72px;
+  height: 14px;
+top: 133px;
+left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p74{
+  width: 69px;
+  height: 14px;
+  top: 133px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p75{
+  width: 86px;
+  height: 14px;
+  top: 133px;
+  left: 990px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p76{
+  width: 57px;
+  height: 14px;
+  top: 133px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p77{
+  width: 116px;
+  height: 14px;
+  top: 157px;
+  left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p78{
+  width: 72px;
+  height: 14px;
+  top: 157px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p79{
+  width: 86px;
+  height: 14px;
+  top: 157px;
+  left: 991px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p80{
+  width: 57px;
+  height: 14px;
+  top: 157px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p81{
+  width: 57px;
+  height: 14px;
+  top: 180px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p82{
+  width: 677px;
+  height: 1px;
+  background: #464646;
+top: 266px;
+left: 623px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p83{
+width: 70px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 282px;
+left: 683px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p84{
+  width: 72px;
+  height: 14px;
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 14px;
+  top: 282px;
+  left: 769px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p85{
+  width: 43px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 887px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p86{
+  width: 86px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 977px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p87{
+  width: 129px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 1110px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p88{
+  width: 396px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 314px;
+left: 763px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p89{
+  width: 14px;
+height: 16px;
+  left: 725px;
+  bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p90{
+  width: 187px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+left: 747px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p91{
+  width: 14px;
+height: 16px;
+left: 964px;
+bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p92{
+  width: 212px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+right: 724px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p93{
+  width: 87px;
+  height: 87px;
+  top: 91px;
+  right: 476px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p94{
+  width: 86px;
+  height: 86px;
+  top: 91px;
+  right: 359px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p95{
+  width: 82px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 480px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p96{
+  width: 72px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 367px;
+}

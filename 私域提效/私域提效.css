@@ -1,0 +1,1105 @@
+/* 整片内容内外边距为0 */
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 所有li标签前面的小黑点取消 */
+li{
+  list-style: none;
+}
+/* 所有a链接标签的下划线取消 */
+a{
+  text-decoration: none;
+}
+/* 整篇内容的宽度设置为1920像素 */
+.w{
+  width: 1920px;
+  margin: 0 auto;
+  /* background-color: mediumseagreen; */
+}
+/* 头部部分内容格式 */
+.navp{
+  float: left;
+  height: 104px;
+  background-color: #fdfeff;
+}
+.navp img{
+  margin: 36px 272px 25px 261px;
+}
+.nav .navt{
+  height: 104px;
+  background-color: #fdfeff;
+}
+.navt ul li{
+  float: left;
+  line-height: 104px;
+  font-size: 16px;
+  padding: 0 22px;
+}
+.navt ul li:nth-child(2){
+  color: #4517af;
+}
+.navt ul li:nth-child(8){
+  height: 54px;
+letter-spacing: 2px;
+border: 1px solid #4517af;
+border-radius: 11px;
+margin-top: 24px;
+line-height: 56px;
+margin-left: 12px;
+}
+.navt ul li:nth-child(9){
+letter-spacing: 2px;
+width: 76px;
+height: 56px;
+background: #4517AF;
+border-radius: 11px;
+line-height: 56px;
+color: #fff;
+margin-left: 12px;
+margin-top: 24px;
+margin-left: 28px;
+}
+.header{
+  height: 460px;
+  background-color: skyblue;
+}
+.header .title{
+width: 762px;
+height: 118px;
+text-align: center;
+margin: 0 580px 0 578px;
+padding-top: 121px;
+}
+.header .title h2{
+font-size: 50px;
+font-family: Source Han Sans CN;
+font-weight: 300;
+color: #FFFFFF;
+line-height: 72px;
+text-shadow: 0px 13px 32px rgba(0,0,0,0.23);
+}
+.header .shenqing h3{
+width: 96px;
+height: 24px;
+font-size: 24px;
+line-height: 24px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+padding: 15px 56px 14px 55px;
+background: #FFFFFF;
+box-shadow: 0px 13px 32px 0px rgba(0,0,0,0.23);
+border-radius: 26px;
+margin-left: 857px;
+margin-top:80px;
+}
+.hd-bd{
+  position: relative;
+  overflow: hidden;
+  height: 931px;
+  background-color:#fdfeff;
+}
+.hd-bd .icon{
+  position: absolute;
+  width: 75px;
+  height: 38px;
+  /* margin: 75px 102px 1843px 1771px; */
+  /* background-color: aqua; */
+  top: 75px;
+  right: 94px;
+}
+.hd-bd .icon ul li{
+float: left;
+width: 9px;
+height: 9px;
+margin-right: 15px ;
+margin-bottom: 10px;
+background: #d3d3d3;
+border-radius: 50%;
+}
+.hd-bd .itd ul li:nth-child(1){
+position: absolute;
+width: 30px;
+height: 4px;
+background: #4617AF;
+border-radius: 2px;
+top: 155px;
+left: 946px;
+}
+.hd-bd .itd ul li:nth-child(2){
+  position: absolute;
+  width: 533px;
+  height: 32px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  top: 178px;
+  left: 694px;
+}
+.hd-bd .itd ul li:nth-child(3){
+  position: absolute;
+  width: 414px;
+  height: 18px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #7B7E81;
+  top: 226px;
+  left: 752px;
+}
+.hd-bd .xtb-l{
+  position: absolute;
+  width: 487px;
+  height: 490px;
+  top: 362px;
+  left: 473px;
+}
+.hd-bd .xtb-l ul li{
+  position:relative;
+width: 487px;
+height: 138px;
+background: #CCCCCC;
+box-shadow: 0px 1px 2px 0px rgba(135,135,134,0.52), 0px -1px 2px 0px rgba(21,21,21,0.57);
+opacity: 0.9;
+border-radius: 10px;
+margin-bottom: 33px;
+}
+.hd-bd .xtb-l ul li:nth-child(1){
+background:url(imgs/feng.png)no-repeat;
+}
+.hd-bd .xtb-l ul li:nth-child(1) h2{
+  position: absolute;
+width: 108px;
+height: 35px;
+font-size: 36px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #4517AF;
+top: 22px;
+left: 145px;
+}
+.hd-bd .xtb-l ul li:nth-child(1) h3{
+  position: absolute;
+  width: 168px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+top: 40px;
+right: 53px;
+}
+.hd-bd .xtb-l ul li:nth-child(1) h4{
+  position: absolute;
+width: 318px;
+height: 40px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #464646;
+bottom: 23px;
+right: 25px;
+}
+.hd-bd .xtb-l ul li:nth-child(2){
+  background: url(imgs/dian.png)no-repeat;
+  }
+  .hd-bd .xtb-l ul li:nth-child(2) h2{
+    position: absolute;
+    width: 111px;
+    height: 35px;
+    font-size: 36px;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    color: #4517AF;
+  top: 23px;
+  left: 146px;
+  }
+  .hd-bd .xtb-l ul li:nth-child(2) h3{
+    position: absolute;
+    width: 187px;
+    height: 18px;
+    font-size: 18px;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    color: #1F2329;
+  top: 38px;
+  right: 32px;
+  }
+  .hd-bd .xtb-l ul li:nth-child(2) h4{
+    position: absolute;
+    width: 318px;
+    height: 41px;
+    font-size: 16px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #464646;
+    line-height: 24px;
+  bottom: 21px;
+  right: 23px;
+  }
+  .hd-bd .xtb-l ul li:nth-child(3){
+    background:url(imgs/ji.png)no-repeat;
+    }
+    .hd-bd .xtb-l ul li:nth-child(3) h2{
+      position: absolute;
+      width: 110px;
+      height: 35px;
+      font-size: 36px;
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+      color: #4517AF;
+    top: 23px;
+    left: 145px;
+    }
+    .hd-bd .xtb-l ul li:nth-child(3) h3{
+      position: absolute;
+      width: 169px;
+      height: 18px;
+      font-size: 18px;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #1F2329;
+    top: 41px;
+    right: 52px;
+    }
+    .hd-bd .xtb-l ul li:nth-child(3) h4{
+      position: absolute;
+      width: 318px;
+      height: 40px;
+      font-size: 16px;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #464646;
+      line-height: 24px;
+    bottom: 22px;
+    right: 25px;
+    } 
+.hd-bd .xtb-r{
+  position: absolute;
+  width: 486px;
+  height: 539px;
+  top: 329px;
+  right: 366px;
+  background: url(imgs/zuhe.png);
+}
+.service{
+  position: relative;
+  height: 1261px;
+background: #F7F7FA;
+}
+.service .itd ul{
+  position: relative;
+}
+.service .itd ul li:nth-child(1){
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #4617AF;
+  border-radius: 2px;
+  top: 107px;
+  left: 946px;
+}
+.service .itd ul li:nth-child(2){
+position: absolute;
+width: 633px;
+height: 32px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+top: 130px;
+left: 643px;
+}
+.service .itd ul li:nth-child(3){
+  position: absolute;
+  width: 265px;
+  height: 15px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  letter-spacing: 2px;
+  top: 178px;
+  left: 827px;
+}
+.service .itd ul li:nth-child(4){
+  position: absolute;
+  width: 339px;
+  height: 23px;
+  font-size: 24px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #1F2329;
+  top: 277px;
+  left: 790px;
+}
+.service .itd ul li:nth-child(5){
+  position: absolute;
+  width: 229px;
+  height: 18px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  letter-spacing: 2px;
+  top: 314px;
+  left: 845px;
+}
+.service .itd ul li:nth-child(6){
+position: absolute;
+width: 314px;
+height: 23px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+top: 792px;
+left: 803px;
+}
+.service .itd ul li:nth-child(7){
+position: absolute;
+width: 260px;
+height: 18px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+letter-spacing: 2px;
+top: 829px;
+left: 829px;
+}
+.service .icon{
+  position: relative;
+  width: 1100px;
+  height: 301px;
+  /* background-color: mediumseagreen; */
+  margin: auto;
+  top: 379px;
+  /* overflow: hidden; */
+}
+
+.service .icon ul{
+  width: 1120px;
+  height: 301px;
+}
+.service .icon ul li{
+  float: left;
+  width: 197px;
+height: 304px;
+background: #FCFDFE;
+box-shadow: 0px 3px 10px 0px rgba(118,118,118,0.1);
+border-radius: 10px;
+margin-right: 27px;
+}
+.service .icon ul li:nth-child(1){
+  position: relative;
+background: url(imgs/1.png)no-repeat;
+}
+.service .icon ul li:nth-child(1) h2{
+  position: absolute;
+  width: 82px;
+height: 19px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+left: 56px;
+bottom: 111px;
+}
+.service .icon ul li:nth-child(1) h4{
+  position: absolute;
+  width: 66px;
+height: 72px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+bottom: 18px;
+left: 66px;
+line-height: 24px;
+}
+.service .icon ul li:nth-child(2){
+  position: relative;
+  background: url(imgs/2.png)no-repeat;
+}
+.service .icon ul li:nth-child(2) h2{
+  position: absolute;
+  width: 105px;
+  height: 19px;
+  font-size: 20px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #1F2329;
+  top: 174px;
+  left: 44px;
+}
+.service .icon ul li:nth-child(2) h4{
+  position: absolute;
+width: 111px;
+height: 43px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+bottom: 35px;
+left: 41px;
+line-height: 26px;
+}
+.service .icon ul li:nth-child(3){
+  position: relative;
+  background: url(imgs/3.png)no-repeat;
+}
+.service .icon ul li:nth-child(3) h2{
+  position: absolute;
+  width: 139px;
+height: 20px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 173px;
+left: 30px;
+}
+.service .icon ul li:nth-child(3) h4{
+  position: absolute;
+  width: 132px;
+height: 43px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 226px;
+left: 33px;
+line-height: 26px;
+}
+.service .icon ul li:nth-child(4){
+  position: relative;
+  background: url(imgs/4.png)no-repeat;
+}
+.service .icon ul li:nth-child(4) h2{
+  position: absolute;
+  width: 82px;
+height: 20px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 173px;
+left: 56px;
+}
+.service .icon ul li:nth-child(4) h4{
+  position: absolute;
+  width: 150px;
+height: 44px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 226px;
+left: 22px;
+line-height: 26px;
+}
+.service .icon ul li:nth-child(5){
+  position: relative;
+ background: url(imgs/5.png)no-repeat;
+}
+.service .icon ul li:nth-child(5) h2{
+  position: absolute;
+  width: 83px;
+height: 20px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 173px;
+left: 55px;
+}
+.service .icon ul li:nth-child(5) h4{
+  position: absolute;
+  width: 133px;
+height: 43px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 226px;
+left: 30px;
+line-height: 26px;
+}
+.service .logo {
+  position: relative;
+  width: 904px;
+  height: 258px;
+  text-align: center;
+  margin:0 auto;
+  top: 598px;
+}
+/* .service .logo ul{
+  width: 1000px;
+} */
+.service .logo ul li{
+  float: left;
+}
+.service .logo ul li:nth-child(1) h3{
+  position: absolute;
+  width: 104px;
+  height: 20px;
+  font-size: 20px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #1F2329;
+  top: 170px;
+  left: 28px;
+}
+/* .service .logo ul li:nth-child(1) h4{
+  position: absolute;
+  width: 142px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+bottom: 33px;
+left: 10px;
+} */
+.service .logo ul li:nth-child(2){
+margin: 0 202px;
+}
+.service .logo ul li:nth-child(2) h3{
+  position: absolute;
+  width: 91px;
+height: 19px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 171px;
+left: 410px;
+}
+/* .service .logo ul li:nth-child(2) h4{
+   
+} */
+.service .logo ul li:nth-child(3) h3{
+  position: absolute;
+  width: 125px;
+height: 21px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+left: 759px;
+top: 170px;
+}
+.service .logo ul li:nth-child(4){
+position: absolute;
+width: 142px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 213px;
+left: 10px;
+}
+.service .logo ul li:nth-child(5){
+  position: absolute;
+  width: 192px;
+height: 39px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 23px;
+top: 216px;
+left: 355px;
+}
+.service .logo ul li:nth-child(6){
+  position: absolute;
+  width: 141px;
+height: 39px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 23px;
+top: 213px;
+left: 750px;
+}
+.ttdt{
+  /* position: relative; */
+  height: 1570px;
+  /* background-color: mediumseagreen; */
+}
+.ttdt .itd-list{
+  overflow: hidden;
+}
+.ttdt .itd-list ul li:nth-child(1){
+  width: 30px;
+  height: 4px;
+  background: #4617AF;
+  border-radius: 2px;
+  margin: 0 auto;
+  margin-top: 85px;
+}
+.ttdt .itd-list ul li:nth-child(2){
+  width: 131px;
+height: 30px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin: 0 auto;
+margin-top: 19px;
+}
+.ttdt .itd-list ul li:nth-child(3){
+  width: 119px;
+height: 13px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+letter-spacing: 2px;
+font-weight: 400;
+color: #7B7E81;
+margin: 0 auto;
+margin-top: 19px;
+}
+.itd-spk{
+  position: relative;
+  overflow: hidden;
+  width: 1100px;
+height: 339px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(185,185,185,0.21);
+border-radius: 10px;
+margin: 0 auto;
+margin-top: 102px;
+}
+.itd-spk h4{
+  width: 114px;
+  height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 8px 11px 7px 8px;
+  background: #4517AF;
+  border-radius: 6px;
+  margin-top: 38px;
+  margin-left: 40px;
+}
+.itd-spk h2{
+  width: 447px;
+height: 55px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+margin-top: 54px;
+margin-left: 40px;
+}
+.itd-spk h3{
+  width: 440px;
+height: 35px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #464646;
+line-height: 21px;
+margin-top: 33px;
+margin-left: 40px;
+}
+.itd-spk p{
+  width: 81px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #4517AF;
+margin-top: 45px;
+margin-left: 380px;
+}
+.itd-spk p::after{
+  float: right;
+  content: '>';
+  width: 7px;
+height: 11px;
+color: #4517AF;
+}
+.itd-spk img{
+  position: absolute;
+  top: 23px;
+  right: 23px;
+}
+.ttdt .more p{
+  width: 92px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 28px;
+margin: 48px 914px 136px 914px;
+}
+.ttdt .more p::after{
+content: '>';
+float: right;
+  width: 8px;
+height: 13px;
+}
+.ttdt .bkgd{
+  overflow: hidden;
+  width: 1755px;
+  height: 263px;
+  margin: auto;
+  background: url(imgs/bkgd.png);
+}
+.ttdt .bkgd ul li:nth-child(1){
+  width: 30px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  margin-top: 33px;
+  margin-left: 861px;
+}
+.ttdt .bkgd ul li:nth-child(2){
+  width: 195px;
+  height: 31px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 19px;
+  margin-left: 777px;
+}
+.ttdt .bkgd ul li:nth-child(3){
+  width: 153px;
+  height: 17px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-top: 16px;
+  margin-left: 799px;
+}
+.ttdt .bkgd ul li:nth-child(4){
+  width: 83px;
+  height: 21px;
+  font-size: 20px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #4517AF;
+  line-height: 19px;
+  margin-top: 59px;
+  margin-left: 788px;
+  padding: 13px 48px 14px 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 13px 32px 0px rgba(69,23,175,0.23);
+  border-radius: 24px;
+}
+.footer{
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+height: 416px;
+background: #202328;
+margin-top: 79px;
+}
+.footer .box15 .p66 {
+  position: absolute;
+ width: 208px;
+ height: 35px;
+ top: 88px;
+ left: 361px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p67{
+  position: absolute;
+  width: 165px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 146px;
+left: 361px;
+}
+/* footer里的box15中的p标签全部设置为绝对定位,使其可以定位到box15的任意位置上 */
+.footer .box15 p{
+  position: absolute;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p68{
+  width: 224px;
+height: 16px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 172px;
+left: 361px;
+}
+/* footer里的box15中的p69,p70,p71,p72同时设置下列格式 */
+.footer .box15 .p69,.p70,.p71,.p72{
+width: 57px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p69{
+top: 92px;
+left: 675px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p70{
+top: 91px;
+left: 833px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p71{
+  top: 91px;
+  left: 991px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p72{
+  top: 91px;
+  left: 1147px;
+}
+/* footer里的box15中的p73,p74,p75,p76.p77,p78,p79,p80,p81同时设置下列格式 */
+.footer .box15 .p73,.p74,.p75,.p76,.p77,.p78,.p79,.p80,.p81{
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 10px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p73{
+  width: 72px;
+  height: 14px;
+top: 133px;
+left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p74{
+  width: 69px;
+  height: 14px;
+  top: 133px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p75{
+  width: 86px;
+  height: 14px;
+  top: 133px;
+  left: 990px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p76{
+  width: 57px;
+  height: 14px;
+  top: 133px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p77{
+  width: 116px;
+  height: 14px;
+  top: 157px;
+  left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p78{
+  width: 72px;
+  height: 14px;
+  top: 157px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p79{
+  width: 86px;
+  height: 14px;
+  top: 157px;
+  left: 991px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p80{
+  width: 57px;
+  height: 14px;
+  top: 157px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p81{
+  width: 57px;
+  height: 14px;
+  top: 180px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p82{
+  width: 677px;
+  height: 1px;
+  background: #464646;
+top: 266px;
+left: 623px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p83{
+width: 70px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 282px;
+left: 683px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p84{
+  width: 72px;
+  height: 14px;
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 14px;
+  top: 282px;
+  left: 769px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p85{
+  width: 43px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 887px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p86{
+  width: 86px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 977px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p87{
+  width: 129px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 1110px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p88{
+  width: 396px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 314px;
+left: 763px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p89{
+  width: 14px;
+height: 16px;
+  left: 725px;
+  bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p90{
+  width: 187px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+left: 747px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p91{
+  width: 14px;
+height: 16px;
+left: 964px;
+bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p92{
+  width: 212px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+right: 724px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p93{
+  width: 87px;
+  height: 87px;
+  top: 91px;
+  right: 476px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p94{
+  width: 86px;
+  height: 86px;
+  top: 91px;
+  right: 359px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p95{
+  width: 82px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 480px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p96{
+  width: 72px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 367px;
+}
+
+
+

@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+  float: left;
+}
+.bkgd{
+  overflow: hidden;
+  margin: auto;
+  width: 1917px;
+  height: 849px;
+  background: url(imgs/bkgd.png)no-repeat;
+}
+h2{
+  width: 664px;
+height: 49px;
+font-size: 50px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+margin-top: 225px;
+margin-left: 358px;
+text-align: center;
+line-height: 49px;
+}
+.solve {
+  /* overflow: hidden; */
+  width: 621px;
+  height: 44px;
+  margin-top: 54px;
+  margin-left: 360px;
+}
+.solve ul{
+  overflow: hidden;
+  width: 629px;
+  height: 47px;
+}
+.solve ul li:nth-child(1){
+  margin-top: 8px;
+}
+.solve ul li:nth-child(2){
+  width: 134px;
+  height: 21px;
+  font-size: 22px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+margin-left: 12px;
+line-height: 21px;
+margin-top: 12px;
+}
+.solve ul li:nth-child(3){
+  width: 124px;
+  height: 44px;
+  border: 2px solid #111111;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+.solve ul li:nth-child(3) img{
+  float: left;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+.solve ul li:nth-child(3) p{
+  float: left;
+  margin-top: 12px;
+  margin-left: 9px;
+}
+.solve ul li:nth-child(4){
+  width: 124px;
+  height: 44px;
+  border: 2px solid #111111;
+  border-radius: 10px;
+  margin-left: 22px;
+}
+.solve ul li:nth-child(4) img{
+  float: left;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+.solve ul li:nth-child(4) p{
+  float: left;
+  margin-top: 12px;
+  margin-left: 9px;
+}
+.solve ul li:nth-child(5){
+  width: 124px;
+  height: 44px;
+  border: 2px solid #111111;
+  border-radius: 10px;
+  margin-left: 22px;
+}
+.solve ul li:nth-child(5) img{
+  float: left;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+.solve ul li:nth-child(5) p{
+  float: left;
+  margin-top: 12px;
+  margin-left: 9px;
+}
+.shenqing{
+  width: 206px;
+height: 52px;
+background: #4517AF;
+box-shadow: 0px 13px 32px 0px rgba(69,23,175,0.23);
+border-radius: 26px;
+margin-top: 139px;
+margin-left: 358px;
+}
+.shenqing p{
+  width: 96px;
+height: 23px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #FFFFFF;
+line-height: 52px;
+margin-left: 55px;
+}
+.point{
+  width: 122px;
+  height: 8px;
+  margin-top: 247px;
+  margin-left: 897px;
+}
+.point ul{
+  overflow: hidden;
+  width: 146px;
+  height: 9px;
+}
+.point ul li{
+  width: 8px;
+height: 8px;
+background: #DBD7F6;
+border-radius: 4px;
+margin-right: 23px;
+}
+.point ul li:nth-child(2){
+  width: 30px;
+height: 8px;
+background: #4517AF;
+border-radius: 4px;
+}
+

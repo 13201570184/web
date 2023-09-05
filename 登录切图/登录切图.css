@@ -1,0 +1,350 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 所有li标签前面的小黑点取消 */
+li{
+  list-style: none;
+}
+/* 所有a链接标签的下划线取消 */
+a{
+  text-decoration: none;
+}
+.w{
+  width: 1920px;
+  margin: 0 auto;
+  /* background-color: mediumseagreen; */
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* 设置背景格式，防止外边距塌陷 */
+.bkgd{
+  overflow: hidden;
+  width: 1920px;
+height: 1080px;
+margin: auto;
+background-color: #f7f8fa;
+}
+/* 确定icon部分的位置 */
+.icon{
+margin-top: 76px;
+margin-left: 162px;
+}
+/* 确定主体内容content的位置格式边框格式以及底色，防止外边距塌陷 */
+.content{
+  position: relative;
+  overflow: hidden;
+  margin-top: 125px;
+  margin-left: 360px;
+  width: 1198px;
+  height: 639px;
+  background: #FFFFFF;
+  border: 2px solid #4517AF;
+  border-radius: 48px;
+}
+/* 确定content部分的logo部分的位置 */
+.content .logon{
+  float: left;
+  margin-top: 41px;
+  margin-left: 353px;
+}
+/* content部分的code部分确定位置 */
+.content .code{
+  float: left;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+/* denglu部分设置位置和大小，防止外边距塌陷 */
+.denglu{
+  float: left;
+  overflow: hidden;
+  width: 232px;
+  height: 38px;
+  margin-top: 72px;
+  margin-left: -425px;
+}
+/* denglu部分里的welcome部分设置大小和位置 */
+.denglu .welcome{
+  float: left;
+  width: 108px;
+height: 26px;
+font-size: 26px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #4517AF;
+line-height: 26px;
+margin-top: 0;
+}
+/* denglu部分里的phone内容设置大小和位置 */
+.denglu .phone{
+  float: left;
+  width: 90px;
+height: 21px;
+font-size: 22px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+margin-top: 4px;
+margin-left: 34px;
+line-height: 22px;
+}
+/* denglu部分里的line设置大小和位置 */
+.denglu .line{
+  float: right;
+  width: 55px;
+height: 3px;
+background: #4617AF;
+border-radius: 1px;
+margin-right: 152px;
+margin-top: 10px;
+}
+/* zhuce里的表格设置位置 */
+.zhuce ul{
+margin-top: 173px;
+margin-left: 103px;
+} 
+/* zhuce里的单元格设置大小位置和边框 */
+.zhuce ul li{
+  width: 425px;
+  height: 47px;
+  border: 1px solid #787878;
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+/* zhuce里的单元格里的图片设置位置 */
+.zhuce ul li img{
+  float: left;
+  margin-top: 12px;
+  margin-left: 26px;
+}
+/* zhuce里的单元格里的p标签里的内容设置格式 */
+.zhuce ul li p{
+  float: left;
+  margin-top: 14px;
+  margin-left: 20px;
+  font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 300;
+color: #C1C1C1;
+line-height: 18px;
+}
+/* button里的表格设置大小和位置 */
+.button ul{
+  width: 424px;
+  height: 16px;
+  margin-top: 73px;
+  margin-left: 106px;
+}
+/* button里表格里的所有单元格设置向左浮动 */
+.button ul li{
+  float: left;
+}
+/* button里的各个单元格设置不同格式 */
+.button ul li:nth-child(1){
+  width: 15px;
+  height: 15px;
+  border: 1px solid #4517AF;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+.button ul li:nth-child(2){
+  width: 49px;
+  height: 16px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #1F2329;
+  line-height: 19px;
+  margin-right: 190px;
+}
+.button ul li:nth-child(3){
+  width: 64px;
+  height: 16px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  color: #4517AF;
+  line-height: 19px;
+  margin-right: 12px;
+}
+.button ul li:nth-child(4){
+  width: 1px;
+  height: 16px;
+  background: #1F2329;
+  border: 1px solid #C2C2C2;
+  margin-right: 13px;
+}
+.button ul li:nth-child(5){
+  width: 65px;
+  height: 16px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 300;
+  color: #7B7E81;
+  line-height: 19px;
+}
+/* load部分设置位置底色位置和边框样式 */
+.load{
+  overflow: hidden;
+  width: 425px;
+height: 51px;
+background: #4517AF;
+box-shadow: 0px 14px 18px 0px rgba(69,23,175,0.15);
+border-radius: 26px;
+margin-top: 72px;
+margin-left: 100px;
+}
+/* load部分里的p标签里的内容设置格式 */
+.load p{
+  width: 49px;
+  height: 22px;
+  font-size: 24px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 22px;
+  margin-top: 14px;
+  margin-left: 188px;
+}
+/* problem设置向左浮动，设置字体样式大小，行高和位置 */
+.problem{
+  float: left;
+  width: 155px;
+height: 17px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #C2C2C2;
+line-height: 16px;
+margin-top: 59px;
+margin-left: 235px;
+}
+/* problem后面设置伪元素，插入图片内容，确定位置 */
+.problem::after{
+  content: url(imgs/next.png);
+  margin-left: 11px;
+}
+/* separate设置为绝对定位可以定位到相对定位的任意位置，设置大小和底色 */
+.separate{
+  position: absolute;
+  width: 1px;
+height: 487px;
+background: #E5E5E5;
+top: 79px;
+left: 599px;
+}
+/* h3设置为绝对定位，定位到相对定位的任意位置 */
+h3{
+  position: absolute;
+  width: 271px;
+height: 22px;
+font-size: 22px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 26px;
+top: 74px;
+left: 756px;
+}
+/* h4设置为绝对定位，定位到相对定位的任意位置 */
+h4{
+  position: absolute;
+  width: 394px;
+height: 42px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 300;
+color: #7B7E81;
+line-height: 26px;
+top: 133px;
+left: 691px;
+}
+/* png里的全部img图片标签全部设置为绝对定位，下列所有标签都是运用绝对定位在相对定位里指定位置 */
+.png img{
+  position: absolute;
+}
+.qp{
+  top: 215px;
+  left: 673px;
+}
+.kdy{
+  top: 215px;
+  left: 793px;
+}
+.oly{
+  top: 215px;
+  left: 916px;
+}
+.hln{
+  top: 215px;
+  left: 1026px;
+}
+.hs{
+  top: 301px;
+  left: 673px;
+}
+.bql{
+  top: 301px;
+  left: 793px;
+}
+.xhsd{
+  top: 301px;
+  left: 916px;
+}
+.yyz{
+  top: 301px;
+  left: 1026px;
+}
+.bcw{
+  top: 388px;
+  left: 673px;
+}
+.xpp{
+  top: 388px;
+  left: 793px;
+}
+.qq{
+  top: 388px;
+  left: 916px;
+}
+.yl{
+  top: 388px;
+  left: 1026px;
+}
+.wd{
+  top: 477px;
+  left: 673px;
+}
+.lyl{
+  top: 477px;
+  left: 793px;
+}
+.jsb{
+  top: 477px;
+  left: 916px;
+}
+.ynby{
+  top: 477px;
+  left: 1026px;
+}
+/* more部分内容向左浮动，设置大小和位置字体颜色等 */
+.more{
+  float: left;
+  width: 90px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #C2C2C2;
+line-height: 19px;
+margin-top: 58px;
+margin-left: 460px;
+}
+/* more部分内容后面加为元素,设置其位置 */
+.more::after{
+  content: url(imgs/next.png);
+  margin-left: 10px;
+}

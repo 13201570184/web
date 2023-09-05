@@ -1,0 +1,642 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 所有li标签前面的小黑点取消 */
+li{
+  list-style: none;
+}
+/* 所有a链接标签的下划线取消 */
+a{
+  text-decoration: none;
+}
+.w{
+  width: 1920px;
+  margin: 0 auto;
+  /* background-color: mediumseagreen; */
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+.nav{
+  overflow: hidden;
+  height: 102px;
+  background: #FFFFFF;
+}
+.navp{
+  margin-top: 34px;
+  margin-left: 240px;
+}
+.navt ul{
+  margin-top: -34px;
+  margin-left: 755px;
+}
+.navt ul li{
+  float: left;
+  margin-right: 44px;
+  width: 65px;
+font-family: OPPOSans;
+font-weight: normal;
+color: #1F2329;
+}
+.navt ul li:nth-child(6){
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #4517AF;
+}
+.logon{
+  float: left;
+  width: 83px;
+  height: 56px;
+  border: 1px solid #4517AF;
+  border-radius: 11px;
+  text-align: center;
+  margin-left: -12px;
+  margin-top: -20px;
+  line-height: 56px;
+}
+.apply{
+  float: left;
+  width: 122px;
+height: 56px;
+background: #4517AF;
+border-radius: 11px;
+text-align: center;
+line-height: 56px;
+margin-top: -20px;
+margin-left: 22px;
+letter-spacing: 4px;
+font-size: 16px;
+font-weight: bold;
+color: #FFFFFF;
+}
+.header{
+  overflow: hidden;
+}
+.header-hd{
+  overflow: hidden;
+  width: 1920px;
+height: 460px;
+background: #1F2329;
+opacity: 0.6;
+}
+.header-hd h2{
+  width: 815px;
+height: 47px;
+font-size: 50px;
+font-family: Source Han Sans CN;
+font-weight: 300;
+color: #FFFFFF;
+line-height: 70px;
+margin-top: 196px;
+margin-left: 552px;
+}
+.header-bd{
+  overflow: hidden;
+  height: 1635px;
+  background: #f7f8fa;
+}
+.header-bd .point{
+  width: 55px;
+  height: 27px;
+  margin-bottom: 36px;
+}
+.header-bd .point ul{
+  width: 69px;
+  height: 33px;
+  margin-top: 75px;
+  margin-left: 1771px;
+}
+.header-bd .point ul li{
+  float: left;
+  width: 9px;
+  height: 9px;
+  background: #D3D3D3;
+border-radius: 50%;
+margin-left: 14px;
+margin-bottom: 8px;
+}
+.header-bd .speak{
+  overflow: hidden;
+  width: 1100px;
+height: 339px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(185,185,185,0.21);
+border-radius: 10px;
+margin-left: 410px;
+margin-bottom: 78px;
+}
+.header-bd .speak h4{
+  width: 114px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #FFFFFF;
+padding: 8px 11px 7px 8px;
+background: #4517AF;
+border-radius: 6px;
+margin-top: 38px;
+margin-left: 40px;
+line-height: 14px;
+}
+.header-bd .speak h2{
+  width: 457px;
+height: 55px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+margin-top: 47px;
+margin-left: 40px;
+}
+.header-bd .speak h3{
+  width: 440px;
+height: 35px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #464646;
+line-height: 21px;
+margin-top: 33px;
+margin-left: 40px;
+}
+.header-bd .speak p{
+  width: 88px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #4517AF;
+margin-top: 45px;
+margin-left: 368px;
+}
+.header-bd .speak p::after{
+  content: '>';
+  width: 7px;
+height: 11px;
+margin-left: 10px;
+}
+.header-bd .speak img{
+  float: right;
+  margin-top: -275px;
+  margin-right: 23px;
+}
+.header-bd .pages ul li{
+  float: left;
+  font-size: 18px;
+}
+.header-bd .pages ul li:nth-child(1){
+  width: 55px;
+  height: 17px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #1F2329;
+  margin-left: 709px;
+  margin-top: 35px;
+}
+.header-bd .pages ul li:nth-child(2){
+  width: 8px;
+height: 14px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #FFFFFF;
+padding: 13px 15px 13px 15px;
+background: #4517AF;
+border-radius: 10px;
+margin-top: 24px;
+margin-left: 46px;
+line-height: 14px;
+}
+.header-bd .pages ul li:nth-child(3){
+  width: 9px;
+height: 14px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+padding: 13px 15px 13px 15px;
+border: 1px solid #1F2329;
+border-radius: 10px;
+margin-top: 24px;
+margin-left: 18px;
+line-height: 14px;
+}
+.header-bd .pages ul li:nth-child(4){
+  width: 9px;
+height: 14px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+padding: 13px 15px 13px 15px;
+border: 1px solid #1F2329;
+border-radius: 10px;
+margin-top: 24px;
+margin-left: 18px;
+line-height: 14px;
+}
+.header-bd .pages ul li:nth-child(5){
+  width: 10px;
+height: 14px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+padding: 13px 15px 13px 15px;
+border: 1px solid #1F2329;
+border-radius: 10px;
+margin-top: 24px;
+margin-left: 18px;
+line-height: 14px;
+}
+.header-bd .pages ul li:nth-child(6){
+  font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 28px;
+margin-left: 18px;
+}
+.header-bd .pages ul li:nth-child(7){
+  width: 19px;
+height: 14px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+padding: 13px 15px 13px 15px;
+border: 1px solid #1F2329;
+border-radius: 10px;
+line-height: 14px;
+margin-top: 24px;
+margin-left: 18px;
+}
+.header-bd .pages ul li:nth-child(8){
+  width: 55px;
+height: 16px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+margin-left: 48px;
+margin-top: 35px;
+}
+.bkgd{
+  overflow: hidden;
+  width: 1755px;
+  height: 263px;
+  margin: auto;
+  background: url(imgs/bkgd.png);
+}
+ .bkgd ul li:nth-child(1){
+  width: 30px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  margin-top: 33px;
+  margin-left: 861px;
+}
+ .bkgd ul li:nth-child(2){
+  width: 195px;
+  height: 31px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 19px;
+  margin-left: 777px;
+}
+ .bkgd ul li:nth-child(3){
+  width: 153px;
+  height: 17px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-top: 16px;
+  margin-left: 799px;
+}
+ .bkgd ul li:nth-child(4){
+  width: 83px;
+  height: 21px;
+  font-size: 20px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #4517AF;
+  line-height: 19px;
+  margin-top: 59px;
+  margin-left: 788px;
+  padding: 13px 48px 14px 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 13px 32px 0px rgba(69,23,175,0.23);
+  border-radius: 24px;
+}
+.footer{
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+height: 416px;
+background: #202328;
+margin-top: 79px;
+}
+.footer .box15 .p66 {
+  position: absolute;
+ width: 208px;
+ height: 35px;
+ top: 88px;
+ left: 361px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p67{
+  position: absolute;
+  width: 165px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 146px;
+left: 361px;
+}
+/* footer里的box15中的p标签全部设置为绝对定位,使其可以定位到box15的任意位置上 */
+.footer .box15 p{
+  position: absolute;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p68{
+  width: 224px;
+height: 16px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 172px;
+left: 361px;
+}
+/* footer里的box15中的p69,p70,p71,p72同时设置下列格式 */
+.footer .box15 .p69,.p70,.p71,.p72{
+width: 57px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p69{
+top: 92px;
+left: 675px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p70{
+top: 91px;
+left: 833px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p71{
+  top: 91px;
+  left: 991px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p72{
+  top: 91px;
+  left: 1147px;
+}
+/* footer里的box15中的p73,p74,p75,p76.p77,p78,p79,p80,p81同时设置下列格式 */
+.footer .box15 .p73,.p74,.p75,.p76,.p77,.p78,.p79,.p80,.p81{
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 10px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p73{
+  width: 72px;
+  height: 14px;
+top: 133px;
+left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p74{
+  width: 69px;
+  height: 14px;
+  top: 133px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p75{
+  width: 86px;
+  height: 14px;
+  top: 133px;
+  left: 990px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p76{
+  width: 57px;
+  height: 14px;
+  top: 133px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p77{
+  width: 116px;
+  height: 14px;
+  top: 157px;
+  left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p78{
+  width: 72px;
+  height: 14px;
+  top: 157px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p79{
+  width: 86px;
+  height: 14px;
+  top: 157px;
+  left: 991px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p80{
+  width: 57px;
+  height: 14px;
+  top: 157px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p81{
+  width: 57px;
+  height: 14px;
+  top: 180px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p82{
+  width: 677px;
+  height: 1px;
+  background: #464646;
+top: 266px;
+left: 623px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p83{
+width: 70px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 282px;
+left: 683px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p84{
+  width: 72px;
+  height: 14px;
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 14px;
+  top: 282px;
+  left: 769px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p85{
+  width: 43px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 887px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p86{
+  width: 86px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 977px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p87{
+  width: 129px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 1110px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p88{
+  width: 396px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 314px;
+left: 763px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p89{
+  width: 14px;
+height: 16px;
+  left: 725px;
+  bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p90{
+  width: 187px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+left: 747px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p91{
+  width: 14px;
+height: 16px;
+left: 964px;
+bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p92{
+  width: 212px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+right: 724px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p93{
+  width: 87px;
+  height: 87px;
+  top: 91px;
+  right: 476px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p94{
+  width: 86px;
+  height: 86px;
+  top: 91px;
+  right: 359px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p95{
+  width: 82px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 480px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p96{
+  width: 72px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 367px;
+}
+
+
+
+
+
+
+
+

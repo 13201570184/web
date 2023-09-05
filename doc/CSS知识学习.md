@@ -825,3 +825,257 @@
 ### before和after必须有content属性
 ### before在父元素内容的前面创建元素，after在父元素内容的后面插入元素
 ### 伪元素选择器和标签选择器一样，权重为1
+品优购项目规划
+网站favicon图标
+favicon.ico一般用于作为缩略的网站标志，它显示在浏览器的地址栏或者标签上
+目前主要的浏览器都支持favicon.ico图标
+一、制作favicon图标
+1.把品优购图标切成png图片
+2.把png图片转换为ico图标，这需要借助于第三方转换网站，例如比特虫：http://www.bitbug.net/
+二、favicon图标放到网站根目录下
+三、HTML页面引入favicon图标
+语法:<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+网站TDK三大标签SEO优化
+SEO(Search Engine Optimization)汉译为搜索引擎优化，是一种利用搜索引擎的规则提高网站在有关搜索引擎内自然排名的方式
+SEO的目的是对网站进行深度的优化，从而帮助网站获取免费的流量，进而在搜索引擎上提升网站的排名，提高网站的知名度
+页面必须有三个标签用来符合SEO优化
+三大标签:title,description,keyword
+title网站标题
+title具有不可替代性，是我们内页的第一个重要标签，是搜索引擎了解网页的入口和对网页主题归属的最佳判断点
+建议:网站名(产品名)-网站的介绍(尽量不要超过30个汉字)
+description网站说明
+简要说明我们网站主要是做什么的
+我们提倡，description作为网站的总体业务和主题概况，多采用"我们是…"、"我们提供…"、"电话:010…"之类的语句
+keywords关键字
+keywords是页面关键词，是搜索引擎大的关注点之一
+keywords最好限制为6~8个关键词，关键词之间用英文逗号隔开，采用关键词1,关键词2的形式
+常见模块类名命名
+以下是我们约定的命名模块，同学们可以直接使用以下类名即可
+|名称|说明|
+|:-|:-|
+|快捷导航栏|shortcut|
+|头部|header|
+|标志|logo|
+|购物车|shopcar|
+|搜索|search|
+|热点词|hotwords|
+|导航|nav|
+|导航左侧|drodown包含.dd .dt|
+|导航右侧|navitems|
+|页面底部|footer|
+|页面底部服务模块|mod_service|
+|页面底部帮助模块|mod_help|
+|页面底部版权模块|mod_copyright|
+LOGO SEO优化
+1.logo里面首先放一个h1标签,目的是为了提权,告诉搜索引擎,这个地方很重要
+2.h1里面再放一个链接,可以返回首页的,把logo的背景图片给链接即可
+3.为了搜索引擎收录我们,我们链接里面要放文字(网站名称),但是文字不要显示出来
+方法1:text-indent移到盒子外面(text-indent:-9999px),然后overflow:hidden,淘宝的做法
+方法2:直接给font-size:0;就看不到文字了,京东的做法
+4.最后给链接一个title属性,这样鼠标放到logo上就可以看到提示文字了
+header制作
+1.header盒子必须要有高度
+2.1号盒子是logo标志定位
+3.2号盒子是search探索模块定位
+4.3号盒子是hotwords热词模块定位
+5.4号盒子是shopcar购物车模块
+count统计部分用绝对定位做
+count统计部分不要给宽度,因为可能买的件数比较多,让件数撑开就好了,给一个高度
+一定注意左下角不是圆角,其余三个是圆角 写法: border-radius:7px 7px 7px 0;
+footer底部制作
+footer页面底部盒子通栏给一个高度和灰色的背景
+footer里面有一个大的版心
+版心里面包含1号盒子,mod_service是服务模块,mod是模块的意思
+版心里面包含2号盒子,mod_help是帮助模块
+版心里面包含3号盒子,mod_copyright是版权模块
+main主体模块制作
+以前书写的就是模块化中的公共部分
+main主体模块是index里面专有的,注意需要新的样式文件index.css
+main盒子宽度为980像素,位置距离左边220px(margin-left),给高度就不用清除浮动
+main里面包含左侧盒子,左浮动,focus焦点图模块
+main里面包含右侧盒子,右浮动,newsflash新闻快报模块 
+newsflash新闻快报模块
+1号盒子为news新闻模块 高度为165px
+2号盒子为lifeservice生活服务模块 高度为209px
+3号盒子为bargain特价商品
+news新闻模块
+注意:这里我们分为上下两个模块,但是两个模块都用div
+1号盒子news-hd新闻头部模块,给一个高度和下边框
+2号盒子news-bd新闻主体部分,里面包含ul和li还要链接
+推荐模块制作
+大盒子recom 推荐模块 recommend
+里面包含2个盒子,浮动即可
+1号盒子recom-hd
+2号盒子recom-bd,注意里面的小竖线
+
+
+
+
+### CSS3中可以通过box-sizing来指定盒模型，有2个值：即可指定为content-box、border-box,这样我们计算盒子大小的方式就发生了改变
+### 可以分为两种情况
+### 1.box-sizing:content-box盒子大小为width+padding+border(以前默认的)
+### 2.box-sizing:content-box盒子大小为width
+### 如果盒子模型我们改变为了box-sizing:border-box，那padding和border就不会撑大盒子(前提padding和border不会超过width宽度)
+### CSS3其他特性(了解)
+### CSS3滤镜filter:
+### filter CSS属性将模糊或颜色偏移等图形效果应用于元素
+### filter: 函数(); 例如: filter:blur(5px); blur模糊处理 数值越大越模糊
+### CSS3calc函数:
+### calc()此CSS函数让你在声明CSS属性值时执行一些计算
+### 语法 width:calc(100%-80px);
+### 括号里面可以使用+-*/来进行计算
+### CSS3过渡(重点)
+### 过渡(transition)是CSS3中具有颠覆性的特性之一，我们可以在不使用Flash动画或JavaScript的情况下，当元素从一种样式变换为另一种样式时为元素添加效果
+### 过渡动画：是从一种状态渐渐过渡到另外一个状态
+### 我们现在经常和:hover一起搭配使用
+### 语法transition:要过渡的属性 花费时间 运动曲线 何时开始；
+### 1.属性：想要变化的CSS属性，宽度高度 背景颜色 内外边距都可以。如果想要所有的属性都变化过渡，写一个all就可以
+### 2.花费时间：单位是秒(必须写单位)，比如0.5s
+### 3.运动曲线：默认是ease(可以省略)
+### 4.何时开始：单位是秒(必须写单位)可以设置延迟触发时间 默认是0s(可以省略)
+### Web服务器
+### 什么是Web服务器
+### 服务器(我们也会称之为主机)是提供计算服务的设备，它也是一台计算机。在网络环境下，根据服务器提供的服务类型不同，服务器又分为文件服务器、数据库服务器、应用程序服务器、Web服务器等
+### Web服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以向浏览器等Web客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载
+### 根据服务器在网络中所在的位置不同，又可以分为本地服务器和远程服务器
+### 将自己的网站上传到远程服务器
+### 这里给大家推荐一个免费的远程服务器(免费空间)http://free.3v.do/
+### 1.去免费空间网站注册账号
+### 2.记录下主机名、用户名、密码、域名
+### 3.利用cutftp软件 上传网站到远程服务器
+### 4.在浏览器中输入域名，即可访问我们的品优购网站了
+### 2D转换
+### 转换(transform)是CSS3中具有颠覆性的特征之一，可以实现元素的位移、旋转、缩放等效果
+### 移动:translate
+### 旋转:rotate
+### 缩放:scale
+### 2D转换之移动translate
+### 2D移动是2D转换里面的一种功能，可以改变元素在页面中的位置，类似定位
+### 语法 transform:translate(X,Y);
+###     transform:translateX(n);		
+###     transform:translateY(n);
+### 重点
+### 定义2D转换中的移动，沿着X和Y轴移动元素
+### translate最大的优点：不会影响到其他元素的位置
+### translate中的百分比单位是相对于自身元素的translate:(50%,50%);
+### 对行内标签没有效果
+### 2D转换这旋转rotate
+### 2D旋转指的是让元素在2维平面内顺时针旋转或者逆时针旋转
+### 语法 transform:rotate(度数)
+### 重点
+### rotat里面跟度数，单位是deg比如 rotate(45deg)
+### 角度为正时，顺时针，负时，为逆时针
+### 默认旋转的中心点是元素的中心点
+### 2D转换中心点transform-origin
+### 我们可以设置元素转换的中心点
+### 语法 transform-origin:x y;
+### 重点
+### 注意后面的参数x和y用空格隔开
+### x y 默认转换的中心点是元素的中心点(50% 50%)
+### 还可以给x y设置像素或者方位名词(top bottom left right center)
+### 2D转换之缩放scale
+### 缩放，顾名思义，可以放大和缩小。只要给元素添加上了这个属性就能控制它放大还是缩小
+### 语法 transform:scale(x,y);
+### 注意
+### 注意其中的x和y用逗号分隔
+### transform:scale(x,y):设置宽度，和高度的放大或缩小倍数
+### transform:scale(2):只写一个参数，第二个参数则和第一个参数一样，相当于scale(2,2)
+### sacle缩放最大的优势:可以设置转换中心点缩放，默认以中心点缩放的，而且不影响其他盒子
+### 2D转换综合写法
+### 注意:
+### 1.同时使用多个转换，其格式为: transform:translate() rotate() scale()等
+### 2.其顺序会影响转换的效果(先旋转会改变坐标轴方向)
+### 3.当我们同时有位移和其他属性时，记得要将位移放到最前面
+### CSS3动画
+### 动画的基本使用
+### 制作动画分为两步：
+### 1.先定义动画
+### 2.再使用（调用）动画
+### 用keyframes定义动画(类似定义类选择器)
+### 语法  @keyframes动画名称{
+###   0%{
+###       transform:translate(x,y)
+###  }
+### 100%{
+###    transform:translate(x,y)
+###  }
+### }
+### 动画序列	
+### 0%是动画的开始，100%是动画的完成。这样的规划就是动画序列
+### 在@keyframes中规定某项CSS样式，就能创建由当前样式逐渐改为新样式的动画效果
+### 动画是使元素从一种样式逐渐变化为另一种样式的效果。您可以改变任意多的样式任意多的次数
+### 请用百分比来规定变化发生的时间，或用关键词"from"和"to"，等同于0%和100%
+### 元素使用动画
+###  div{
+###   width:200px;
+###   height:200px;
+###   background-color: aqua;
+###   margin: 100px auto;
+###   animation-name: 动画名称；
+###    animation-duration: 持续时间；
+### }
+### 动画常用属性
+|属性|描述|
+|:-|:-|
+|@keyframes|规定动画|
+|animation|所有动画属性的简写属性，除了animation-play-state属性|
+|animation-name|规定@keyframes动画的名称(必须的)|
+|animation-duration|规定动画完成一个周期所花费的秒或毫秒，默认是0(必须的)|
+|animation-timing-function|规定动画的速度曲线，默认是"ease"|
+|animation-delay|规定动画何时开始，默认是0|
+|animation-iteration-count|规定动画被播放的次数，默认是1，还有infinite(无限)|
+|animation-direction|规定动画是否在下一周期逆向播放，默认是"normal"，alternate逆播放|
+|animation-play-state|规定动画是否正在运行或暂停。默认是"running"，还有"pause"|
+|animation-fill-mode|规定动画结束后状态，保持forwards 到起始backwards|
+### 动画简写属性
+### animation:动画名称 持续时间 运动曲线 何时开始 播放次数 是否反方向 动画起始或者结束的状态
+### 例如 animation: mv 5s linear 2s infinite alternate;
+### 简写属性里面不包含animation-play-state
+### 暂停动画：animation-play-state：puased;经常和鼠标经过等其他配合使用
+### 想要动画走回来，而不是直接跳回来：animation-direction：alternate
+### 盒子动画结束后，停在结束位置：animation-fill-mode：forwards
+### 速度曲线细节
+### animation-timing-function：规定动画的速度曲线，默认是"ease"
+|值|描述|
+|:-|:-|
+|linear|动画从头到尾的速度是相同的。匀速|
+|ease|默认，动画以低速开始，然后加快，在结束前变慢|
+|ease-in|动画以低速开始|
+|ease-out|动画以低速结束|
+|ease-in-out|动画以低速开始和结束|
+|steps()|指定了时间函数中的间隔数量(步长)|
+### 3D转换
+### 三维坐标系
+### 三维坐标系其实就是指立体空间，立体空间是由3个轴共同组成的
+### x轴：水平向右 注意：x右边是正值，左边是负值
+### y轴：垂直向下 注意：y下面是正值，上面是负值
+### z轴：垂直屏幕 注意：往外面是正值，往里面是负值
+### 3D移动translate3d
+### 3D移动在2D移动的基础上多加了一个可以移动的方向，就是z轴方向
+### transform:translateX(100px):仅仅是在x轴上移动
+### transform:translateY(100px):仅仅是在Y上移动
+### transform:translateZ(100px):仅仅是在Z上移动注意:translateZ(一般单位为px)
+### transform:translate3d(x,y,z):其中x,y,z分别指要移动的轴的方向的距离
+### 透视perspective
+### 在2D平面产生近大远小视觉立体，但是只是效果二维的
+### 如果想要在网页产生3D效果需要透视(理解成3D物体投影在2D平面内)
+### 模拟人类的视觉位置，可认为安排一只眼睛去看
+### 透视我们也称为视距：视距就是人的眼睛到屏幕的距离
+### 距离视觉点越近的在电脑平面成像越大，越远成像越小
+### 透视的单位是像素
+### 透视写在被观察元素的父盒子上面的
+### d：就是视距，视距就是一个距离人的眼睛到屏幕的距离
+### z：就是z轴，物体距离屏幕的距离，z轴越大(正值)我们看到的物体就越大
+### translateZ
+### transform:translateZ(100px):仅仅是在Z轴上移动。有了透视，就能看到translateZ引起的变化了
+### 3D旋转rotate3d
+### 3D旋转指可以让元素在三维平面内沿着x轴，y轴，z轴或者自定义轴进行旋转
+### 语法：transform:rotateX(45deg):沿着x轴正方向旋转45度
+### transform:rotateY(45deg):沿着y轴正方向旋转45度
+### transform:rotateZ(45deg):沿着z轴正方向旋转45度
+### transform:rotate3d(x,y,z,deg):沿着自定义轴旋转 deg为角度
+### 3D呈现transform-style(重要)
+### 控制子元素是否开启三维立体环境
+### transform-style:flat子元素不开启3d立体空间 默认的
+### transform-style:preserve-3d;子元素开启立体空间
+### 代码写给父级，但是影响的是子盒子

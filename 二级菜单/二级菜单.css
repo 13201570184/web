@@ -1,0 +1,281 @@
+/* 整片内容设置为内外边距为0 */
+*{
+  margin: 0;
+  padding: 0;
+}
+/* 所有单元格li前面的黑点全部取消 */
+li{
+  list-style: none;
+}
+/* bkgd部分设置防止外边距塌陷,设置宽度和背景颜色 */
+.bkgd{
+  overflow: hidden;
+  margin: auto;
+  width: 2000px;
+height: 500px;
+background-color: lightpink;
+}
+/* introd部分设置防止外边距塌陷,设置大小和位置 */
+.introduce{
+  overflow: hidden;
+  width: 542px;
+  height: 292px;
+  margin-top: 78px;
+  margin-left: 105px;
+}
+/* yunying部分设置左浮动,设置大小和背景颜色,盒子阴影以及边框格式 */
+.yunying{
+  float: left;
+  width: 196px;
+height: 122px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(64,64,64,0.2);
+border-radius: 10px;
+}
+/* us部分设置左浮动,设置大小背景颜色边框样式和位置 */
+.us{
+  float: left;
+  width: 150px;
+height: 106px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(64,64,64,0.2);
+border-radius: 10px;
+margin-top: 8px;
+margin-left: 196px;
+margin-bottom: 9px;
+}
+/* yunying部分里的表格里的各个单元格设置不同格式 */
+.yunying ul li:nth-child(1){
+  width: 150px;
+  height: 25px;
+  margin-top: 27px;
+  margin-left: 21px;
+}
+/* yunying部分里的表格里的各个单元格里的img图片设置左浮动 */
+.yunying ul li:nth-child(1) img{
+  float: left;
+}
+/* yunying部分里的表格里的各个单元格里的p标签设置不同格式 */
+.yunying ul li:nth-child(1) p{
+  float: left;
+  width: 110px;
+  height: 19px;
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #4D00B6;
+  line-height: 18px;
+margin-top: 3px;
+margin-left: 14px;
+}
+.yunying ul li:nth-child(2){
+  width: 160px;
+height: 1px;
+border: 1px solid #CCCCCC;
+margin-top: 9px;
+margin-left: 17px;
+}
+.yunying ul li:nth-child(3){
+  width: 150px;
+  height: 25px;
+  margin-top: 12px;
+  margin-left: 21px;
+}
+.yunying ul li:nth-child(3) img{
+  float: left;
+}
+.yunying ul li:nth-child(3) p{
+  float: left;
+  width: 110px;
+  height: 18px;
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #1E232A;
+  line-height: 18px;
+margin-top: 3px;
+margin-left: 14px;
+}
+/* us部分里的表格里的各个单元格设置不同格式 */
+.us ul li:nth-child(1){
+  width: 103px;
+  height: 20px;
+  margin-top: 21px;
+  margin-left: 21px;
+}
+/* us部分里的表格里的各个单元格里的img图片设置不同格式 */
+.us ul li:nth-child(1) img{
+  float: left;
+}
+/* us部分里的表格里的各个单元格里的p标签设置不同格式 */
+.us ul li:nth-child(1) p{
+  float: left;
+  width: 73px;
+height: 19px;
+font-size: 18px;
+font-family: OPPOSans;
+font-weight: normal;
+color: #4D00B6;
+line-height: 12px;
+margin-left: 10px;
+margin-top: 3px;
+}
+.us ul li:nth-child(2){
+  width: 115px;
+height: 1px;
+border: 1px solid #CCCCCC;
+margin-top: 12px;
+margin-left: 19px;
+}
+.us ul li:nth-child(3){
+  width: 103px;
+  height: 20px;
+  margin-top: 14px;
+  margin-left: 21px;
+}
+.us ul li:nth-child(3) img{
+  float: left;
+}
+.us ul li:nth-child(3) p{
+  float: left;
+  width: 73px;
+  height: 18px;
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #1E232A;
+  line-height: 12px;
+margin-left: 10px;
+margin-top: 1px;
+}
+/* 在下方yunying1部分设置左浮动,设置大小和位置,设置背景颜色边框格式和盒子阴影 */
+.yunying1{
+  float: left;
+  width: 196px;
+height: 122px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(64,64,64,0.2);
+border-radius: 10px;
+margin-top: 48px;
+}
+/* 在下方的us1部分设置左浮动,设置大小和位置,设置背景颜色边框格式和盒子阴影 */
+.us1{
+  float: left;
+  width: 150px;
+height: 106px;
+background: #FFFFFF;
+box-shadow: 0px 0px 18px 0px rgba(64,64,64,0.2);
+border-radius: 10px;
+margin-top: 48px;
+margin-left: 196px;
+}
+/* 下方yunying1部分里的表格里的各个单元格设置不同的格式 */
+.yunying1 ul li:nth-child(1){
+  width: 150px;
+  height: 25px;
+  margin-top: 27px;
+  margin-left: 21px;
+}
+/* 下方的yunying1部分里的表格里的各个单元格里的img图片设置不同格式 */
+.yunying1 ul li:nth-child(1) img{
+  float: left;
+}
+/* 在下方的yunying1部分里的表格里的各个单元格里的p标签内容设置不同格式 */
+.yunying1 ul li:nth-child(1) p{
+  float: left;
+  width: 110px;
+  height: 19px;
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #1E2329;
+  line-height: 12px;
+margin-top: 3px;
+margin-left: 14px;
+}
+.yunying1 ul li:nth-child(2){
+  width: 160px;
+height: 1px;
+border: 1px solid #CCCCCC;
+margin-top: 9px;
+margin-left: 17px;
+}
+.yunying1 ul li:nth-child(3){
+  width: 150px;
+  height: 25px;
+  margin-top: 12px;
+  margin-left: 21px;
+}
+.yunying1 ul li:nth-child(3) img{
+  float: left;
+}
+.yunying1 ul li:nth-child(3) p{
+  float: left;
+  width: 110px;
+  height: 18px;
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #6420C0;
+  line-height: 12px;
+margin-top: 3px;
+margin-left: 14px;
+}
+.us1 ul li:nth-child(1){
+  width: 103px;
+  height: 20px;
+  margin-top: 21px;
+  margin-left: 21px;
+}
+.us1 ul li:nth-child(1) img{
+  float: left;
+}
+.us1 ul li:nth-child(1) p{
+  float: left;
+  width: 73px;
+  height: 19px;
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #1E2329;
+  line-height: 12px;
+margin-left: 10px;
+margin-top: 3px;
+}
+.us1 ul li:nth-child(2){
+  width: 115px;
+height: 1px;
+border: 1px solid #CCCCCC;
+margin-top: 12px;
+margin-left: 19px;
+}
+.us1 ul li:nth-child(3){
+  width: 103px;
+  height: 20px;
+  margin-top: 14px;
+  margin-left: 21px;
+}
+.us1 ul li:nth-child(3) img{
+  float: left;
+}
+.us1 ul li:nth-child(3) p{
+  float: left;
+  width: 73px;
+  height: 18px;
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #6420C0;
+  line-height: 12px;
+margin-left: 10px;
+margin-top: 1px;
+}
+
+
+
+
+
+
+
+
+

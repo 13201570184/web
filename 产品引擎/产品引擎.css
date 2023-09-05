@@ -1,0 +1,676 @@
+/* 整篇内容内外边距为0 */
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 所有li标签前面的小黑点取消 */
+li{
+  list-style: none;
+}
+/* 所有a链接标签的下划线取消 */
+a{
+  text-decoration: none;
+}
+/* 整篇内容的宽度设置为1920像素 */
+.w{
+  width: 1920px;
+  margin: 0 auto;
+}
+/* 头部部分内容格式 */
+.navp{
+  overflow: hidden;
+  float: left;
+  height: 104px;
+  background-color: #fdfeff;
+}
+/* 设置nav部分的图片位置 */
+.navp img{
+  margin: 36px 272px 25px 261px;
+}
+/* 设置导航栏nav里的navt部分的格式 */
+.nav .navt{
+  height: 104px;
+  background-color: #fdfeff;
+}
+/* navt部分里的每个单元格向左浮动，设置统一格式 */
+.navt ul li{
+  float: left;
+  line-height: 104px;
+  font-size: 16px;
+  padding: 0 22px;
+}
+/* navt部分的个别单元格设置不同的格式 */
+.navt ul li:nth-child(3){
+  color: #4517af;
+}
+.navt ul li:nth-child(8){
+  height: 54px;
+letter-spacing: 2px;
+border: 1px solid #4517af;
+border-radius: 11px;
+margin-top: 24px;
+line-height: 56px;
+margin-left: 12px;
+}
+.navt ul li:nth-child(9){
+letter-spacing: 2px;
+width: 76px;
+height: 56px;
+background: #4517AF;
+border-radius: 11px;
+line-height: 56px;
+color: #fff;
+margin-left: 12px;
+margin-top: 24px;
+margin-left: 28px;
+}
+/* 头部header设置格式，防止外边距塌陷 */
+.header{
+  overflow: hidden;
+  height: 460px;
+  background-color: skyblue;
+}
+/* header部分里的title里的二级标题设置格式 */
+ .title h2{
+  width: 608px;
+  height: 47px;
+  font-size: 50px;
+  font-family: Source Han Sans CN;
+  line-height: 47px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-shadow: 0px 13px 32px rgba(0,0,0,0.23);
+  margin-left: 655px;
+  margin-top: 134px;
+}
+/* header部分里的title里的四级标题设置格式 */
+.title h4{
+  width: 313px;
+height: 27px;
+font-size: 28px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+line-height: 27px;
+color: #FFFFFF;
+text-shadow: 0px 13px 32px rgba(0,0,0,0.23);
+margin-left: 803px;
+margin-top: 30px;
+}
+/* header的shenqing部分里的三级表头设置格式 */
+.header .shenqing h3{
+width: 96px;
+height: 24px;
+font-size: 24px;
+line-height: 24px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+padding: 15px 56px 14px 55px;
+background: #FFFFFF;
+box-shadow: 0px 13px 32px 0px rgba(0,0,0,0.23);
+border-radius: 26px;
+margin-left: 857px;
+margin-top:82px;
+}
+/* hd-bd部分设置高度和底色，设置相对定位，以此使得绝对定位可以放到相对定位的任意位置 */
+.hd-bd{
+  position: relative;
+  height: 1316px;
+  background-color:#fdfeff;
+}
+/* hd-bd部分的icon设置大小和位置 */
+.hd-bd .icon{
+  width: 75px;
+  height: 38px;
+  margin-top: 75px;
+  margin-left: 1771px;
+}
+/* hd-bd里的icon里的表格里的每个单元格都设置向左浮动，设置大小颜色和边框样式 */
+.hd-bd .icon ul li{
+float: left;
+width: 9px;
+height: 9px;
+margin-right: 15px ;
+margin-bottom: 10px;
+background: #d3d3d3;
+border-radius: 50%;
+}
+/* hd-bd里的nav里的表格里的各个单元格设置不同格式 */
+.hd-bd-nav ul li:nth-child(1){
+  width: 30px;
+  height: 4px;
+  background: #4617AF;
+  border-radius: 2px;
+  margin-top: 34px;
+  margin-left: 946px;
+}
+.hd-bd-nav ul li:nth-child(2){
+  width: 279px;
+height: 39px;
+font-size: 40px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 34px;
+margin-left: 820px;
+}
+.hd-bd-nav ul li:nth-child(3){
+  width: 482px;
+height: 23px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+letter-spacing: 4px;
+margin-top: 21px;
+margin-left: 718px;
+}
+/* hd-bd 里的二级标题设置格式 */
+.hd-bd h2{
+  width: 368px;
+height: 81px;
+font-size: 30px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 232px;
+margin-left: 492px;
+}
+/* hd-bd 里的图片设置位置 */
+.hd-bd img{
+  margin-top: -183px;
+  margin-left: 1026px;
+}
+/* hd-bd的line部分设置大小位置和边框 */
+.hd-bd .line{
+  width: 1200px;
+height: 1px;
+border: 1px solid #EAEAEA;
+margin: 0 auto;
+margin-top: 96px;
+}
+/* hd-bd里的yxzdh模块设置位置 */
+.hd-bd .yxzdh{
+  margin-top: 94px;
+  margin-left: 423px;
+}
+/* hd-bd里的三级标题设置格式 */
+.hd-bd h3{
+  width: 317px;
+height: 82px;
+font-size: 30px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+  margin-top: -193px;
+  margin-left: 1130px;
+  margin-bottom: 261px;
+}
+/* header里的xcxsc设置为相对定位，设置大小和底色，防止外边距塌陷 */
+header .xcxsc{
+  position: relative;
+  overflow: hidden;
+  width: 1920px;
+height: 805px;
+background: #F5F7F9;
+}
+/* header里的xcxsc里的表格里的各个单元格设置不同格式 */
+header .xcxsc ul li:nth-child(1){
+  width: 30px;
+  height: 4px;
+  background: #4617AF;
+  border-radius: 2px;
+  margin-top: 124px;
+  margin-left: 946px;
+}
+header .xcxsc ul li:nth-child(2){
+  width: 232px;
+  height: 31px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  margin-top: 19px;
+  margin-left: 845px;
+}
+header .xcxsc ul li:nth-child(3){
+  width: 379px;
+height: 19px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+letter-spacing: 4px;
+margin-top: 22px;
+margin-left: 770px;
+}
+/* header里的xcssc里的三级标题设置格式 */
+header .xcxsc h3{
+  width: 340px;
+height: 289px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 38px;
+margin-top: 146px;
+margin-left: 498px;
+}
+/* header三级标题里的图片设置位置 */
+header h3 img{
+  margin-top: -332px;
+    margin-left: 505px;
+}
+/* sycm模块设置下外边距，防止外边距塌陷，设置为相对定位，设置大小和底色 */
+.sycm{
+  margin-bottom: 86px;
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+  height: 805px;
+  background: #FAFAFB;
+}
+/* sycm里的表格里各个单元格设置不同格式 */
+.sycm ul li:nth-child(1){
+  width: 30px;
+height: 4px;
+background: #4617AF;
+border-radius: 2px;
+margin-top: 114px;
+margin-left: 950px;
+}
+.sycm ul li:nth-child(2){
+  width: 198px;
+  height: 31px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  margin-top: 19px;
+  margin-left: 866px;
+}
+.sycm ul li:nth-child(3){
+  width: 384px;
+height: 19px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+letter-spacing: 4px;
+color: #7B7E81;
+margin-top: 22px;
+margin-left: 774px;
+}
+/* sycm里的p标签里的图片设置位置 */
+.sycm p img{
+  margin-top: 95px;
+  margin-left: 473px;
+}
+/* sycm里的三级标题设置格式 */
+.sycm h3{
+  width: 499px;
+height: 289px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 38px;
+margin-top: -303px;
+margin-left: 1010px;
+}
+/* bkgd插入图片,设置大小防止外边距塌陷 */
+ .bkgd{
+  overflow: hidden;
+  width: 1755px;
+  height: 263px;
+  margin: auto;
+  background: url(../私域提效/imgs/bkgd.png);
+}
+/* bkgd里的表格里各个单元格设置不同的格式 */
+ .bkgd ul li:nth-child(1){
+  width: 30px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  margin-top: 33px;
+  margin-left: 861px;
+}
+ .bkgd ul li:nth-child(2){
+  width: 195px;
+  height: 31px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 19px;
+  margin-left: 777px;
+}
+ .bkgd ul li:nth-child(3){
+  width: 153px;
+  height: 17px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-top: 16px;
+  margin-left: 799px;
+}
+ .bkgd ul li:nth-child(4){
+  width: 83px;
+  height: 21px;
+  font-size: 20px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #4517AF;
+  line-height: 19px;
+  margin-top: 59px;
+  margin-left: 788px;
+  padding: 13px 48px 14px 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 13px 32px 0px rgba(69,23,175,0.23);
+  border-radius: 24px;
+}
+/* 类选择去footer设置相对定位，设置大小位置和底色，防止外边距塌陷 */
+.footer{
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+height: 416px;
+background: #202328;
+margin-top: 79px;
+}
+.footer .box15 .p66 {
+  position: absolute;
+ width: 208px;
+ height: 35px;
+ top: 88px;
+ left: 361px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p67{
+  position: absolute;
+  width: 165px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 146px;
+left: 361px;
+}
+/* footer里的box15中的p标签全部设置为绝对定位,使其可以定位到box15的任意位置上 */
+.footer .box15 p{
+  position: absolute;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p68{
+  width: 224px;
+height: 16px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 172px;
+left: 361px;
+}
+/* footer里的box15中的p69,p70,p71,p72同时设置下列格式 */
+.footer .box15 .p69,.p70,.p71,.p72{
+width: 57px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p69{
+top: 92px;
+left: 675px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p70{
+top: 91px;
+left: 833px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p71{
+  top: 91px;
+  left: 991px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p72{
+  top: 91px;
+  left: 1147px;
+}
+/* footer里的box15中的p73,p74,p75,p76.p77,p78,p79,p80,p81同时设置下列格式 */
+.footer .box15 .p73,.p74,.p75,.p76,.p77,.p78,.p79,.p80,.p81{
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 10px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p73{
+  width: 72px;
+  height: 14px;
+top: 133px;
+left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p74{
+  width: 69px;
+  height: 14px;
+  top: 133px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p75{
+  width: 86px;
+  height: 14px;
+  top: 133px;
+  left: 990px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p76{
+  width: 57px;
+  height: 14px;
+  top: 133px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p77{
+  width: 116px;
+  height: 14px;
+  top: 157px;
+  left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p78{
+  width: 72px;
+  height: 14px;
+  top: 157px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p79{
+  width: 86px;
+  height: 14px;
+  top: 157px;
+  left: 991px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p80{
+  width: 57px;
+  height: 14px;
+  top: 157px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p81{
+  width: 57px;
+  height: 14px;
+  top: 180px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p82{
+  width: 677px;
+  height: 1px;
+  background: #464646;
+top: 266px;
+left: 623px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p83{
+width: 70px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 282px;
+left: 683px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p84{
+  width: 72px;
+  height: 14px;
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 14px;
+  top: 282px;
+  left: 769px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p85{
+  width: 43px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 887px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p86{
+  width: 86px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 977px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p87{
+  width: 129px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 1110px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p88{
+  width: 396px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 314px;
+left: 763px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p89{
+  width: 14px;
+height: 16px;
+  left: 725px;
+  bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p90{
+  width: 187px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+left: 747px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p91{
+  width: 14px;
+height: 16px;
+left: 964px;
+bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p92{
+  width: 212px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+right: 724px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p93{
+  width: 87px;
+  height: 87px;
+  top: 91px;
+  right: 476px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p94{
+  width: 86px;
+  height: 86px;
+  top: 91px;
+  right: 359px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p95{
+  width: 82px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 480px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p96{
+  width: 72px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 367px;
+}
+
+
+

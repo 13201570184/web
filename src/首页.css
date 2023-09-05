@@ -1,0 +1,1695 @@
+/* 整片内容内外边距为0 */
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 所有li标签前面的小黑点取消 */
+li{
+  list-style: none;
+}
+/* 所有a链接标签的下划线取消 */
+a{
+  text-decoration: none;
+}
+/* 整篇内容的宽度设置为1920像素 */
+body{
+  width: 1920px;
+}
+/* 头部部分内容格式 */
+.header{
+  height: 102px;
+  background-color: #fdfeff;
+  font-size: 16px;
+}
+/* 对头部内容的img标签转换为块级元素使其浮动并设置外边距 */
+.header .box1 img{
+  display: block;
+  float:left;
+  margin: 35px 240px;
+
+}
+/* 对头部内容的box2里的无序列表设置浮动和外边距 */
+.header .box2 ul li{
+  float: left;
+  margin: 42px 22px;
+}
+
+/* 对头部内容的box2里的无序列表中的li里的b2l1设置内边距,撑大宽高.并设置圆角边框和字体粗细 */
+.header .box2 ul li .b2l1{
+  padding: 20px 24px;
+  border: 1px solid #c7b5ea;
+  border-radius: 12px;
+  font-weight: bold;
+}
+/* 对头部内容的box2里的无序列表中的li里的b2l2设置内边距,撑大宽高,设置边框级字体颜色 */
+.header .box2 ul li .b2l2{
+  padding: 20px 26px;
+  border: 1px solid #4d00d6;
+  border-radius: 10px;
+  background-color: #4d00d6;
+  font-weight: bold;
+  color: #ffffff;
+}
+/* banner部分设置为相对定位和背景图片,里面绝对定位的内容可以定位在banner部分的任意位置 */
+.banner{
+  position: relative;
+  background: url(../imgs/banner.png);
+  width: auto;
+  height: 788px;
+}
+/* 设置为绝对定位使其可以定位在banner的任意位置 */
+.banner .logo{
+  position: absolute;
+  top: 166px;
+  right: 463px;
+}
+/* 设置为绝对定位使其可以定位在banner的任意位置 */
+.banner .p1{
+  position: absolute;
+  font-size: 50px;
+  font-weight: bold;
+  top: 253px;
+  left: 654px;
+  color: #ffffff;
+}
+/* 设置为绝对定位使其可以定位在banner的任意位置 */
+.banner .p2{
+  position: absolute;
+  font-size: 22px;
+  font-weight: 300;
+  top: 326px;
+  left: 642px;
+  color: #ffffff;
+}
+/* 设置为绝对定位使其可以定位在banner的任意位置 */
+.banner .p3{
+  position: absolute;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 15px 56px 14px 55px;
+  top: 481px;
+  left: 728px;
+  border: 1px solid #ffffff;
+  border-radius: 26px;
+  background-color:  #ffffff;
+  color: #000;
+}
+/* 设置为绝对定位使其可以定位在banner的任意位置 */
+.banner .p4{
+  position: absolute;
+  font-size: 24px;
+  font-weight: 300;
+  top: 481px;
+  right: 727px;
+  padding:15px 0 14px 31px;
+  border: 1px solid #ffffff;
+  border-radius: 26px;
+  background-color: #ffffff;
+  color: #000;
+}
+/* 是图片设置为块级元素浮动紧贴文本,设置外边距 */
+.banner .p4 img{
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin-left: 17px;
+  margin-right: 30px;
+}
+/* 设置为绝对定位使其可以定位在banner的任意位置 */
+.banner ul{
+  position: absolute;
+  top: 751px;
+  left: 889px;
+}
+/* 使无序列表里的li在列表部位浮动 */
+.banner ul .l1{
+  float: left;
+  width: 30px;
+  height: 8px;
+  border-radius: 4px;
+  padding: 1px;
+  background-color: #ffffff;
+
+}
+/* 使无序列表里的li在列表部位浮动 */
+.banner ul li{
+  float: left;
+  width: 8px;
+  height: 8px;
+  background-color: #d8d7f6;
+  border-radius: 4px;
+  margin: 0 11px;
+}
+/* 设置box3为相对定位,里面内容设置绝对定位可以定位到任意位置 */
+.box3{
+  position: relative;
+  height: 155px;
+  background-color: #fdfeff;
+  margin-bottom: 19px;
+}
+/* 使无序列表里的li在列表部位浮动 */
+.box3 ul li{
+  position: relative;
+  width: 28px;
+  height: 2px;
+  border: 1px solid #4617af;
+  border-radius: 2px;
+  background-color: #4617af;
+  top: 151px;
+  left: 945px;
+}
+/* box4里面的p标签为标准流,位于标准流对应位置 */
+.box4 p{
+  width: 675px;
+  height: 180px;
+  font-size: 32px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 46px;
+}
+/* 设置为绝对定位,可以在box4里定位到任意位置 */
+.box4 .rightpic{
+  position: absolute;
+  width: 106px;
+  height: 277px;
+top: 967px;
+left: 1814px;
+}
+/* box5里面的li标签为标准流,位于标准流对应位置 */
+.box5 ul li{
+ margin-bottom: 18px;
+ margin-left: 361px;
+}
+/* 设置为绝对定位,可以在box5里定位到任意位置 */
+.box5 .leftpic{
+  position: absolute;
+  width: 113px;
+  height: 294px;
+  top: 1594px;
+  left: 0;
+}
+/* box5里面的li标签为标准流,位于标准流对应位置 */
+.box5 ul .li3{
+  margin-bottom: 132px;
+}
+/* 设置为绝对定位,可以在box5里定位到任意位置 */
+.box5 .pr2{
+  position: absolute;
+  width: 106px;
+  height: 277px;
+top: 2200px;
+left: 1814px;
+}
+/* box6为相对定位,box6里面的绝对定位可以定位到任意位置 */
+.box6{
+  position: relative;
+  height: 1031px;
+  background-color: #f7f7fc;
+}
+/* box6的无序列表为相对定位,位于标准流位置 */
+.box6 ul{
+  position: relative;
+  height: 110px;
+}
+/* 设置为绝对定位,可以在box6里定位到任意位置 */
+.box6 ul .li4{
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  top: 87px;
+  left: 945px;
+  background-color: #4617af;
+  border: 1px solid #4617af;
+  border-radius: 1px;
+}
+/* box6位于其对应标准流位置 */
+.box6 p{
+  width: 683px;
+  height: 31px;
+  font-size: 32px;
+  margin-left: 634px;
+}
+/* box6里的p里面img和文本居中对齐,位于标准流对应位置 */
+.box6 p img{
+ display: inline-block;
+ width: 93px;
+ height: 28px;
+ vertical-align: middle;
+}
+/* box6里的p5标签属于标准流对应位置 */
+.box6 .p5{
+  width: 274px;
+  height: 14px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  letter-spacing: 2px;
+  color: #7b7e81;
+  margin-top: 17px;
+  margin-left: 822px;
+}
+/* box6里的img转换为块级元素设置宽高位于标准流对应位置 */
+.box6 .img1{
+  display: block;
+  width: 1251px;
+  height: 390px;
+  margin-top: 82px;
+  margin-left: 335px;
+}
+/* box6里的p6位于标准流对应位置 */
+.box6 .p6{
+  width: 93px;
+  height: 15px;
+  font-size: 16px;
+  color: #4617af;
+  margin-top: 32px;
+  margin-left: 913px;
+  margin-bottom: 62px;
+}
+/* box6里的p6的img紧贴p6文本图片文字居中对齐 */
+.box6 .p6 img{
+  float: right;
+  width: 19px;
+  height: 19px;
+  vertical-align: middle;
+}
+/* box6里的无序列表里的li5位于标准流对应位置,水平向左浮动 */
+.box6 .ul1 .li5{
+  float: left;
+  width: 529px;
+  height: 119px;
+  top: 62px;
+  left: 361px;
+ font-size: 24px;
+ background-color: #e8e8ef;
+ border: 1px solid #e8e8ef;
+ border-radius: 10px;
+ margin-left: 361px;
+ text-align: center;
+ line-height: 119px;
+}
+/* box6里的无序列表里的li6位于标准流对应位置,水平向左浮动 */
+.box6 .ul1 .li6{
+  float:left;
+  width: 285px;
+  height: 119px;
+  top: 62px;
+  left: 940px;
+ font-size: 18px;
+ background-color: #e8e8ef;
+ border: 1px solid #e8e8ef;
+ border-radius: 10px;
+ margin-left: 50px;
+ text-align: center;
+ line-height: 119px;
+}
+/* box6里的无序列表里的li7位于标准流对应位置,水平向左浮动 */
+.box6 .ul1 .li7{
+  float: left;
+  width: 285px;
+  height: 119px;
+  top: 62px;
+  right: 360px;
+  font-size: 18px;
+  background-color: #e8e8ef;
+  border: 1px solid #e8e8ef;
+  border-radius: 10px;
+  margin-left: 50px;
+  text-align: center;
+  line-height: 119px;
+ }
+ /* box6里的无序列表里的li5位于标准流对应位置,文本与图片居中对齐水平向左浮动 */
+.box6 .ul1 .li5 img{
+  vertical-align: middle;
+  margin-right: 16px;
+}
+/* box6里的无序列表里的li6位于标准流对应位置,文本与图片居中对齐水平向左浮动 */
+.box6 .ul1 .li6 img{
+  vertical-align: middle;
+  margin-right: 15px;
+}
+/* box6里的无序列表里的li7位于标准流对应位置,文本与图片居中对齐水平向左浮动 */
+.box6 .ul1 .li7 img{
+  vertical-align: middle;
+  margin-right: 15px;
+}
+/* 设置为绝对定位,在box6里可以定位任意位置 */
+.box6 .p7{
+  position: absolute;
+  width: 568px;
+  height: 20px;
+  font-size: 20px;
+  color: #1f2329;
+  top: 909px;
+  text-align: center;
+}
+/* 设置为绝对定位,在box6里可以定位任意位置 */
+.box6 .pl9 img{
+  position: absolute;
+  width: 113px;
+  height: 294px;
+  top: 96px;
+  left: 0px;
+}
+/* 设置为绝对定位,在box6里可以定位任意位置 */
+.box6 .pr9 img{
+  position: absolute;
+  width: 106px;
+  height: 277px;
+  bottom: 59px;
+  right:0;
+}
+/* box7设置相对定位,里面的绝对定位可以定位到任意位置 */
+.box7{
+  position: relative;
+  height: 126px;
+  background-color: #fdfeff;
+  margin-bottom: 19px;
+}
+/* box7里的无序列表中的li放到标准流对应位置 */
+.box7 ul li{
+  position: relative;
+  width: 28px;
+  height: 2px;
+  border: 1px solid #4617af;
+  border-radius: 2px;
+  background-color: #4617af;
+  top: 122px;
+  left: 945px;
+  margin-bottom: 19px;
+}
+/* p8标签位于标准流对应位置 */
+.p8{
+width: 98px;
+height: 31px;
+font-size: 32px;
+font-weight: 500;
+color: #1f2329;
+margin: 0 auto;
+margin-bottom: 17px;
+}
+/* p9标签位于标准流对应位置 */
+.p9{
+  width: 175px;
+  height: 18px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Source Han Sans CN;
+  letter-spacing: 2px;
+  color: #7B7E81;
+  margin: auto;
+  margin-bottom: 80px;
+}
+/* box8设置为相对定位,里面的绝对定位可以定位到任意位置 */
+.box8{
+  position: relative;
+  float: left;
+  width: 615px;
+  height: 440px;
+  background: #ffffff;
+  box-shadow: 0px 0px 15px 1px rgba(185,185,185,0.2);
+  border-radius: 5px;
+  margin-left: 326px;
+  margin-bottom: 90px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .pl2{
+  position: absolute;
+  width: 113px;
+  height: 294px;
+  top: -203px;
+  left: -326px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .pl3{
+  position: absolute;
+  width: 19px;
+height: 21px;
+top: -11px;
+left: -243px;
+}
+/* box9设置为相对定位,里面的绝对定位可以定位到任意位置 */
+.box9{
+  position: relative;
+  float: left;
+  width: 615px;
+  height: 440px;
+  background:  #ffffff;
+  box-shadow: 0px 0px 15px 1px rgba(185,185,185,0.2);
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-bottom: 90px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .pr3{
+  position: absolute;
+  width: 113px;
+  height: 294px;
+top: 270px;
+  left: 414px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .pr4{
+  position: absolute;
+  width: 19px;
+height: 21px;
+top: 451px;
+left: 423px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 ul .li8 img{
+  float: left;
+  position: absolute;
+  top: 35px;
+  left: 34px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 ul .li9{
+  position: absolute;
+  float: left;
+  width: 48px;
+height: 23px;
+font-size: 24px;
+font-weight: 600;
+color: #1F2329;
+top: 45px;
+left: 92px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 ul .li10{
+  position: absolute;
+  float: left;
+  width: 0;
+  height: 23px;
+  background: #B9B9B9;
+  border: 1px solid #7B7E81;
+  border-radius: 1px;
+  top: 48px;
+  left: 159px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 ul .li11{
+position: absolute;
+float: left;
+width: 73px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 51px;
+left: 178px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p10{
+  position: absolute;
+  width: 69px;
+height: 27px;
+font-size: 28px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 139px;
+left: 35px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p11{
+  position: absolute;
+  width: 149px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 175px;
+left: 34px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p12{
+  position: absolute;
+  width: 34px;
+height: 23px;
+font-size: 30px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 141px;
+left: 219px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p13{
+  position: absolute;
+  width: 32px;
+height: 16px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 150px;
+left: 261px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p14{
+position: absolute;
+width: 128px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 175px;
+left: 217px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p15{
+  position: absolute;
+  width: 245px;
+  height: 23px;
+  font-size: 24px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  top: 230px;
+  left: 34px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p16{
+  position: absolute;
+  width: 318px;
+  height: 38px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  line-height: 22px;
+  top: 270px;
+  left: 36px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 .p17{
+  position: absolute;
+  width: 65px;
+  height: 16px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  padding: 11px 28px;
+  border: 1px solid #4517af;
+  background-color: #4517af;
+  border-radius: 4px;
+  color: #FFFFFF;
+  top: 367px;
+  left: 34px;
+}
+/* 设置为绝对定位,在box8里可以定位任意位置 */
+.box8 img{
+  position: absolute;
+  display: block;
+  top: 41px;
+  right: 36px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 ul .li12 img{
+  float: left;
+  position: absolute;
+  top: 35px;
+  left: 34px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 ul .li13{
+  position: absolute;
+  float: left;
+  width: 72px;
+height: 23px;
+font-size: 24px;
+font-weight: 600;
+color: #1F2329;
+top: 45px;
+left: 92px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 ul .li14{
+  position: absolute;
+  float: left;
+  width: 0;
+  height: 23px;
+  background: #B9B9B9;
+  border: 1px solid #7B7E81;
+  border-radius: 1px;
+  top: 48px;
+  left: 183px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 ul .li15{
+position: absolute;
+float: left;
+width: 73px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 51px;
+left: 200px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p18{
+  position: absolute;
+  width: 69px;
+height: 27px;
+font-size: 28px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 139px;
+left: 35px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p19{
+  position: absolute;
+  width: 149px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 175px;
+left: 34px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p20{
+  position: absolute;
+  width: 34px;
+height: 23px;
+font-size: 30px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 141px;
+left: 219px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p21{
+  position: absolute;
+  width: 32px;
+height: 16px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 150px;
+left: 300px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p22{
+position: absolute;
+width: 128px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+top: 175px;
+left: 218px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p23{
+  position: absolute;
+  width: 331px;
+  height: 23px;
+  font-size: 24px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  top: 230px;
+  left: 35px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p24{
+  position: absolute;
+  width: 330px;
+  height: 60px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  line-height: 22px;
+  top: 270px;
+  left: 35px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 .p25{
+  position: absolute;
+  width: 65px;
+  height: 16px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  padding: 11px 28px;
+  border: 1px solid #4517af;
+  background-color: #4517af;
+  border-radius: 4px;
+  color: #FFFFFF;
+  top: 367px;
+  left: 34px;
+}
+/* 设置为绝对定位,在box9里可以定位任意位置 */
+.box9 img{
+  position: absolute;
+  display: block;
+  top: 41px;
+  left: 412px;
+}
+/* box10里面的p标签位于标准流对应位置 */
+.box10 p{
+width: 92px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 15px;
+margin: auto;
+padding-top: 90px;
+padding-bottom: 138px;
+}
+/* box10里面p标签后面的img图片紧贴p标签浮动 */
+.box10 p img{
+float: right;
+width: 8px;
+height: 13px;
+vertical-align: middle;
+}
+/* box11设置位相对定位,里面的绝对定位可以定位到任意位置 */
+.box11{
+position: relative;
+height: 1281px;
+background-color:  #f7f7fc;
+margin-top: 400px;
+}
+/* 设置为绝对定位,在box11里可以定位任意位置 */
+.box11 .p26{
+position: absolute;
+width: 28px;
+height: 2px;
+border: 1px solid #4617af;
+background-color: #4617af;
+top: 70px;
+left: 945px;
+}
+/* 设置为绝对定位,在box11里可以定位任意位置 */
+.box11 .p27{
+position: absolute;
+width: 131px;
+height: 30px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+top: 93px;
+left: 894px;
+}
+/* 设置为绝对定位,在box11里可以定位任意位置 */
+.box11 .p28{
+position: absolute;
+width: 119px;
+height: 13px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+letter-spacing: 2px;
+color: #7B7E81;
+top: 142px;
+left: 901px;
+margin-bottom: 101px;
+}
+/* box11里的box12板块设置为绝对定位,将box12定位到box11的任意位置,在box12里的绝对定位可以定位任意位置 */
+.box11 .box12{
+  position: absolute;
+  width: 1287px;
+  height: 396px;
+  background-color:#ffffff;
+  top: 256px;
+  left: 317px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .p29{
+  position: absolute;
+width: 134px;
+height: 17px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #FFFFFF;
+padding: 8px 10px 9px 9px;
+background-color: #4617af;
+border-radius: 6px;
+top: 45px;
+left: 46px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .p30{
+  position: absolute;
+  width: 534px;
+height: 66px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 134px;
+left: 47px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .p31{
+  position: absolute;
+  width: 534px;
+height: 41px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #464646;
+line-height: 25px;
+top: 236px;
+left: 46px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .p32{
+  position: absolute;
+  width: 72px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #4517AF;
+top: 329px;
+left: 482px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .p33{
+  position: absolute;
+  width: 8px;
+height: 13px;
+top: 332px;
+left: 564px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .p34{
+  position: absolute;
+  top: 28px;
+  right: 28px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .pl0{
+  position: absolute;
+  width: 113px;
+  height: 294px;
+  top: -120px;
+  left: -317px;
+}
+/* 设置为绝对定位,在box12里可以定位任意位置 */
+.box11 .box12 .pr0{
+  position: absolute;
+  width: 106px;
+  height: 277px;
+  top: 628px;
+  left: 1491px;
+}
+/* box11里的box13板块设置为绝对定位,将box13定位到box11里的任意位置,在box13里的绝对定位可以定位任意位置 */
+.box11 .box13{
+  position: absolute;
+  width: 1287px;
+  height: 396px;
+  background-color:#ffffff;
+  top: 729px;
+  left: 317px;
+}
+/* 设置为绝对定位,在box13里可以定位任意位置 */
+.box11 .box13 .p29{
+  position: absolute;
+width: 134px;
+height: 17px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #FFFFFF;
+padding: 8px 10px 9px 9px;
+background-color: #4617af;
+border-radius: 6px;
+top: 45px;
+left: 46px;
+}
+/* 设置为绝对定位,在box13里可以定位任意位置 */
+.box11 .box13 .p30{
+  position: absolute;
+  width: 534px;
+height: 66px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+top: 134px;
+left: 47px;
+}
+/* 设置为绝对定位,在box13里可以定位任意位置 */
+.box11 .box13 .p31{
+  position: absolute;
+  width: 534px;
+height: 41px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #464646;
+line-height: 25px;
+top: 236px;
+left: 46px;
+}
+/* 设置为绝对定位,在box13里可以定位任意位置 */
+.box11 .box13 .p32{
+  position: absolute;
+  width: 72px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #4517AF;
+top: 329px;
+left: 482px;
+}
+/* 设置为绝对定位,在box13里可以定位任意位置 */
+.box11 .box13 .p33{
+  position: absolute;
+  width: 8px;
+height: 13px;
+top: 332px;
+left: 564px;
+}
+/* 设置为绝对定位,在box13里可以定位任意位置 */
+.box11 .box13 .p34{
+  position: absolute;
+  top: 28px;
+  right: 28px;
+}
+/* 设置为绝对定位,在box11里可以定位任意位置 */
+.box11 .p35{
+  position: absolute;
+  width: 73px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 28px;
+top: 1195px;
+left: 914px;
+}
+/* 设置为绝对定位,在box11里可以定位任意位置 */
+.box11 .p36{
+  position: absolute;
+  width: 8px;
+height: 13px;
+top: 1198px;
+left: 998px;
+}
+/* box14设置为相对定位,里面的绝对定位可以定位到任意位置 */
+.box14{
+  position: relative;
+  height: 4000px;
+  background-color: #fdfeff;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .pl6 {
+position: absolute;
+  width: 19px;
+height: 21px;
+top: 83px;
+left: 65px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .pl7{
+  position: absolute;
+  width: 22px;
+height: 16px;
+top: 150px;
+left: 19px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .pl8{
+  position: absolute;
+  width: 11px;
+height: 11px;
+top: 188px;
+left: 79px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .pr6{
+  position: absolute;
+  width: 19px;
+height: 21px;
+top: 1021px;
+right: 71px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .pr7{
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  top: 959px;
+  right: 25px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .pr8{
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: 926px;
+  right: 85px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p37{
+position: absolute;
+width: 30px;
+height: 4px;
+background: #4617AF;
+border-radius: 2px;
+top: 149px;
+left: 945px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p38{
+position: absolute;
+width: 480px;
+height: 31px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+top: 172px;
+left: 719px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p39{
+  position: absolute;
+  width: 376px;
+  height: 18px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #7b7e81;
+  letter-spacing: 2px;
+  top: 220px;
+  left: 769px;
+  }
+  /* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 ul{
+  position: absolute;
+  top: 454px;
+  left: 257px;
+}
+/* box14无序列表里的li16满足标准流ul位置,ul已经定位,在已定位位置输入为相应格式 */
+.box14 ul .li16{
+  width: 134px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+margin-top: 30px;
+text-align: center;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p40{
+position: absolute;
+top: 431px;
+left: 417px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p41{
+  position: absolute; 
+  width: 33px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 648px;
+left: 467px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p42{
+  position: absolute;
+  top: 407px;
+  left: 577px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p43{
+  position: absolute;
+  width: 51px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 625px;
+left: 618px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p44{
+  position: absolute;
+  top: 383px;
+  left: 736px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p45{
+  position: absolute;
+  width: 51px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 601px;
+left: 777px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p46{
+  position: absolute;
+  top: 359px;
+  left: 894px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p47{
+  position: absolute;
+  width: 33px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 576px;
+left: 943px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p48{
+  position: absolute;
+  top: 383px;
+  right: 736px;
+
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p49{
+  position: absolute;
+  width: 50px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 600px;
+right: 778px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p50{
+  position: absolute;
+  top: 407px;
+right: 577px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p51{
+  position: absolute;
+  width: 33px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 624px;
+right: 629px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p52{
+  position: absolute;
+  top: 431px;
+right: 417px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p53{
+  position: absolute;
+  width: 34px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 648px;
+right: 469px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p54{
+  position: absolute;
+  top: 454px;
+  right: 258px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p55{
+  position: absolute;
+  width: 67px;
+height: 16px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+top: 672px;
+right: 293px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p56{
+position: absolute;
+top: 700px;
+left: 381px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p57{
+  position: absolute;
+  width: 75px;
+  height: 18px;
+  font-size: 18px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 10px;
+  padding: 20px 31px;
+  background-color: #4517af;
+  box-shadow: 0px 13px 32px 0px rgba(69,23,175,0.23);
+  border-radius: 29px;
+  top: 766px;
+  left: 891px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p58{
+  position: absolute;
+width: 18px;
+height: 74px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+line-height: 18px;
+padding: 21px 17px 18px 18px;
+background: #FFFFFF;
+box-shadow: 0px 3px 7px 0px rgba(108,108,108,0.19);
+border-radius: 10px 10px 0 0;
+top: 729px;
+right: 89px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p59 img{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 12px 11px 14px 12px;
+  background: #4517af;
+  box-shadow: 0px 3px 7px 0px rgba(108,108,108,0.19);
+  border-radius: 0px 0px 10px 10px;
+  top: 842px;
+  right: 89px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p60{
+  position: absolute;
+  width: 23px;
+  height: 25px;
+  padding: 15px 15px 14px 16px;
+  background: #ffffff;
+  box-shadow: 0px 3px 8px 0px rgba(108,108,108,0.14);
+  border-radius: 27px;
+  top: 1073px;
+  right: 88px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p61 img{
+  position: absolute;
+ top: 1174px;
+ left: 85px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p62{
+  position: absolute;
+  width: 30px;
+height: 4px;
+background: #FFFFFF;
+border-radius: 2px;
+top: 1261px;
+left: 946px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p63{
+  position: absolute;
+  width: 195px;
+height: 31px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #FFFFFF;
+top: 1284px;
+left: 862px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p64{
+  position: absolute;
+  width: 153px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+top: 1331px;
+left: 884px;
+}
+/* 设置为绝对定位,在box14里可以定位任意位置 */
+.box14 .p65{
+  position: absolute;
+  width: 83px;
+height: 21px;
+font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #4517AF;
+padding: 13px 48px 14px 46px;
+background: #FFFFFF;
+box-shadow: 0px 13px 32px 0px rgba(69,23,175,0.23);
+border-radius: 24px;
+line-height: 20px;
+top: 1407px;
+left: 873px;
+}
+/* 在box14里设置box15,box15为绝对定位,可以定位到box14的任意位置,box15里的绝对定位可以定位到任意位置 */
+.box14 .box15{
+  position: absolute;
+  width: 1920px;
+height: 416px;
+background: #202328;
+top: 1627px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.box14 .box15 .p66 {
+  position: absolute;
+ width: 208px;
+ height: 35px;
+ top: 88px;
+ left: 361px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.box14 .box15 .p67{
+  position: absolute;
+  width: 165px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 146px;
+left: 361px;
+}
+/* box14里的box15中的p标签全部设置为绝对定位,使其可以定位到box15的任意位置上 */
+.box14 .box15 p{
+  position: absolute;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.box14 .box15 .p68{
+  width: 224px;
+height: 16px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 172px;
+left: 361px;
+}
+/* box14里的box15中的p69,p70,p71,p72同时设置下列格式 */
+.box14 .box15 .p69,.p70,.p71,.p72{
+width: 57px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.box14 .box15 .p69{
+top: 92px;
+left: 675px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.box14 .box15 .p70{
+top: 91px;
+left: 833px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.box14 .box15 .p71{
+  top: 91px;
+  left: 991px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.box14 .box15 .p72{
+  top: 91px;
+  left: 1147px;
+}
+/* box14里的box15中的p73,p74,p75,p76.p77,p78,p79,p80,p81同时设置下列格式 */
+.box14 .box15 .p73,.p74,.p75,.p76,.p77,.p78,.p79,.p80,.p81{
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 10px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p73{
+  width: 72px;
+  height: 14px;
+top: 133px;
+left: 675px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p74{
+  width: 69px;
+  height: 14px;
+  top: 133px;
+  left: 833px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p75{
+  width: 86px;
+  height: 14px;
+  top: 133px;
+  left: 990px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p76{
+  width: 57px;
+  height: 14px;
+  top: 133px;
+  left: 1148px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p77{
+  width: 116px;
+  height: 14px;
+  top: 157px;
+  left: 675px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p78{
+  width: 72px;
+  height: 14px;
+  top: 157px;
+  left: 833px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p79{
+  width: 86px;
+  height: 14px;
+  top: 157px;
+  left: 991px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p80{
+  width: 57px;
+  height: 14px;
+  top: 157px;
+  left: 1148px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p81{
+  width: 57px;
+  height: 14px;
+  top: 180px;
+  left: 833px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p82{
+  width: 677px;
+  height: 1px;
+  background: #464646;
+top: 266px;
+left: 623px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p83{
+width: 70px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 282px;
+left: 683px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p84{
+  width: 72px;
+  height: 14px;
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 14px;
+  top: 282px;
+  left: 769px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p85{
+  width: 43px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 887px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p86{
+  width: 86px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 977px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p87{
+  width: 129px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 1110px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p88{
+  width: 396px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 314px;
+left: 763px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p89{
+  width: 14px;
+height: 16px;
+  left: 725px;
+  bottom: 63px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p90{
+  width: 187px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+left: 747px;
+bottom: 64px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p91{
+  width: 14px;
+height: 16px;
+left: 964px;
+bottom: 63px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p92{
+  width: 212px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+right: 724px;
+bottom: 64px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p93{
+  width: 87px;
+  height: 87px;
+  top: 91px;
+  right: 476px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p94{
+  width: 86px;
+  height: 86px;
+  top: 91px;
+  right: 359px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p95{
+  width: 82px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 480px;
+}
+/* 定位到box14里的box15的相应位置 */
+.box14 .box15 .p96{
+  width: 72px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 367px;
+}

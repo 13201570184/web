@@ -1,0 +1,1242 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 所有li标签前面的小黑点取消 */
+li{
+  list-style: none;
+}
+/* 所有a链接标签的下划线取消 */
+a{
+  text-decoration: none;
+}
+.w{
+  width: 1920px;
+  margin: 0 auto;
+  /* background-color: mediumseagreen; */
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* nav部分设置防止外边距塌陷，设置高度背景颜色 */
+.nav{
+  overflow: hidden;
+  height: 102px;
+  background: #FFFFFF;
+}
+/* navp部分设置位置 */
+.navp{
+  margin-top: 34px;
+  margin-left: 240px;
+}
+/* navt部分的表格设置位置 */
+.navt ul{
+  margin-top: -34px;
+  margin-left: 755px;
+}
+/* navt部分的表格的每个单元格设置左浮动，设置位置大小颜色和字体种类字重 */
+.navt ul li{
+  float: left;
+  margin-right: 44px;
+  width: 65px;
+font-family: OPPOSans;
+font-weight: normal;
+color: #1F2329;
+}
+/* navt部分里的第7个单元格设置格式 */
+.navt ul li:nth-child(7){
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #4517AF;
+}
+/* logon部分设置左浮动设置大小位置，设置边框居中行高 */
+.logon{
+  float: left;
+  width: 83px;
+  height: 56px;
+  border: 1px solid #4517AF;
+  border-radius: 11px;
+  text-align: center;
+  margin-left: -12px;
+  margin-top: -20px;
+  line-height: 56px;
+}
+/* apply部分设置左浮动，设置大小位置背景颜色，设置行间距，设置字体大小 */
+.apply{
+  float: left;
+  width: 122px;
+height: 56px;
+background: #4517AF;
+border-radius: 11px;
+text-align: center;
+line-height: 56px;
+margin-top: -20px;
+margin-left: 22px;
+letter-spacing: 4px;
+font-size: 16px;
+font-weight: bold;
+color: #FFFFFF;
+}
+/* header-hd部分设置防止外边距塌陷，设置大小背景颜色以及透明度 */
+.header-hd{
+  overflow: hidden;
+  width: 1920px;
+height: 460px;
+background: #1F2329;
+opacity: 0.6;
+}
+/* }header-hd部分设置大小位置，设置行高字体大小种类颜色字重 */
+.header-hd h2{
+  width: 651px;
+height: 120px;
+font-size: 50px;
+font-family: Source Han Sans CN;
+font-weight: 300;
+color: #FFFFFF;
+line-height: 72px;
+margin-top: 175px;
+margin-left: 633px;
+text-align: center;
+}
+/* header-bd部分设置防止外边距塌陷，设置高度和背景颜色 */
+.header-bd{
+  overflow: hidden;
+  height: 2044px;
+  background: #FFFFFF;
+}
+/* header-bd部分的point部分设置大小以及下外边距 */
+.header-bd .point{
+  width: 55px;
+  height: 27px;
+  margin-bottom: 36px;
+}
+/* header-bd的point部分的表格设置大小和位置 */
+.header-bd .point ul{
+  width: 69px;
+  height: 33px;
+  margin-top: 75px;
+  margin-left: 1771px;
+}
+/* header-bd里的point里的表格设置大小位置背景颜色以及边框样式 */
+.header-bd .point ul li{
+  float: left;
+  width: 9px;
+  height: 9px;
+  background: #D3D3D3;
+border-radius: 50%;
+margin-left: 14px;
+margin-bottom: 8px;
+}
+/* header-bd部分里的line部分设置大小位置背景颜色和边框样式 */
+.header-bd .line{
+  width: 30px;
+height: 4px;
+background: #4617AF;
+border-radius: 2px;
+margin-top: 37px;
+margin-left: 945px;
+}
+/* header-bd部分的title内容设置大小位置和字体大小颜色种类和字重 */
+.header-bd .title{
+  width: 130px;
+height: 31px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 19px;
+margin-left: 894px;
+}
+/* header-bd部分的eng部分设置大小位置，字体大小种类颜色和字重以及行间距 */
+.header-bd .eng{
+  width: 88px;
+height: 14px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+letter-spacing: 2px;
+margin-top: 17px;
+margin-left: 914px;
+}
+/* header-bd部分里的pic1内容设置防止外边距塌陷，设置大小位置，设置背景颜色设置边框样式 */
+.header-bd .pic1{
+  overflow: hidden;
+  width: 1101px;
+  height: 387px;
+  background: #F8F8FA;
+border-radius: 10px 0px 0px 10px;
+margin-top: 107px;
+}
+/* header-bd部分的pic1部分里的二级标题设置大小位置，设置字体大小颜色种类字重 */
+.header-bd .pic1 h2{
+  width: 97px;
+height: 23px;
+font-size: 24px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 73px;
+margin-left: 42px;
+}
+/* header-bd部分里的pic1部分里的三级标题设置大小位置，设置字体大小颜色种类和字重以及行间距 */
+.header-bd .pic1 h3{
+  width: 202px;
+  height: 16px;
+  font-size: 15px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-left: 43px;
+}
+/* header-bd部分里的pic1部分里的四级标题设置大小位置，设置字体大小颜色种类和字重以及行间距 */
+.header-bd .pic1 h4{
+  width: 462px;
+height: 137px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+line-height: 30px;
+margin-top: 48px;
+margin-left: 25px;
+}
+/* header-bd部分里的pic1里的img图片设置浮动，设置大小和位置 */
+.header-bd .pic1 img{
+  float: right;
+  width: 551px;
+  height: 389px;
+  margin-top: -306px;
+}
+/* header-bd里的pic2内容设置防止外边距塌陷，设置大小位置，边框格式 */
+.header-bd .pic2{
+  overflow: hidden;
+  width: 1101px;
+  height: 387px;
+  background: #F8F8FA;
+border-radius: 10px 0px 0px 10px;
+margin-top: 67px;
+}
+/* 设置img里的图片内容左浮动设置位置 */
+.header-bd .pic2 img{
+  float: left;
+  margin-top: 137px;
+  margin-left: 135px;
+}
+/* pic2里的四级标题设置左浮动，设置大小位置，设置字体大小种类颜色字重以及行间距 */
+.header-bd .pic2 h4{
+  float: right;
+  width: 497px;
+height: 289px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+line-height: 30px;
+margin-top: 49px;
+margin-right: 53px;
+letter-spacing: 2px;
+}
+/* logo部分里的表格设置位置 */
+.header-bd .logo ul{
+  margin-top: 115px;
+  margin-left: 424px;
+}
+/* logo部分里的单元格设置左右外边距和左浮动 */
+.header-bd .logo ul li{
+  float: left;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+/* logo部分里的单元格里的p标签里的内容设置上外边距，和文本水平居中 */
+.header-bd .logo ul li p{
+  margin-top: 12px;
+  text-align: center;
+}
+/* logo里的各个单元格里的p标签内容设置不同的格式 */
+.header-bd .logo ul li:nth-child(1) p{
+  width: 99px;
+  height: 44px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  line-height: 28px;
+}
+.header-bd .logo ul li:nth-child(2) p{
+  width: 49px;
+  height: 43px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  line-height: 28px;
+  margin-left: 25px;
+}
+.header-bd .logo ul li:nth-child(3) p{
+  width: 89px;
+  height: 44px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  line-height: 28px;
+  margin-left: 5px;
+}
+.header-bd .logo ul li:nth-child(4) p{
+  width: 66px;
+height: 44px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 28px;
+margin-left: 15px;
+}
+.header-bd .logo ul li:nth-child(5) p{
+  width: 66px;
+height: 43px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 28px;
+margin-left: 17px;
+}
+.header-bd .logo ul li:nth-child(6) p{
+  width: 50px;
+height: 43px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 28px;
+margin-left: 25px;
+}
+/* header-bd部分里的underline部分设置大小和位置，设置边框 */
+.header-bd .underline{
+  width: 1200px;
+height: 1px;
+border: 1px solid #EAEAEA;
+margin-top: 354px;
+margin-left: 360px;
+}
+/* introduce设置防止外边距塌陷，设置大小 */
+.introduce{
+  overflow: hidden;
+width: 1050px;
+height: 415px;
+}
+/* introduce1~6部分设置左浮动 */
+.introduce1,.introduce2,.introduce3,.introduce4,.introduce5,.introduce6{
+  float: left;
+}
+/* introdu1lid二级标题设置大小位置，设置字体大小种类字重和颜色以及行高 */
+.introduce1 h2{
+  width: 73px;
+height: 35px;
+font-size: 45px;
+font-family: Source Han Sans CN;
+font-weight: 800;
+color: #4517AF;
+line-height: 33px;
+margin-top: 111px;
+margin-left: 43px;
+}
+/* introduce1里的p标签设置大小位置，设置字体大小种类颜色字重和行高 */
+.introduce1 p{
+  width: 131px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 33px;
+margin-top: 25px;
+margin-left: 17px;
+}
+.introduce2 h2{
+  width: 108px;
+height: 34px;
+font-size: 35px;
+font-family: Source Han Sans CN;
+font-weight: 800;
+color: #4517AF;
+line-height: 33px;
+margin-top: 109px;
+margin-left: 312px;
+}
+.introduce2 p{
+  width: 150px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 33px;
+margin-top: 28px;
+margin-left: 290px;
+}
+.introduce3 h2{
+  width: 73px;
+height: 35px;
+font-size: 45px;
+font-family: Source Han Sans CN;
+font-weight: 800;
+color: #4517AF;
+line-height: 33px;
+margin-top: 110px;
+margin-left: 320px;
+}
+.introduce3 p{
+  width: 149px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 33px;
+margin-top: 25px;
+margin-left: 290px;
+}
+.introduce4 h2{
+  width: 105px;
+height: 34px;
+font-size: 45px;
+font-family: Source Han Sans CN;
+font-weight: 800;
+color: #4517AF;
+line-height: 33px;
+margin-top: 140px;
+margin-left: 25px;
+}
+.introduce4 p{
+  width: 168px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 33px;
+margin-top: 26px;
+}
+.introduce5 h2{
+  width: 105px;
+height: 34px;
+font-size: 45px;
+font-family: Source Han Sans CN;
+font-weight: 800;
+color: #4517AF;
+line-height: 33px;
+margin-top: 140px;
+margin-left: 293px;
+}
+.introduce5 p{
+  width: 131px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 33px;
+margin-top: 26px;
+margin-left: 290px;
+}
+.introduce6 h2{
+  width: 71px;
+height: 34px;
+font-size: 35px;
+font-family: Source Han Sans CN;
+font-weight: 800;
+color: #4517AF;
+line-height: 33px;
+margin-top: 140px;
+margin-left: 317px;
+}
+.introduce6 p{
+  width: 192px;
+height: 18px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+line-height: 33px;
+margin-top: 26px;
+margin-left: 252px;
+} 
+/* culture部分设置防止外边距塌陷设置固定和背景颜色 */
+.culture{
+  overflow: hidden;
+  height: 560px;
+background: #F7F7FC;
+}
+/* culture部分的line设置大小位置背景颜色和边框样式 */
+.culture .line{
+  width: 30px;
+height: 4px;
+background: #4617AF;
+border-radius: 2px;
+margin-top: 55px;
+margin-left: 945px;
+}
+/* culture部分的title部分设置大小位置，设置字体大小种类颜色字重 */
+.culture .title{
+  width: 132px;
+height: 31px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 19px;
+margin-left: 893px;
+}
+/* culture部分的eng部分设置大小位置设置字体大小种类颜色和字重 */
+.culture .eng{
+  width: 183px;
+height: 17px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+letter-spacing: 2px;
+margin-top: 18px;
+margin-left: 867px;
+}
+/* logo部分里的表格设置防止外边距塌陷，设置大小位置 */
+.culture .logo ul{
+  overflow: hidden;
+  width: 1040px;
+  height: 284px;
+  margin: auto;
+  margin-top: 64px;
+}
+/* logo部分里的各个单元格设置不同的格式 */
+.culture .logo ul li:nth-child(1){
+  float: left;
+  width: 180px;
+  height: 180px;
+}
+.culture .logo ul li:nth-child(2){
+  float: left;
+  width: 180px;
+  height: 180px;
+margin-left: 246px;
+margin-right: 247px;
+}
+.culture .logo ul li:nth-child(3){
+  float: left;
+  width: 180px;
+  height: 180px;
+}
+/* logo部分里的各个单元格里的二级标题设置大小和位置，设置字体大小种类颜色和字重 */
+.culture .logo ul li:nth-child(1) h2{
+  width: 53px;
+  height: 25px;
+  font-size: 26px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  margin-top: 10px;
+  margin-left: 63px;
+}
+.culture .logo ul li:nth-child(2) h2{
+  width: 52px;
+height: 24px;
+font-size: 26px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 8px;
+margin-left: 63px;
+}
+.culture .logo ul li:nth-child(3) h2{
+  width: 80px;
+height: 25px;
+font-size: 26px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 7px;
+margin-left: 50px;
+}
+/* logo部分里的各个单元格里的p标签设置大小和位置，设置字体大小种类颜色和字重 */
+.culture .logo ul li:nth-child(1) p{
+  width: 149px;
+height: 17px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+margin-top: 22px;
+margin-left: 21px;
+text-align: center;
+}
+.culture .logo ul li:nth-child(2) p{
+  width: 225px;
+height: 49px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+margin-top: 22px;
+margin-left: -7px;
+text-align: center;
+}
+.culture .logo ul li:nth-child(3) p{
+  width: 150px;
+height: 49px;
+font-size: 18px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+margin-top: 22px;
+margin-left: 14px;
+text-align: center;
+}
+/* boss部分设置防止外边距塌陷，设置高度 */
+.boss{
+  height: 838px;
+  overflow: hidden;
+}
+/* boss部分的line内容设置大小位置，设置背景颜色边框样式 */
+.boss .line{
+  width: 30px;
+  height: 4px;
+  background: #4617AF;
+  border-radius: 2px;
+  margin-top: 115px;
+  margin-left: 945px;
+}
+/* boss部分里的title内容设置大小位置，设置字体大小种类颜色和字重 */
+.boss .title{
+  width: 165px;
+  height: 31px;
+  font-size: 32px;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #1F2329;
+  margin-top: 19px;
+  margin-left: 877px;
+}
+/* boss部分里的eng内容设置大小位置，设置字体大小种类颜色和字重 */
+.boss .eng{
+  width: 200px;
+  height: 14px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #7B7E81;
+  letter-spacing: 2px;
+  margin-top: 17px;
+  margin-left: 868px;
+}
+/* tab部分设置防止外边距塌陷，设置大小位置 */
+.tab{
+  overflow: hidden;
+  width: 1100px;
+  height: 142px;
+  margin-top: 129px;
+}
+/* tab部分的last内容设置左浮动，设置位置 */
+.tab .last{
+  float: left;
+  margin-top: 53px;
+}
+/* tab部分里的math1内容设置左浮动，设置大小位置，设置背景颜色边框样式和盒子阴影 */
+.tab .math1{
+  float: left;
+  width: 459px;
+height: 141px;
+background: #F8F8FA;
+box-shadow: 1px 3px 6px 0px rgba(61,61,61,0.15);
+border-radius: 20px;
+margin-left: 49px;
+}
+/* tab部分里的math2内容设置左浮动，设置大小位置，设置背景颜色边框样式和盒子阴影 */
+.tab .math2{
+  float: left;
+  width: 459px;
+height: 141px;
+background: #F8F8FA;
+box-shadow: 1px 3px 6px 0px rgba(61,61,61,0.15);
+border-radius: 20px 20px 20px 10px;
+margin-left: 47px;
+}
+/* tab部分里的next内容设置左浮动设置位置 */
+.tab .next{
+  float: right;
+  margin-top: 53px;
+}
+/* tab部分里的math1里的二级标题设置左浮动设置大小位置，设置字体大小种类颜色和字重，设置行高 */
+.tab .math1 h2{
+  float: left;
+  width: 40px;
+height: 26px;
+font-size: 34px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #4517AF;
+margin-top: 58px;
+margin-left: 22px;
+line-height: 26px;
+}
+/* tab部分里的math1里的四级标题设置左浮动设置大小位置，设置字体大小种类颜色和字重，设置行高 */
+.tab .math1 h4{
+  float: left;
+  width: 14px;
+height: 16px;
+font-size: 17px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #4517AF;
+line-height: 16px;
+margin-top: 57px;
+margin-left: 5px;
+}
+/* tab部分里的math1 里的p标签里的内容设置左浮动设置大小位置，设置背景颜色 */
+.tab .math1 p{
+  float: left;
+  width: 1px;
+height: 105px;
+background: #E3E3E3;
+margin-top: 17px;
+margin-left: 21px;
+}
+/* tab部分里的math1里的三级标题设置左浮动设置大小位置，设置字体大小种类颜色和字重，设置行高 */
+.tab .math1 h3{
+  float: left;
+  width: 281px;
+height: 17px;
+font-size: 17px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+margin-top: 63px;
+margin-left: 25px;
+line-height: 17px;
+}
+/* tab部分里的math2里的二级标题设置左浮动设置大小位置，设置字体大小种类颜色和字重，设置行高 */
+.tab .math2 h2{
+  float: left;
+  width: 40px;
+height: 26px;
+font-size: 34px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #4517AF;
+margin-top: 58px;
+margin-left: 22px;
+line-height: 26px;
+}
+/* tab部分里的math2里的四级标题设置左浮动设置大小位置，设置字体大小种类颜色和字重，设置行高 */
+.tab .math2 h4{
+  float: left;
+  width: 14px;
+height: 16px;
+font-size: 17px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #4517AF;
+line-height: 16px;
+margin-top: 57px;
+margin-left: 5px;
+}
+/* tab部分里的math2 里的p标签里的内容设置左浮动设置大小位置，设置背景颜色 */
+.tab .math2 p{
+  float: left;
+  width: 1px;
+height: 105px;
+background: #E3E3E3;
+margin-top: 17px;
+margin-left: 21px;
+}
+/* tab部分里的math2里的三级标题设置左浮动设置大小位置，设置字体大小种类颜色和字重，设置行高 */
+.tab .math2 h3{
+  float: left;
+  width: 302px;
+height: 47px;
+font-size: 17px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #1F2329;
+margin-top: 47px;
+margin-left: 25px;
+line-height: 24px;
+}
+/* year部分设置防止外边距塌陷，设置大小位置，插入背景图片，选择不平铺 */
+.year{
+  overflow: hidden;
+  width: 1200px;
+  height: 218px;
+  background: url(imgs/year.png) no-repeat;
+  margin-top: 84px;
+}
+/* year部分里的p标签设置大小位置，设置背景颜色 */
+.year p{
+  width: 1200px;
+height: 1px;
+background: #1F2329;
+margin-top: 89px;
+}
+/* year部分里的表格设置大小位置 */
+.year ul{
+  width: 1222px;
+  height: 218px;
+  margin-top: -16px;
+}
+/* year部分里的所有单元格设置左浮动，设置大小位置bjys，设置文本水平居中，设置每个单元格之间的距离，设置边框样式设置字体大小颜色种类字重设置行高 */
+.year ul li{
+  float: left;
+  width: 86px;
+height: 28px;
+background: #FFFFFF;
+border: 1px solid #1F2329;
+border-radius: 14px;
+text-align: center;
+line-height: 28px;
+margin-right:56px;
+font-size: 17px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #1F2329;
+}
+/* year部分里的第一个单元格设置大小，位置和背景颜色，设置字体大小颜色种类和字重 */
+.year ul li:first-child{
+  margin-left: 52px;
+  background: #4517AF;
+  font-size: 20px;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #FFFFFF;
+}
+/* contact设置防止外边距塌陷，设置高度 */
+.contact{
+  overflow: hidden;
+  height: 847px;
+}
+/* contact部分里的line设置大小位置，背景颜色和边框样式 */
+.contact .line{
+  width: 30px;
+height: 4px;
+background: #4617AF;
+border-radius: 2px;
+margin-left: 945px;
+}
+/* contact部分里的title设置大小位置，设置字体大小颜色种类和字重 */
+.contact .title{
+  width: 165px;
+height: 31px;
+font-size: 32px;
+font-family: Source Han Sans CN;
+font-weight: 500;
+color: #1F2329;
+margin-top: 19px;
+margin-left: 895px;
+}
+/* contact部分里的eng设置大小位置，设置字体大小颜色种类和字重 */
+.contact .eng{
+  width: 200px;
+height: 14px;
+font-size: 16px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+letter-spacing: 2px;
+margin-top: 17px;
+margin-left: 906px;
+}
+/* contact部分里的location部分设置防止外边距塌陷，设置大小位置 */
+.contact .location{
+  overflow: hidden;
+  width: 1011px;
+  height: 525px;
+  margin-top: 111px;
+  margin-left: 456px;
+}
+/* contact部分里的location部分里表格里的全部单元格设置左浮动 */
+.contact .location ul li{
+  float: left;
+}
+/* contact部分里的location部分里表格里的第二个单元格设置位置 */
+.contact .location ul li:nth-child(2){
+  margin-left: 29px;
+  margin-right: 29px;
+}
+/* link部分内容设置防止外边距塌陷，设置大小和位置，插入背景图片选择不平铺 */
+.link{
+  overflow: hidden;
+  width: 1199px;
+  height: 193px;
+  background: url(imgs/footerbkgd.png)no-repeat;
+  margin-bottom: 89px;
+}
+/* link部分里的二级标题设置左浮动，设置大小位置，设置字体大小种类颜色和字重，设置行高 */
+.link h2{
+  float: left;
+  width: 27px;
+height: 139px;
+font-size: 28px;
+font-family: OPPOSans;
+font-weight: normal;
+color: #1F2329;
+line-height: 28px;
+margin-top: 27px;
+margin-left: 296px;
+}
+/* link部分里的三级标题设置左浮动，设置大小位置，设置字体大小种类颜色和字重，设置行高，顺时针旋转90度 */
+.link h3{
+  float: left;
+  width: 95px;
+height: 14px;
+font-size: 14px;
+font-family: OPPOSans;
+font-weight: normal;
+color: #7B7E81;
+line-height: 22px;
+margin-top: 70px;
+margin-left: -31px;
+line-height: 14px;
+transform: rotate(90deg);
+}
+/* link部分的表格里的所有单元格左浮动 */
+.link ul li{
+  float: left;
+}
+/* link部分表格里的各个单元格设置不同格式 */
+.link ul li:nth-child(1){
+margin-top: 26px;
+margin-left: 267px;
+}
+.link ul li:nth-child(2){
+  margin-top: 27px;
+  margin-left: 62px;
+}
+/* link部分表格里的各个单元格里的p标签内容设置不同格式 */
+.link ul li:nth-child(1) p{
+  width: 82px;
+  height: 15px;
+  font-size: 14px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #1F2329;
+  line-height: 14px;
+  margin-top: 15px;
+}
+.link ul li:nth-child(2) p{
+  width: 71px;
+  height: 15px;
+  font-size: 14px;
+  font-family: OPPOSans;
+  font-weight: normal;
+  color: #1F2329;
+  line-height: 14px;
+  margin-left: 8px;
+  margin-top: 15px;
+}
+/* footer部分设置防止外边距塌陷，设置相对定位，使得绝对定位可以定位到其中任意位置，设置大小位置，设置背景颜色 */
+.footer{
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+height: 416px;
+background: #202328;
+margin-top: 79px;
+}
+/* box15里的p66标签定位到footer里的任意位置 */
+.footer .box15 .p66 {
+  position: absolute;
+ width: 208px;
+ height: 35px;
+ top: 88px;
+ left: 361px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p67{
+  position: absolute;
+  width: 165px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 146px;
+left: 361px;
+}
+/* footer里的box15中的p标签全部设置为绝对定位,使其可以定位到box15的任意位置上 */
+.footer .box15 p{
+  position: absolute;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p68{
+  width: 224px;
+height: 16px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 172px;
+left: 361px;
+}
+/* footer里的box15中的p69,p70,p71,p72同时设置下列格式 */
+.footer .box15 .p69,.p70,.p71,.p72{
+width: 57px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 10px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p69{
+top: 92px;
+left: 675px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p70{
+top: 91px;
+left: 833px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p71{
+  top: 91px;
+  left: 991px;
+}
+/* 设置为绝对定位,在box15里可以定位任意位置 */
+.footer .box15 .p72{
+  top: 91px;
+  left: 1147px;
+}
+/* footer里的box15中的p73,p74,p75,p76.p77,p78,p79,p80,p81同时设置下列格式 */
+.footer .box15 .p73,.p74,.p75,.p76,.p77,.p78,.p79,.p80,.p81{
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 10px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p73{
+  width: 72px;
+  height: 14px;
+top: 133px;
+left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p74{
+  width: 69px;
+  height: 14px;
+  top: 133px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p75{
+  width: 86px;
+  height: 14px;
+  top: 133px;
+  left: 990px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p76{
+  width: 57px;
+  height: 14px;
+  top: 133px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p77{
+  width: 116px;
+  height: 14px;
+  top: 157px;
+  left: 675px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p78{
+  width: 72px;
+  height: 14px;
+  top: 157px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p79{
+  width: 86px;
+  height: 14px;
+  top: 157px;
+  left: 991px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p80{
+  width: 57px;
+  height: 14px;
+  top: 157px;
+  left: 1148px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p81{
+  width: 57px;
+  height: 14px;
+  top: 180px;
+  left: 833px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p82{
+  width: 677px;
+  height: 1px;
+  background: #464646;
+top: 266px;
+left: 623px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p83{
+width: 70px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 282px;
+left: 683px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p84{
+  width: 72px;
+  height: 14px;
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 14px;
+  top: 282px;
+  left: 769px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p85{
+  width: 43px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 887px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p86{
+  width: 86px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 977px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p87{
+  width: 129px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 282px;
+left: 1110px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p88{
+  width: 396px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+top: 314px;
+left: 763px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p89{
+  width: 14px;
+height: 16px;
+  left: 725px;
+  bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p90{
+  width: 187px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+left: 747px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p91{
+  width: 14px;
+height: 16px;
+left: 964px;
+bottom: 63px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p92{
+  width: 212px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #7B7E81;
+line-height: 14px;
+right: 724px;
+bottom: 64px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p93{
+  width: 87px;
+  height: 87px;
+  top: 91px;
+  right: 476px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p94{
+  width: 86px;
+  height: 86px;
+  top: 91px;
+  right: 359px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p95{
+  width: 82px;
+height: 14px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 480px;
+}
+/* 定位到footer里的box15的相应位置 */
+.footer .box15 .p96{
+  width: 72px;
+height: 13px;
+font-size: 14px;
+font-family: Source Han Sans CN;
+font-weight: 400;
+color: #FFFFFF;
+line-height: 14px;
+top: 189px;
+right: 367px;
+}

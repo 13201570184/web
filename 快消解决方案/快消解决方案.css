@@ -1,0 +1,332 @@
+/* 整篇内容设置内外边距为0 */
+*{
+  padding: 0;
+  margin: 0;
+}
+/* 将所有单元格li前面的小黑点取消掉 */
+li{
+  list-style: none;
+}
+/* 此标签设置宽度为1440像素，水平居中 */
+.w{
+  width: 1440px;
+  margin: auto;
+}
+/* 导航栏nav部分设置高度 */
+.nav{
+  height: 104px;
+}
+/* 导航栏的navp部分设置左浮动，设置大小 */
+.navp{
+  float: left;
+  width: 482px;
+  height: 104px;
+}
+/* navp部分img图片设置位置 */
+.navp img{
+  margin-top: 30px;
+  margin-left: 120px;
+}
+/* navt设置左浮动，设置大小 */
+.navt{
+  float: left;
+  width: 958px;
+  height: 104px;
+}
+/* navt部分里的所有单元格设置左浮动，设置高度字体大小和位置 */
+.navt ul li{
+  float: left;
+  height: 21px;
+font-size: 16px;
+font-family: Helvetica;
+color: #222222;
+margin-top: 43px;
+margin-right: 35px;
+}
+/* navt部分里的logon部分设置左浮动，设置大小边框格式和位置 */
+.navt .logon{
+  float: left;
+  width: 64px;
+height: 36px;
+border-radius: 7px;
+border: 1px solid #4517AF;
+margin-top: 34px;
+margin-left: 15px;
+}
+/* navt部分里的logon部分的p标签设置大小位置，字体大小种类颜色行高 */
+.navt .logon p{
+  width: 32px;
+height: 21px;
+font-size: 16px;
+font-family: Helvetica;
+color: #222222;
+line-height: 21px;
+margin-top: 8px;
+margin-left: 16px;
+}
+/* navt部分的shenqing部分设置左浮动，设置大小位置边框样式 */
+.navt .shenqing{
+  float: left;
+  width: 96px;
+height: 36px;
+background: #4517AF;
+border-radius: 7px;
+margin-top: 34px;
+margin-left: 20px;
+}
+/* navt部分的shenqing部分里的p标签设置大小位置，字体大小种类颜色行高 */
+.navt .shenqing p{
+  width: 64px;
+height: 21px;
+font-size: 16px;
+font-family: Helvetica;
+color: #FFFFFF;
+line-height: 21px;
+margin-top: 8px;
+margin-left: 16px;
+}
+/* header部分设置高度 */
+.header{
+  height: 1210px;
+}
+/* header-hd部分设置防止外边框塌陷，设置大小和背景颜色 */
+.header-hd{
+  overflow: hidden;
+  width: 1440px;
+  height: 458px;
+  background-color: lightcoral;
+}
+/* header-hd部分的二级标题设置大小和位置，设置字体大小种类颜色行高 */
+.header-hd h2{
+  width: 550px;
+height: 74px;
+font-size: 50px;
+font-family: Helvetica;
+color: #FFFFFF;
+line-height: 60px;
+margin-top: 140px;
+margin-left: 445px;
+}
+/* header-hd部分里的download部分设置防止外边距塌陷，设置大小和位置设置背景颜色， */
+.header-hd .download{
+  overflow: hidden;
+  width: 207px;
+height: 52px;
+background: #FFFFFF;
+border-radius: 26px;
+margin-top: 53px;
+margin-left: 616px;
+}
+/* header-hd部分里的download内容里的p标签内容设置大小和位置，设置字体大小种类颜色和行高 */
+.header-hd .download p{
+  width: 144px;
+height: 36px;
+font-size: 24px;
+font-family: Helvetica;
+color: #1F2329;
+line-height: 36px;
+margin-top: 8px;
+margin-left: 32px;
+}
+/* header-bd部分设置高度 */
+.header-bd{
+  height: 752px;
+}
+/* header-bd部分的img图片设置位置 */
+.header-bd img{
+  float: left;
+  margin-top: 204px;
+  margin-left: 170px;
+}
+/* header-bd部分里的三级标题设置左浮动，设置大小和位置，设置字体大小种类颜色和行高 */
+.header-bd h3{
+  float: left;
+  width: 340px;
+height: 45px;
+font-size: 30px;
+font-family: Helvetica;
+color: #1F2329;
+line-height: 36px;
+margin-top: 187px;
+margin-left: 78px;
+}
+/* header-bd部分里的四级标题设置左浮动设置大小和位置，设置字体大小种类颜色和行高 */
+.header-bd h4{
+  float: left;
+  width: 463px;
+height: 155px;
+font-size: 18px;
+font-family: Helvetica;
+color: #4B4B4B;
+line-height: 29px;
+margin-top: 35px;
+margin-left: 78px;
+}
+/* header-bd里的四级标题里的行内元素span内容设置其颜色为#4517af */
+.header-bd h4 span{
+  color: #4517AF;
+}
+/* header-bd部分里的download部分设置格式 */
+.header-bd .download{
+float: left;
+  width: 165px;
+height: 50px;
+background: #4517AF;
+box-shadow: 1px 19px 28px 0px rgba(69,23,175,0.22);
+border-radius: 12px;
+margin-top: 48px;
+margin-left: 78px;
+}
+/* header-bd部分里的download内容里的p标签内容设置格式 */
+.header-bd .download p{
+  width: 126px;
+height: 31px;
+font-size: 21px;
+font-family: Helvetica;
+color: #FFFFFF;
+line-height: 50px;
+margin-left: 20px;
+}
+/* challenge部分设置防止外边距塌陷，设置高度 */
+.challenge{
+  overflow: hidden;
+  height: 704px;
+}
+/* challenge部分里的line内容设置格式 */
+.challenge .line{
+  width: 32px;
+height: 5px;
+background: #4517AF;
+border-radius: 3px;
+margin-left: 704px;
+}
+/* challenge部分里的title内容设置格式 */
+.challenge .title{
+  width: 165px;
+height: 47px;
+font-size: 32px;
+font-family: Helvetica;
+color: #222222;
+line-height: 47px;
+margin-top: 11px;
+margin-left: 637px;
+}
+/* .challenge部分里的eng内容设置格式 */
+.challenge .eng{
+  width: 102px;
+height: 24px;
+font-size: 16px;
+font-family: Helvetica;
+color: #4B4B4B;
+line-height: 24px;
+letter-spacing: 2px;
+margin-top: 2px;
+margin-left: 669px;
+}
+/* .challenge部分里的pic2图片设置位置 */
+.challenge .pic2{
+  margin-top: 91px;
+  margin-left: 216px;
+}
+/* .challenge部分里的pic3图片设置位置 */
+.challenge .pic3{
+  margin-left: 216px;
+  margin-top: 22px;
+}
+/* .challenge部分里的pic4图片设置位置 */
+.challenge .pic4{
+  margin-left: 216px;
+  margin-top: 22px;
+}
+/* programme部分设置高度 */
+.programme{
+height: 1881px;
+}
+/* programme部分的line部分内容设置格式 */
+.programme .line{
+  width: 32px;
+height: 5px;
+background: #4517AF;
+border-radius: 3px;
+margin-left: 704px;
+}
+/* programme部分的title部分内容设置格式 */
+.programme .title{
+  width: 725px;
+height: 47px;
+font-size: 32px;
+font-family: Helvetica;
+color: #222222;
+line-height: 47px;
+margin-top: 13px;
+margin-left: 357px;
+}
+/* programme部分的eng部分内容设置格式 */
+.programme .eng{
+  width: 278px;
+height: 24px;
+font-size: 16px;
+font-family: Helvetica;
+color: #4B4B4B;
+line-height: 19px;
+letter-spacing: 2px;
+margin-left:581px;
+}
+/* programme部分里的pic5里的图片设置格式 */
+.programme .pic5{
+  margin-top: 79px;
+  margin-left: 168px;
+}
+/* programme部分里的pic6里的图片设置格式 */
+.programme .pic6{
+  margin-top: -45px;
+  margin-left: 168px;
+}
+/* programme部分里的pic7里的图片设置格式 */
+.programme .pic7{
+  margin-top: -45px;
+  margin-left: 168px;
+}
+/* programme部分里的pic8里的图片设置格式 */
+.programme .pic8{
+  margin-top: -45px;
+  margin-left: 168px;
+}
+底部footer设置大小
+.footer{
+  width: 1440px;
+  height: 257px;
+}
+/* 底部footer部分里的bkgd设置格式 */
+.footer .bkgd{
+  width: 1380px;
+  height: 194px;
+  background:url(imgs/footerbkgd.png);
+  margin-left: 30px;
+}
+/* bkgd里的二级标题设置格式 */
+.bkgd h2{
+  float: left;
+  width: 429px;
+height: 49px;
+font-size: 33px;
+font-family: Helvetica;
+color: #222222;
+line-height: 49px;
+margin-top: 73px;
+margin-left: 266px;
+}
+/* bkgd里的next部分设置格式 */
+.bkgd .next{
+  float: left;
+margin-top: 75px;
+margin-left: 25px;
+}
+/* bkgd里的qywx部分设置格式 */
+.bkgd .qywx{
+  float: left;
+  width: 124px;
+  height: 124px;
+  margin-top: 35px;
+  margin-left: 202px;
+}
