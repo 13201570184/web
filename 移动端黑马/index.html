@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0,maximum-scale1.0, minimum-scale1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <title>黑马面面</title>
+</head>
+<body>
+  <section class="top">
+  <!-- 头部区域 -->
+  <header class="header">黑马面面</header>
+  <!-- 导航栏nav部分 -->
+  <div class="nav">
+    <a href="#" class="item">
+      <img src="icons/icon1.png" alt="">
+      <span>HR面试</span>
+    </a>
+    <a href="#" class="item">
+      <img src="icons/icon2.png" alt="">
+      <span>笔试</span>
+    </a>
+    <a href="#" class="item">
+      <img src="icons/icon3.png" alt="">
+      <span>技术面试</span>
+    </a>
+    <a href="#" class="item">
+      <img src="icons/icon4.png" alt="">
+      <span>模拟面试</span>
+    </a>
+    <a href="#" class="item">
+      <img src="icons/icon5.png" alt="">
+      <span>面试技巧</span>
+    </a>
+    <a href="#" class="item">
+      <img src="icons/icon6.png" alt="">
+      <span>薪资查询</span>
+    </a>
+  </div>
+     <!-- go模块 -->
+      <a href="" class="go">
+      <img src="imgs/go.png" alt="">
+      <a href=""></a>
+    </section>
+    <!-- 就业指导模块 -->
+    <section class="content">
+      <!-- 头部 -->
+      <div class="con-hd">
+        <h4>
+          <span class="icon"><img src="icons/i1.png" alt=""></span>
+          就业指导
+        </h4>
+        <a href="#" class="more">更多>></a>
+      </div>
+      <!-- 轮播图模块 -->
+      <div class="get_job_focus">
+        <div class="swiper-container get_job_fo">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"><img src="imgs/pic.png" alt=""></a>
+              <p>老师教你应对面试技巧</p>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="imgs/ldh.jpg" alt=""></a>
+              <p>老师教你应对面试技巧</p>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="imgs/2.jpg" alt=""></a>
+              <p>老师教你应对面试技巧</p>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="imgs/3.jpg" alt=""></a>
+              <p>老师教你应对面试技巧</p>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- 将控制图片左右翻页的箭头，放到图片外面左右两侧 -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <!-- 引入js文件 -->
+    <script src="js/flexible.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+      // 第一个函数里面是 就业指导轮播图 (沙箱函数)
+      (function () {
+        var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        // 每个slide之间的距离
+        spaceBetween: 30,
+        // 最大的图片放到中间显示
+      centeredSlides: true,
+      loop: true,
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      })();
+    </script>
+</body>
+</html>

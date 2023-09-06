@@ -1,0 +1,144 @@
+body{
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+  background: #f2f4f7;
+}
+a{
+  text-decoration: none;
+}
+@media screen and (min-width:750px) {
+  html{
+    font-size: 37.5px!important;
+  }
+}
+.top{
+  background: #fff;
+  padding-bottom: 1.1467rem;
+}
+.header{
+  height: 2.1333rem;
+  text-align: center;
+  line-height: 2.1333rem;
+  border-bottom: 1px solid #eaeaea;
+  font-size: .9333rem;
+  color: #1c1c1c;
+}
+// nav部分
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.2rem 0 1.6rem 0;
+   .item{
+    display: flex ;
+    width: 33.33%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .6667rem;
+     img{
+      width: 3.7067rem;
+      height: 3.7067rem;
+     }
+     span{
+      font-size: .6667rem;
+      line-height: .6667rem;
+      color: #707070;
+     }
+     &:nth-child(-n+3){
+      margin-bottom: 1.65333rem;
+     }
+   }
+}
+.go img{
+  width: 19.2533rem;
+  height: 4.0533rem;
+  margin: 0 .2667rem 0 .48rem;
+}
+.content{
+  padding: 1.0667rem .64rem;
+  background: #fff;
+  margin: .2667rem 0;
+  .con-hd{
+    display: flex;
+    justify-content: space-between;
+    height: 1.0133rem;
+    line-height: 1.0133rem;
+    h4{
+      margin: 0;
+      font-size: .7467rem;
+      color: #333;
+      .icon{
+        display: inline-block;
+        width: 1.0133rem;
+        height: 1.0133rem;
+        vertical-align: middle;
+      }
+    }
+    .more{
+      font-size: .5867rem;
+      color:#999;
+    }
+  }
+}
+.get_job_focus{
+  position: relative;
+  .swiper-container {
+    // width: 100%;
+    height: 100%;
+    // 根据需求把轮播图的宽度调为540px,使得左右两图片部分放到中心图的后面
+    width: 14.4rem;
+    margin-top: .9067rem;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  transition: 300ms;
+  // 左右的图片（非中心图片）大小改为原来的0.8倍
+  opacity: 0.5;
+  transform: scale(0.8);
+  a{
+    width: 9.0133rem;
+    height: 10.0267rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  p{
+    width: 9.0133rem;
+    font-size: .6667rem;
+    margin-top: .64rem;
+    color: #333;
+  }
+  }
+  // 当前选中的slide 中间的图片
+.swiper-slide-active,.swiper-slide-duplicate-active{
+    transform: scale(1);
+    opacity: 1;
+    z-index: 99;
+}
+  .swiper-button-next,
+  .swiper-button-prev{
+    outline: none;
+    &::after{
+      font-size: 1.0666667rem;
+      color: #333;
+    }
+  }
+}
