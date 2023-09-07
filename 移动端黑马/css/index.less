@@ -100,14 +100,6 @@ a{
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
   transition: 300ms;
   // 左右的图片（非中心图片）大小改为原来的0.8倍
   opacity: 0.5;
@@ -141,4 +133,77 @@ a{
       color: #333;
     }
   }
+}
+// 学习模块轮播图
+.study{
+  padding-bottom: 2.6667rem;
+  .swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: .5333rem ;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 7.7333rem;
+    height: 9.0667rem;
+    font-size: 18px;
+    background: #fff;
+    border-radius: .2667rem;
+    box-shadow: 0 0 .2667rem rgba(0, 0, 0, .1);
+    h5{
+      font-size: .6933rem;
+      margin: .5333rem 0;
+      padding: 0 .2667rem;
+      font-weight: 400;
+    }
+    p{
+      font-size: .6933rem;
+      color: #ff4400;
+    }
+    /* Center slide text vertically */
+
+    display: flex;
+
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.footer{
+  width: 20rem;
+  position: fixed;
+  height: 2.9333rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 99 ;
+  border-top: .0267rem solid #ccc;
+  display: flex;
+  
+  a{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: .5333rem;
+  img{
+    width: 1.0133rem;
+    height: 1.0933rem;
+    display: flex;
+  }
+  p{
+    font-size: .64rem;
+    color: #666;
+    padding-top: .2667rem;
+  }
+}
 }

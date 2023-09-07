@@ -97,14 +97,6 @@ a {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
   transition: 300ms;
   opacity: 0.5;
   transform: scale(0.8);
@@ -137,4 +129,70 @@ a {
 .get_job_focus .swiper-button-prev::after {
   font-size: 1.0666667rem;
   color: #333;
+}
+.study {
+  padding-bottom: 2.6667rem;
+}
+.study .swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0.5333rem;
+}
+.study .swiper-slide {
+  flex-direction: column;
+  justify-content: center;
+  width: 7.7333rem;
+  height: 9.0667rem;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 0.2667rem;
+  box-shadow: 0 0 0.2667rem rgba(0, 0, 0, 0.1);
+  /* Center slide text vertically */
+  display: flex;
+}
+.study .swiper-slide h5 {
+  font-size: 0.6933rem;
+  margin: 0.5333rem 0;
+  padding: 0 0.2667rem;
+  font-weight: 400;
+}
+.study .swiper-slide p {
+  font-size: 0.6933rem;
+  color: #ff4400;
+}
+.study .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer {
+  width: 20rem;
+  position: fixed;
+  height: 2.9333rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 99 ;
+  border-top: 0.0267rem solid #ccc;
+  display: flex;
+}
+.footer a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5333rem;
+}
+.footer a img {
+  width: 1.0133rem;
+  height: 1.0933rem;
+  display: flex;
+}
+.footer a p {
+  font-size: 0.64rem;
+  color: #666;
+  padding-top: 0.2667rem;
 }

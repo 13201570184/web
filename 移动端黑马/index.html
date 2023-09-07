@@ -49,7 +49,7 @@
       <!-- 头部 -->
       <div class="con-hd">
         <h4>
-          <span class="icon"><img src="icons/i1.png" alt=""></span>
+          <span class="icon"><img src="icons/i2.png" alt=""></span>
           就业指导
         </h4>
         <a href="#" class="more">更多>></a>
@@ -83,6 +83,45 @@
         <div class="swiper-button-prev"></div>
       </div>
     </section>
+    <!-- 充电学习模块 -->
+    <section class="content">
+      <!-- 头部 -->
+      <div class="con-hd">
+        <h4>
+          <span class="icon"><img src="icons/i1.png" alt=""></span>
+          充电学习
+        </h4>
+        <a href="#" class="more">更多>></a>
+      </div>
+      <!-- 学习模块轮播图 -->
+      <div class="study">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"><img src="imgs/pic1.png" alt=""></a>
+              <h5>说低调英语，告别中式英语</h5>
+              <p>156人学习</p>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="imgs/pic2.png" alt=""></a>
+              <h5>说低调英语，告别中式英语</h5>
+              <p>156人学习</p>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="imgs/pic1.png" alt=""></a>
+              <h5>说低调英语，告别中式英语</h5>
+              <p>156人学习</p>
+            </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <a href="#"><img src="icons/home.png" alt=""><p>首页</p></a>
+      <a href="#"><img src="icons/net.png" alt=""><p>技术面试</p></a>
+      <a href="#"><img src="icons/ms.png" alt=""><p>模拟面试</p></a>
+      <a href="#"><img src="icons/user.png" alt=""><p>我的主页</p></a>  
+    </footer>
     <!-- 引入js文件 -->
     <script src="js/flexible.js"></script>
     <script src="js/swiper.min.js"></script>
@@ -102,6 +141,14 @@
         },
       });
       })();
+      // 第二个函数的轮播图
+       (function(){
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2.3,
+        spaceBetween: 20,
+        
+      });
+       })();
     </script>
 </body>
 </html>
