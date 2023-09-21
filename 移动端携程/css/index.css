@@ -137,7 +137,7 @@ nav{
 }
 .nav-items:nth-child(-n+2){
   border-right: 1px solid #fff;
-}
+} 
 .nav-items a{
   flex: 1;
   line-height: 44px;

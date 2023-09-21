@@ -4,23 +4,243 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    @media screen and (max-width:499px){
-      body{
-        background-color: mediumseagreen;
+    <script>
+      // switch 流程控制应用
+      // var name =prompt('请从刘备、关羽、张飞里挑选你的英雄');
+      // switch(name) {
+      //   case '刘备' :
+      //   alert('汉昭烈帝');
+      //   break;
+      //   case '关羽' :
+      //   alert('汉寿亭侯');
+      //   break;
+      //   case '张飞':
+      //   alert('飞飞公主')
+      //   default:
+      //   alert('没有此英雄');
+      // }
+
+
+      // for(var i =1;i<=100; i++){
+      //   console.log('hello');
+      // }
+      // for(var i =1;i<=100;++i){
+      //   console.log('ciallo')
+      // }
+      
+      // var num = 0;
+      // for( var i=1;i<=100; i++ ){
+      //    var num = num + i; 
+      // }
+      // num = num / 100;
+      // console.log(num)
+      //   var sum = 0;
+      // for(var i =1;i<=100;i++){
+      //   sum=sum + i % 2 == 1;
+      // }
+      // console.log(sum);
+      // 用三元表达式分别求1~100里所有奇数的和以及所有偶数的和
+      //   var even = 0;
+      //   var odd = 0;
+      // for(var i =1;i<=100;i++){
+      //   i % 2 ==0 ? even=even + i : odd=odd + i;
+      // }
+      // console.log(even);
+      // console.log(odd);
+      // 输入多少人，录入多少人的成绩 求总成绩和平均值
+      // var sum =0;
+      // var num = prompt('人数');
+      // for(var i =1; i<=num;i++){
+      //   sum=sum+ parseFloat(prompt('第'+ i + '名的成绩是'));
+      // }
+      // var pingjun = sum / num
+      // alert('总成绩是'+sum +'\n'+ '平均成绩是'+pingjun);
+      // 打印x行 y列的星星图标
+      // var x = prompt('请输入行数');
+      // var y = prompt('请输入列数');
+      // var star ='';
+      // for(var a =1;a<=x;a++){
+      //   for(var b =1;b<=y;b++){
+      //     star=star + '⭐'
+      //   }
+      //   star=star + '\n';
+      // }
+      // console.log(star);
+      // 打印n行 n列的倒三角形
+      // var x = prompt('请输入行数(行数要和列数相同)');
+      // var y = prompt('请输入列数');
+      // var star ='';
+      // for(var a =1;a<=x;a++){
+      //   var row =y-a+1;
+      //   for(var b =1;b<=row;b++){
+      //     star=star + '⭐';
+      //   }
+      //   star=star +'\n';
+      // }
+      //   console.log(star)
+      // 99乘法表
+      // var num = '';
+      // for(var a=1;a<=9;a++){
+      //   for(var b=1;b<=a;b++){
+      //     num = num + b + 'x' + a + '=' + a * b + '\t';
+      //   }
+      //   num += '\n';
+      // }
+      // console.log(num
+      // while循环 --条件循环
+      // var i=1;
+      // var num=0;
+      // while(i<=100){
+      //   console.log('你今年'+ i +'岁了');
+      //   num= num + i;
+      //   i++;
+      // }
+      // console.log(num)
+        // var spk = prompt('帮帮我');
+        // while(spk !== '肯德基爷爷'){
+        //   spk = prompt('帮帮我');
+        // }
+        // alert('崩铁，启动!!');  
+      
+      // do while循环
+      // var i=1;
+      // var num=0;
+      // do{
+      //   console.log('今年你'+ i +'岁了');
+      //   num=num + i;
+      //   i++;
+      // }while(i<=100);
+      // console.log(num)
+      // do{
+      //   var spk =prompt('异世相遇');
+      // }while(spk !== '尽享美味');
+      // alert('原神，启动!!')
+      // for(var i=1;i<=5;i++){  
+      //   if(i==3){
+      //     break;
+      //   }
+      //   console.log('在吃第' + i + '个包子')
+      // 
+      // 登录页面.只有用户名为admin 密码为123456 才能登陆
+      // do{
+      //   var user =prompt('请输入你的用户名')
+      //   var password = prompt('请输入你的密码')
+      // }while(user !=='admin' || password !=='123456')  //使用或 || 标签，是因为只有当while里面的是全部条件都为false时，才执行。即user为admin 且password为123456.若用&& 且标签,只要user 或password中一个显示false就行了
+      // alert('正在登陆，请稍后'
+
+
+      // 简易ATM
+      // var money = 100;
+      // var list = prompt('请输入您要的操作：' + '\n' + '1.存钱' + '\n' + '2.取钱' + '\n' + '3.显示余额' + '\n' + '4.退出')
+      // switch(list){
+      //   case '1' :
+      //   var cun = parseFloat(prompt('您要存入的金额是'));
+      //   var sum = money + cun;
+      //   alert('当前的余额是' + sum + '元')
+      //   break;
+      //   case '2' :
+      //   var qu = prompt('您要取出的金额是')
+      //   var sum = money - qu;
+      //   alert('剩余余额为'+ sum + '元')
+      //   break;
+      //   case '3' :
+      //   alert('当前余额为'+ money + '元')
+      //   break;
+      //   case '4' :
+      //   alert('正在退出，请稍后')
+      //   break;
+      // 
+
+      // 获取数组元素
+      // var arr=['星期一','星期二','星期三','星期四','星期五','星期六','星期天'];
+      // alert('今天是' + arr[6]);
+
+
+      // 遍历数组
+      // var arr = ['蔡徐坤','老八','卢本伟','燕双鹰','嘎子'];
+      // for(var i = 0; i < 5 ; i++){
+      //   alert('你的选择是'+ arr[i]);
+      // }
+
+
+      // 求数组中的最大值
+      // var arr = [12,23,17,7,54,18];
+      // var max = arr[0];
+      // for(var i = 1 ; i < arr.length ;i++){
+      //   if(arr[i] > max){
+      //     max = arr[i];
+      //   }
+      // }
+      // console.log('该数组的最大值为' + max);
+
+      // 求数组中的最小值
+      // var cxk = [23,-11,7,0.07,-9,88]
+      // var min = cxk[1];
+      // for(var i = 1 ; i < cxk.length; i++){
+      //   if(cxk[i]<min){
+      //     min = cxk[i];
+      //   }
+      // }
+      // console.log('该数组的最小值为' + min)
+
+
+      // 数组转换为分割字符串
+      // var color = ['red','yellow','green','blue','gold'];
+      // var text = '';
+      // for(var i =0 ;i <color.length ; i++){
+      //   text+=color[i] + '|';
+      // }
+      // console.log(text)
+
+
+      // 新建一个数组，里面存放10个整数(1~10)
+      // var ppt=[];
+      // for(var i=0;i<10;i++){
+      //   ppt[i]= i+1;
+      // }
+      // console.log(ppt)
+
+
+      // 将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来，放入新数组
+      // var zu = [];
+      // var cs = [2,0,6,1,77,0,52,10,25,7];
+      // for(var i = 0 ;i<=cs.length;i++){
+      //   if(cs[i] >= 10){
+      //     zu[zu.length] = cs[i];
+      //   }
+      // }
+      // console.log(zu)
+      // 或者
+      // var zu = [];
+      // var cs = [2,0,6,1,77,0,52,10,25,7];
+      // var b = 0;
+      // for(var i = 0 ;i<=cs.length;i++){
+      //   if(cs[i] >= 10){
+      //     zu[b] = cs[i];
+      //        b++;
+      //   }
+      // }
+      // console.log(zu)
+
+
+      // 冒泡排序(按大小顺序排列)
+      var arr = [3,5,7,1,9];
+      for(var a =0;a<arr.length-1;a++){
+        for(var b=0;b<arr.length-a-1;b++){
+          if(arr[b]<arr[b+1]){
+            var wb = arr[b];
+            arr[b] = arr[b+1];
+            arr[b+1] = wb;
+          }
+        }
       }
-    }
-    @media screen and (min-width:500px){
-      body{
-        background-color: lightpink;
-      }
-    }
-    @media screen and (min-width:900px) {
-      body{
-        background-color: crimson;
-      }
-    }
-  </style>
+      console.log(arr)
+
+
+
+
+
+    </script>
 </head>
 <body>
 
