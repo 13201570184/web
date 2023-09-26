@@ -39,6 +39,8 @@
       //   sum=sum + i % 2 == 1;
       // }
       // console.log(sum);
+
+
       // 用三元表达式分别求1~100里所有奇数的和以及所有偶数的和
       //   var even = 0;
       //   var odd = 0;
@@ -47,6 +49,8 @@
       // }
       // console.log(even);
       // console.log(odd);
+
+
       // 输入多少人，录入多少人的成绩 求总成绩和平均值
       // var sum =0;
       // var num = prompt('人数');
@@ -55,6 +59,8 @@
       // }
       // var pingjun = sum / num
       // alert('总成绩是'+sum +'\n'+ '平均成绩是'+pingjun);
+
+
       // 打印x行 y列的星星图标
       // var x = prompt('请输入行数');
       // var y = prompt('请输入列数');
@@ -66,6 +72,8 @@
       //   star=star + '\n';
       // }
       // console.log(star);
+
+
       // 打印n行 n列的倒三角形
       // var x = prompt('请输入行数(行数要和列数相同)');
       // var y = prompt('请输入列数');
@@ -78,6 +86,8 @@
       //   star=star +'\n';
       // }
       //   console.log(star)
+
+
       // 99乘法表
       // var num = '';
       // for(var a=1;a<=9;a++){
@@ -87,6 +97,8 @@
       //   num += '\n';
       // }
       // console.log(num
+
+
       // while循环 --条件循环
       // var i=1;
       // var num=0;
@@ -102,6 +114,7 @@
         // }
         // alert('崩铁，启动!!');  
       
+
       // do while循环
       // var i=1;
       // var num=0;
@@ -121,6 +134,8 @@
       //   }
       //   console.log('在吃第' + i + '个包子')
       // 
+
+
       // 登录页面.只有用户名为admin 密码为123456 才能登陆
       // do{
       //   var user =prompt('请输入你的用户名')
@@ -164,7 +179,7 @@
 
 
       // 求数组中的最大值
-      // var arr = [12,23,17,7,54,18];
+      // var arr = [72,23,17,7,54,18];
       // var max = arr[0];
       // for(var i = 1 ; i < arr.length ;i++){
       //   if(arr[i] > max){
@@ -173,9 +188,10 @@
       // }
       // console.log('该数组的最大值为' + max);
 
+
       // 求数组中的最小值
-      // var cxk = [23,-11,7,0.07,-9,88]
-      // var min = cxk[1];
+      // var cxk = [-23,-11,7,0.07,-19,-88]
+      // var min = cxk[0];
       // for(var i = 1 ; i < cxk.length; i++){
       //   if(cxk[i]<min){
       //     min = cxk[i];
@@ -224,25 +240,351 @@
 
 
       // 冒泡排序(按大小顺序排列)
-      var arr = [3,5,7,1,9];
-      for(var a =0;a<arr.length-1;a++){
-        for(var b=0;b<arr.length-a-1;b++){
-          if(arr[b]<arr[b+1]){
-            var wb = arr[b];
-            arr[b] = arr[b+1];
-            arr[b+1] = wb;
-          }
-        }
-      }
-      console.log(arr);
+      // var arr = [3,5,7,1,9];
+      // for(var a =0;a<arr.length-1;a++){
+      //   for(var b=0;b<arr.length-a-1;b++){
+      //     if(arr[b]<arr[b+1]){
+      //       var wb = arr[b];
+      //       arr[b] = arr[b+1];
+      //       arr[b+1] = wb;
+      //     }
+      //   }
+      // }
+      // console.log(arr);
+
+      
+      // 利用函数求1~123所有整数的和
+      // function getSum(num1, num2){
+      // var sum = 0;
+      // for(var i =num1; i<= num2;i++){
+      // sum+=i;
+      //   }
+      // console.log(sum)
+      // }
+      // getSum(1,123);
+
+
+      // 利用函数求任意两个数的和
+      // function getSum(num1,num2){
+      //      var sum = 0;
+      //      sum = parseFloat(num1) +parseFloat(num2);
+      //      alert('和为'+ sum);
+      // }
+      // num1 = prompt('请输入第一个数');
+      // num2 = prompt('请输入第二个数');
+      // getSum(num1,num2);
+
+      // 利用函数求任意两个数之间的和
+      // function getSum(num1,num2){
+      //   var sum = 0;
+      //   for(var i = parseFloat(num1) + 1;i < parseFloat(num2); i++){
+      //     sum +=i;
+      //   }
+      //   alert('和为' + sum);
+      // }
+      // num1 = prompt('请输入大于哪一个数');
+      // num2 = prompt('请输入小于哪一个数');
+      // getSum(num1,num2);
+
+
+      // 利用函数求任意两个数的最大值利用return
+      // function getMax(num1,num2){
+      //   if(num1>num2){
+      //     return num1;
+      //   } else{
+      //     return num2;
+      //   }
+      // }
+      // console.log(getMax(11,14));
+
+      // 三元表达式方法求最大值
+      // function getMax(num1,num2){
+      // return  num1>num2  ?  num1  : num2
+      // }
+      // console.log(getMax(2,4));
+
+      // 求数组[5,2,99,101,67,177]中的最大值用返回值return
+      // function getArrMax(arr){
+      //   var max = arr[0];
+      //   for(var i = 1; i < arr.length; i++){
+      //     if(arr[i] > max){
+      //       max = arr[i]
+      //     }
+      //   }
+      //   return max;
+      // }
+      // var re = getArrMax([5,2,99,101,67,177]);
+      // console.log(re);
+      
+
+      // 求任意两个数的 加减乘除结果
+      // function  getArr( num1,num2){
+      //   var newArr = [];
+      //   newArr[newArr.length] =   num1 + num2 ;
+      //   newArr[newArr.length] =   num1 - num2 ;
+      //   newArr[newArr.length] =   num1 * num2 ;
+      //   newArr[newArr.length] =   num1 / num2 ;
+      //   return newArr;
+      // }
+      // var re = getArr(6,4);
+      // console.log(re);
+      // 简单方法
+      // function getArr(num1,num2){
+      //   return[num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+      // }
+      // var re = getArr(6,4);
+      // console.log(re);
+
+      // 判读一个数是否为素数
+      // function getNum(num){
+      //   for(var i = 2;i < num;i++){
+      //     if(num % i != 0){
+      //       continue;
+      //     }else{
+      //       alert('这个数不是素数')
+      //       return;
+      //     }
+      //   }
+      //   alert('这个数是素数')
+      // }
+      // var re = getNum(prompt('请输入一个数'));
+
+        
+      // 预解析案例  
+      // f1();
+      // console.log(a);
+      // console.log(b);
+      // console.log(c);
+      // function f1() {
+      //   var a = b = c = 9;
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+      // }
+      // 预解析结果为
+      // function f1() {
+      //   var a = 9;
+      //   b = 9;
+      //   c = 9;
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+      // }
+      // f1();
+      // console.log(a);
+      // console.log(b);
+      // console.log(c);
+      // 输出结果为 9 9 9 undefined 9 9
+
+      // 用对象字面量的形式创建一个名字为可可的狗
+      // var dog = {
+      //   name:'可可',
+      //   type:'阿拉斯加犬',
+      //   age:5,
+      //   color: 'brown',
+      //   skill: function(){
+      //     console.log('bark');
+      //     console.log('showFilm');
+      //   }
+      // }
+      // console.log(dog.type);
+      // console.log(dog.color);
+      // dog.skill();
+
+      // 用new Object 形式创建一个鸣人对象
+      // var obj = new Object;
+      // obj.name = '鸣人';
+      // obj.sex = '男';
+      // obj.age = '18岁';
+      // obj.cp = '日向雏田';
+      // obj.skill = function(){
+      //   console.log('螺旋丸');
+      // }
+      // console.log(obj.name);
+      // console.log(obj['cp']);
+      // obj.skill();
+
+      // 构造函数创建两个英雄对象
+      // function Hero(name,type,blood) {
+      //   this.name = name;
+      //   this.type = type;
+      //   this.blood = blood;
+      //   this.attack = function(type){
+      //     console.log(type);
+      //   }
+      // }
+      // var lp = new Hero('廉颇','力量型','500血量',)
+      // console.log(lp.blood);
+      // lp.attack('近战');
+      // var hy = new Hero('后羿','敏捷型','100血量');
+      // console.log(hy.type);
+      // hy.attack('远程');
+
+      // 创造一个电脑对象，该对象要有颜色、质量、品牌、型号，可以看电影、听音乐、打游戏和敲代码
+      // var computer = {
+      //   color:'red',
+      //   weight:'1.5kg',
+      //   brand:'china',
+      //   type:'7090Ti',
+      //   skill:function(){
+      //     console.log('看电影');
+      //     console.log('听音乐');
+      //     console.log('打游戏');
+      //     console.log('敲代码')
+      //   }
+      // }
+      // console.log(computer.type);
+      // computer.skill();
+
+
+      // 要求用户才 1~50之间的一个数字 但是只有10次猜的机会
+      // function getRandom(min,max){
+      //   return Math.floor(Math.random() * (max - min + 1)) + min;
+      // }
+      // var random = getRandom(1,50);
+      // for(i = 9; i >= 0; i--){
+      //   var num = prompt('请输入一个1~50的数')
+      //   if(num > random){
+      //     alert('这个数输入大了你还有' + i +'次机会')
+      //   }else if(num < random){
+      //     alert('你输入的数过小你还有' + i + '次机会')
+      //   } else {
+      //     alert('恭喜你，输入正确')
+      //     break;
+      //   }
+      // }
+
+
+      // 获取当前时间
+      // var date = new Date()
+      // console.log(date);
+
+      // 倒计时案例 距离10月1日倒计时
+      // function lastTime(time){
+      //   var nowTime = +new Date();
+      //   var inputTime = +new Date(time);
+      //   var time = (inputTime - nowTime) / 1000;
+      //   var d = parseInt(time /60 /60 /24);
+      //   d = d <10 ?  '0' + d  : d;
+      //   var h = parseInt(time / 60 /60 % 24);
+      //   h = h <10 ?  '0' + h  : h;
+      //   var m = parseInt(time / 60 %60 );
+      //   m = m <10 ?  '0' + m  : m;
+      //   var s = parseInt(time  % 60 );
+      //   s = s <10 ?  '0' + s  : s;
+      //   return d + '天' + h + '时'  + m + '分' + s + '秒';
+      // }
+      // console.log(lastTime('2023-10-01 00:00:00'));
+      // var date = new Date();
+      // console.log(date);
+
+
+      // function unique(arr) {
+      //   var newArr = [];
+      //   for (var i =0; i < arr.length; i++) {
+      //     if(newArr.indexOf(arr[i]) === -1) {
+      //       newArr.push(arr[i]);
+      //     }
+      //   }
+      //   return newArr;
+      // }
+      // var demo = unique(['c','a','z','a','x','a','x','c','b']);
+      // console.log(demo);
+
+      // 数组转化为字符串格式
+      // var arr = ['sd','bg','gg','god'];
+      // var arr1 = ['a','b','c','d','e','f','g'];
+      // var arr2 = [1,2,3,4,5,6];
+      // console.log(arr.toString());
+      // console.log(arr.join('()'));
+      // console.log(arr.concat(arr1));
+      // console.log(arr.slice(1,3));       slice里面的数字表示 从第一个数对应的值开始（不包含第一个数）组新数组，到第二个数字表示的那个数结束(包含第二个数)
+      // console.log(arr1.slice(2,5));
+      // console.log(arr2.splice(2,3));     splice里面的数字表示 从第一个数对应的值开始（不包含第一个数）开始  第二个数表示开始往后数对应数量的元素组成一个新数组
+
+
+      // 查找字符串'abcoefoxyozzopp'中所有o出现的位置以及次数
+      // var str = 'abcoefoxyozzopp';
+      // var index = str.indexOf('o');
+      // var num = 0;
+      // while (index !== -1) {
+      //   console.log(index);
+      //   num++;
+      //   index = str.indexOf('o',index + 1);
+      // }
+      // console.log('o出现的次数是：' + num);
+      // 同样方法求数字里重复出现的位置和次数
+      // var color = ['red','blue','red','green','pink','red']
+      // var num = 0;
+      // var co = color.indexOf('red');
+      // while( co !== -1){
+      //   console.log(co);
+      //   num++;
+      //   co = color.indexOf('red',co+ 1);
+      // }
+      // console.log('red出现的次数是' + num);
+
+      // 从字符串里找出出现次数最多的数，并指出出现位置
+      // var str = 'abcoefoxyozzopp';
+      // var o = {};
+      // for(var i = 0; i<str.length;i++){
+      //   var chars =str.charAt(i);
+      //   if(o[chars]){
+      //     o[chars]++;
+      //   } else{
+      //     o[chars] = 1;
+      //   }
+      // }
+      // console.log(o);
+      // 遍历对象
+      // var max = 0;
+      // var ch = ';'
+      // for(var k in o) {
+      //   if( o[k] > max){
+      //     max = o[k];
+      //     ch = k;
+      //   }
+      // }
+      // console.log(max);
+      // console.log('最多的字符是' + ch);
+
+      
+
+
 
 
 
 
 
     </script>
+    <!-- <style>
+      img{
+        width: 300px;
+        height: 200px;
+      }
+
+    </style> -->
+
 </head>
 <body>
+  <!-- <img src="../imgjs/s.gif" alt="">
+    <div>上午好</div>
+    <script>
+      var img = document.querySelector('img')
+      var div = document.querySelector('div')
+      var date = new Date();
+      var h =date.getHours();
+      if(h<12){
+        img.src = '../imgjs/s.gif';
+        div.innerHTML ='上午好';
+      } else if (h<18){
+        img.src = '../imgjs/x.gif';
+        div.innerHTML = '下午好';
+      } else{
+        img.src = '../imgjs/w.gif';
+        div.innerHTML ='晚上好';
+      } -->
 
+    </script>
 </body>
 </html>
