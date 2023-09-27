@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    ul{
+      width: 1000px;
+      height: 48px;
+      margin-top: 123px;
+      margin-left: 500px;
+      background-color: #ccc;
+    }
+    li{
+      float: left;
+      padding: 12px  30px;
+      font-size: 24px;
+      line-height: 24px;
+      list-style: none;
+    }
+    .bkgd{
+      background-color: red;
+    }
+    .item{
+      width: 900px;
+      font-size: 24px;
+      margin-left: 500px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="bkgd">商品介绍</li>
+    <li>规格和包装</li>
+    <li>售后保障</li>
+    <li>商品评价(6000+)</li>
+    <li>手机社区</li>
+  </ul>
+  <div class="item" style="display:block">该商品的介绍……</div>
+  <div class="item" style="display:none">该商品的规格和包装……</div>
+  <div class="item"  style="display:none">该商品的售后服务……</div>
+  <div class="item"  style="display:none">该商品的评价……</div>
+  <div class="item"  style="display:none">更多手机咨询……</div>
+  <script>
+    var lis = document.querySelectorAll('li');
+    var items = document.querySelectorAll('.item');
+    for(i = 0 ;i<lis.length;i++){
+      lis[i].setAttribute('index',i);
+      lis[i].onclick = function(){
+        for(var i =0;i<lis.length;i++){
+          lis[i].className = '';
+        }
+        this.className = 'bkgd';
+        var index =this.getAttribute('index');
+        for(var i =0;i<lis.length;i++){
+          items[i].style.display = 'none'
+        }
+        items[index].style.display = 'block'
+      }
+    }
+  </script>
+</body>
+</html>

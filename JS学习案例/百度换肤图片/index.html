@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background: url(imgs/1.jpg)no-repeat ;
+      background-size: 100%;
+    }
+    .box{
+      width: 750px;
+      margin: 234px auto;
+    }
+    .box img{
+      width: 160px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="imgs/1.jpg" alt="">
+    <img src="imgs/2.jpg" alt="">
+    <img src="imgs/3.jpg" alt="">
+    <img src="imgs/4.jpg" alt="">
+  </div>
+  <script>
+    var imgs = document.querySelectorAll('img')
+      for(i = 0;i<imgs.length;i++){
+        imgs[i].onclick = function(){
+        document.body.style.backgroundImage = 'url('+ this.src +')';
+      }
+    }
+  </script>
+</body>
+</html>

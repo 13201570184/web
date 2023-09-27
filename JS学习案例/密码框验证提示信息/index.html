@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>密码框验证提示</title>
+  <style>
+    .box{
+      width: 400px;
+      margin: 234px auto;
+    }
+    .text{
+      display: inline-block;
+      font-size: 12px;
+      color: #999;
+      background: url(imgs/mess.png)no-repeat left center;
+      padding-left: 20px;
+    }
+    .right{
+      color: green;
+      background-image: url(imgs/right.png);
+    }
+    .wrong{
+      color: red;
+      background-image: url(imgs/wrong.png);
+    } 
+  </style>
+</head>
+<body>
+<div class="box">
+  <input type="password">
+  <p class="text">请输入6~16位密码</p>
+</div>
+<script>
+  var btn = document.querySelector('input')
+  var text = document.querySelector('.text')
+  btn.onblur = function(){
+    if(this.value.length<6 || this.value.length>16){
+      text.className = 'text wrong';
+      text.innerHTML = '输入错误,请输入6~16位数'
+    }else{
+      text.className = 'text right';
+      text.innerHTML = '输入正确,请牢记密码'
+    }
+  }
+</script>
+</body>
+</html>
