@@ -1271,7 +1271,7 @@
 ### 注册事件有两种方式：传统方式和方法监听注册方式
 ### 传统注册方式
 ### 1. 利用on 开头的事件 onclick
-### 2. <button onclick = "alert('hi~')"></button>
+### 2. \<button onclick = "alert('hi~')"></button>
 ### 3. btn.onclick = function(){}
 ### 4. 特点：注册事件的唯一性
 ### 5. 同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数
@@ -1680,9 +1680,275 @@
 ### 当我们点击按钮时候，判断步长是正值还是负值
 ### 1. 如果是正值，则步长往大了取整 Math.ceil()
 ### 2. 如果是负值，则步长往小了取整 Math.floor()
-
-
-
-
+## 
+### 节流阀
+### 防止轮播图按钮连续点击造成播放过快
+### 节流阀目的：当上一个函数动画内容执行完毕，再去执行下一个函数动画，让事件无法连续触发
+### 核心实现思路：利用回调函数，添加一个变量来控制，锁住函数和解锁函数
+### 开始设置一个变量var flag = true;
+### if(flag){flag = false;do something}  执行过程中，关闭事件内容
+### 利用回调函数 动画执行完毕，flag = true  事件内容执行完成后，开启下次执行
+## 
+### 移动端常见特效
+### 触屏事件
+### 触屏事件概述
+### 移动端浏览器兼容性较好，我们不需要考虑以前JS的兼容性问题，可以放心的使用原生JS书写效果，但是移动端也有自己独特的地方。比如触屏事件touch(也称触摸事件),Android和IOS都有
+### touch对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可响应用户手指(或触控笔)对屏幕或者触控板操作
+### 常见的触屏事件如下：
+|触屏touch事件|说明|              变量.addEventListener('touchstart',function(){})
+|:-|:-|
+|touchstart|手指触摸到一个DOM元素时触发|
+|touchmove|手指在一个DOM元素上滑动时触发|
+|touchend|手指从一个DOM元素上移开时触发|
+## 
+### 触屏事件对象(TouchEvent)
+### TouchEvent是一类描述手指在触控平面(触摸屏、触摸板等)的状态变化的事件。这类事件用于描述一个或多个触点，使开发者可以检测触点的移动，触点的增加和减少，等等
+### touchstart、touchmove、touchend三个事件都会各自有事件对象
+### 触摸事件对象重点我们看三个常见对象列表：
+|触摸列表|说明|
+|:-|:-|
+|touches|正在触摸屏幕的所有手指的一个列表|
+|targetTouches|正在触摸当前DOM元素上的手指的一个列表|
+|changedTouches|手指状态发生了改变的列表，从无到有，从有到无变化|
+### 因为平时我们都是给元素注册触摸事件，所以重点记住targetTouches
+## 
+### 移动端拖动元素
+### 1. touchstart、touchmove、touchend可以实现拖动元素
+### 2. 但是拖动元素需要当前手指的坐标值 我们可以使用 targetTouches[0]里面的pageX 和 pageY
+### 3. 移动端拖动的原理： 手指移动中，计算出手指移动的距离。然后用盒子原来的位置 + 手指移动的距离
+### 4. 手指移动的距离： 手指滑动中的位置减去手指刚开始触摸的位置
+### 拖动元素三步曲：
+### 1. 触摸元素 touchstart: 获取手指初始坐标，同时获得盒子原来的位置
+### 2. 移动手指 touchmove: 计算手指的滑动距离，并且移动盒子
+### 3. 离开手指 touchend:
+### 注意：手指移动也会触发滚动屏幕所以这里要阻止默认的屏幕滚动 e.preventDefault();
+## 
+### classList属性
+### classList属性是HTML5新增的一个属性，返回元素的类名。但是ie10以上版本支持
+### 该属性用于在元素中添加，移除及切换CSS类。有以下方法
+### 添加类:
+### element.classList.add('类名');
+### div.classList.add('box')
+### 移除类：
+### element.classList.remove('类名');
+### div.classList.remove('box1')
+### 切换类：
+### element.classList.toggle('类名')         //这种写法，如果标签本身有这个类名，则移除此类名，如果没有则添加这个类名
+## 
+### click延时解决方案
+### 移动端click事件会有300ms的延时，原因是移动端屏幕双击会缩放(double tap to zoom)页面
+### 解决方案：
+### 1. 禁用缩放。浏览器禁用默认的双击缩放行为并且去掉300ms的点击延迟
+### 写法为：   \<meta name = "viewport" content = "user-scalable = no">
+### 2. 利用touch事件自己封装这个事件解决300ms延迟
+### 原理就是：
+### (1). 当我们手指触摸屏幕，记录当前触摸时间
+### (2). 当我们手指离开屏幕，用离开的时间减去触摸的时间
+### (3). 如果时间小于150ms，并且没有滑动过屏幕，那么我们就定义为点击
+### 写法为：  function tap(obj, callback) {
+###   var isMove = false;
+###   var startTime = 0;
+###   obj.addEventListener("touchstart", function (e) {
+###     startTime = Date.now(); //记录触摸时间
+###   });
+###   obj.addEventListener("touchmove", function (e) {
+###     isMove = true; //看是否有滑动，有滑动算拖拽，不算点击
+###   });
+###   obj.addEventListener('touchend',function(e){
+###     if(!isMove&&(Date.now()=startTime)<150){//如果手指触摸和离开时间小于150ms 算点击
+###         callback&&callback();//执行回调函数
+###     }
+###     isMove=false;//取反 重置
+###     startTime=0;
+###   });
+### }
+### //调用
+### tap(div,function(){ })
+### 3. 使用插件。fastclick插件解决300ms延迟
+## 
+### 移动端常见开发插件
+### 什么是插件
+### JS插件是JS文件，它遵循一定规范编写，方便程序展示效果，拥有特定功能且方便调用。如轮播图和瀑布流插件
+### 特点：它一般是为了解决某个问题而专门存在，其功能单一，并且比较小
+### 我们以前写的animate.js也算一个最简单的插件  (可以调用的JS 都可以算作插件)
+### fastclick插件解决300ms延迟。使用延时
+### GitHub官网地址：https://github.com/ftlabs/fastclick
+## 
+### Swiper插件使用
+### 中文官网地址：https://www.swiper.com.cn/
+### 1. 引入插件相关文件
+### 2. 按照规定语法使用
+## 
+### 其他移动端常见插件
+### superslide: http://www.superslide2.com/
+### iscroll: https://github.com/cubiq/iscroll
+### 
+### 插件的使用总结
+### 1. 确认插件实现的功能
+### 2. 去官网查看使用说明
+### 3. 下载插件
+### 4. 打开demo实例文件，查看需要引入的相关文件，并且引入
+### 5. 复制demo实例文件中的结构html,样式css以及JS代码
+## 
+### 框架概述
+### 框架，顾名思义就是一套架构，它会基于自身的特点向用户提供一套较为完整的解决方案。框架的控制权在框架本身，使用者要按照框架所规定的某种规范进行开发
+### 插件一般是为了解决某个问题而专门存在，其功能单一，并且比较小
+### 前端常用的框架有Bootstrap、Vue、Angular、React等。既能开发PC端，也能开发移动端
+### 前端常见的移动端插件有swiper、superslide、iscroll等
+### 框架：大而全，一整套解决方案
+### 插件：小而专一，某个功能的解决方案
+## 
+### Bootstrap
+### Bootstrap 是一个简洁、直观、强悍的前端开发框架，它让web开发更迅速、简单
+### 它能开发PC端，也能开发移动端
+### Bootstrap JS插件使用步骤：
+### 1. 引入相关JS文件
+### 2. 复制HTML 结构
+### 3. 修改对应样式
+### 4. 修改相应JS参数 
+## 
+### 本地存储
+### 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，HTML5规范提出了相关解决方案
+### 本地存储特性
+### 1. 数据存储在用户浏览器中
+### 2. 设置、读取方便、甚至页面刷新不丢失数据
+### 3. 容量较大，sessionStorage约5M、localStorage约20M
+### 4. 只能存储字符串，可以将对象JSON.stringify()编码后存储
+## 
+### window.sessionStorage
+### 1. 生命周期为关闭浏览器窗口
+### 2. 在同一个窗口(页面)下数据可以共享
+### 3. 以键值对的形式存储使用
+### 存储数据：
+### sessionStorage.setItem(key,value)    key表示名称 .setItem('giao',value)
+### 获取数据：
+### sessionStorage.getItem(key)    带引号
+### 删除数据：
+### sessionStorage.removeItem(key)
+### 删除所有数据：
+### sessionStorage.clear()  括号里不用填
+## 
+### window.localStorage
+### 1. 生命周期永久生效，除非手动删除 否则关闭页面也会存在
+### 2. 可以多窗口(页面)共享(同一浏览器可以共享)
+### 3. 以键值对的形式存储使用
+### 存储数据：
+### localStorage.setItem(key,value)
+### 获取数据：
+### localStorage.getItem(key) 
+### 删除数据：
+### localStorage.removeItem(key)
+### 删除所有数据：
+### localStorage.clear()
+### element.addEventListener('change',function(){})    change 事件表示当条件发生改变时执行新的操作 
+## 
+### jQuery概述
+### JavaScript库
+### 仓库：可以把很多东西放到这个仓库里面。找东西只需要到仓库里面查找到就可以了
+### JavaScript库：即library，是一个封装好的特定的集合(方法和函数)。从封装一大堆函数的角度理解库，就是在这个库中，封装了很多预先定义好的函数在里面，比如动画animate、hide、show,比如获取元素等
+### 简单理解：就是一个JS文件，里面对我们原生js代码进行了封装，存放到里面。这样我们可以快速高效的使用这些封装好的功能了
+### 比如jQuery，就是为了快速方便的操作DOM，里面基本都是函数(方法)
+## 
+### 常见的JavaScript库
+### jQuery  Prototype  YUI  Dojo  Ext JS  移动端的zepto
+### 这些库都是对原生JavaScript的封装，内部都是用JavaScript实现的，我们主要学习的是jQuery
+## 
+### jQuery的概念
+### jQuery 是一个快速、简洁的JavaScript库，其设计的宗旨是"Write Less,Do More"，即倡导写更少的代码，做更多的事情
+### j就是JavaScript; Query查询；意思就是查询JS，把JS中的DOM操作做了封装，我们可以快速的查询使用里面的功能
+### jQuery封装了JavaScript常用的功能代码，优化了DOM操作、事件处理、动画设计和Ajax交互
+### 学习jQuery本质：就是学习调用这些函数(方法)
+### jQuery出现的目的是加快前端人员的开发速度，我们可以非常方便的调用和使用它，从而提高开发效率
+## 
+### jQuery的优点
+### 优点
+### 1. 轻量级。核心文件才几十kb，不会影响页面加载速度
+### 2. 跨浏览器兼容。基本兼容了现在主流的浏览器
+### 3. 链式编程、隐式迭代
+### 4. 对事件、样式、动画支持，大大简化了DOM操作
+### 5. 支持插件扩展开发。有着丰富的第三方的操作，例如：树形菜单、日期控件、轮播图等
+### 6. 免费、开源
+## 
+### jQuery的下载
+### 官网地址: https://jquery.com/
+### jQuery的使用步骤
+### 1. 引入jQuery文件
+### 2. 使用即可
+### jQuery的入口函数
+### 1. $(function () {
+###   ……   //此处是页面DOM加载完成的入口
+### });
+### 2. $(document).ready(function(){
+###   ……   //此处是页面DOM加载完成的入口
+### });
+### 使用jQuery入口函数可以将script写在Body的任意位置
+### 这样写 ： 1. 等着DOM结构渲染完毕即可执行内部代码，不必等到所有外部资源加载完成，jQuery帮我们完成了封装
+###   2. 相当于原生JS中的DOMContentLoaded
+###   3. 不同于原生JS中的load事件是等页面文档、外部的JS文件、css文件、图片加载完毕才执行内部代码
+###   4. 更推荐使用第一种方式
+## 
+### jQuery的顶级对象$
+### 1. $是jQuery的别称，在代码中可以使用jQuery代替$，但一般为了方便，通常都直接使用$
+### 2. $是jQuery的顶级对象，相当于原生JS中的window。把元素利用$包装成jQuery对象，就可以调用jQuery的方法
+## 
+### jQuery对象和 DOM对象
+### 1. 用原生JS获取来的对象就是DOM对象
+### 2. jQuery方法获取的元素就是jQuery对象
+### 3. jQuery对象本质是：利用$对DOM对象包装后产生的对象(伪数组形式存储)
+### jQuery对象与 DOM对象对象之间是可以相互转换的
+### 因为原生JS比jQuery更大，原生的一些属性和方法jQuery没有给我们封装，要想使用这些属性和方法需要把jQuery对象转换为DOM对象才能使用
+### 1. DOM对象转换为jQuery对象：$(DOM对象)
+### $('div')   如果div已经被定为DOM对象 则$(div) 不需要带引号
+### 2. jQuery对象转换为DOM对象(两种方式)
+### $('div')[index]  index是索引号
+### $('div').get(index)  index是索引号
+## 
+### jQuery选择器
+### jQuery基础选择器
+### 原生JS获取元素方式很多，很杂，而且兼容性情况不一致，因此jQuery给我们做了封装，使获取元素统一标准
+### $("选择器")  //里面选择器直接写CSS选择器即可，但是要加引号
+|名称|用法|描述|
+|:-|:-|:-|
+|ID选择器|$("#id")|获取指定ID的元素|
+|全选选择器|$("*")|匹配所有元素|
+|类选择器|$(".class")|获取同一类class的元素|
+|标签选择器|$("div")|获取同一类标签的所有元素|
+|并集选择器|$("div,p,li")|选取多个元素|
+|交集选择器|$("li.current")|交集元素|
+## 
+### jQuery层级选择器
+|名称|用法|描述|
+|:-|:-|:-|
+|子代选择器|$("ul>li");|使用>号，获取亲儿子层级的元素；注意，并不会获取孙子层级的元素|
+|后代选择器|$("ul li");|使用空格，代表后代选择器，获取ul下的所有li元素，包括孙子等|
+## 
+### jQuery设置样式
+### $('div').css('属性'."值")
+## 
+### 隐式迭代(重要)
+### 遍历内部DOM元素(伪数组形式存储)的过程就叫做隐式迭代
+### 简单理解：给匹配到的所有元素进行循环遍历，执行相应的方法，而不用我们再进行循环，简化我们的操作，方便我们调用
+## 
+### jQuery筛选选择器
+|语法|用法|描述|
+|:-|:-|:-|
+|:first|$('li:first')|获取第一个li元素|
+|:last|$('li:last')|获取最后一个li元素|
+|:eq(index)|$("li:eq(2)")|获取到的li元素中，选择索引号为2的元素，索引号index从0开始|
+|:odd|$("li:odd")|获取到的li元素中，选择索引号为奇数的元素|
+|:even|$("li:even")|获取到的li元素中，选择索引号为偶数的元素|
+## 
+### jQuery筛选方法(重点)
+|语法|用法|说明|
+|:-|:-|:-|
+|parent()|$("li").parent();|查找父级|
+|children(selector)|$("ul").children("li")|相当于$("rul>li"),最近一级(亲儿子)|
+|find(selector)|$("ul").find("li");|相当于$("ul li"),后代选择器|
+|siblings(selector)|$(".first").siblings("li");|查找兄弟节点，不包括自己本身|
+|nextAll([expr])|$(".first").nextAll()|查找当前元素之后所有的同辈元素|
+|prevAll([expr])|$(".last").prevAll()|查找当前元素之前所有的同辈元素|
+|hasClass(class)|$('div').hasClass("protected")|检查当前的元素是否含有某个特定的类，如果有，则返回true|
+|eq(index)|$("li").eq(2);|相当于$("li:eq(2)"),index 从0开始|
+### 重点记住：parent() children() find() siblings() eq()
 
 
