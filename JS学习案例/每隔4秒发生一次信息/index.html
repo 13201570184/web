@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number"> <button>发送</button>
+  <script>
+    var btn = document.querySelector('button')
+    var time = 3;
+    btn.addEventListener('click',function(){
+      btn.disabled = true;
+      var timer = setInterval(function(){
+        if(time == 0){
+          clearTimeout = (timer);
+          btn.disabled = false;
+          time = 3;
+          btn.innerHTML = '发送';
+      }else{
+        btn.innerHTML = '请于' + time + '秒后尝试';
+        time--;
+       }
+      }, 1000)
+    }) 
+  </script>
+</body>
+</html>

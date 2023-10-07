@@ -1098,7 +1098,7 @@
 ### element.setAttribute('属性'，'值')；
 ### 区别：
 ### element.属性  设置内置属性值
-### element.setAttribute('属性');  主要设置自定义的属性 (标准)
+### element.setAttribute('属性','值');  主要设置自定义的属性 (标准)
 ### 3. 移除属性
 ### element.removeAttribute('属性');
 ## 
@@ -1147,7 +1147,7 @@
 ### 用 childNodes求元素的方法为：
 ### var ul = document.querySelector('ul');
 ### for (var i = 0;i< ul.childNodes.length;i++) {
-###   if (ul.childNodes[i].nodeType == 1) {
+###   if (ul.childNodes[i].nodeType === 1) {
 ###     // ul.childNodes[i] 是元素节点
 ###     console.log(ul.childNodes[i]);
 ###   }
@@ -1189,4 +1189,500 @@
 ###   }
 ###   return null;
 ### }
+##
+### 创建节点
+### document.createElement('tagName')
+### document.createElement()方法创建由 tagName 指定的HTML元素。因为这些元素原先不存在，是根据我们的需求动态生成的，所以我们也称为动态创建元素节点
+### 添加节点
+### 1. node.appendChild(child)
+### node.appendChild() 方法将一个节点添加到指定父节点的子节点列表末尾。类似于CSS里面的after伪元素    node代表父级元素 child代表子级元素
+### 2. node.insertBefore(child,指定元素)
+### node.insertBefore() 方法将一个节点添加到父节点的指定子节点前面。类似于CSS里面的before 伪元素
+## 
+### 删除节点
+### node.removeChild(child)
+### node.removeChild()方法从DOM中删除一个子节点，返回删除的节点
+### 复制节点(克隆节点)
+### node.cloneNode()
+### node.cloneNode() 方法返回调用该方法的节点的一个副本。也称为克隆节点/拷贝节点
+### 注意：
+### 1. 如果括号参数为空或者为false ,则是浅拷贝，即只克隆复制节点本身(只复制标签名)，不克隆里面的子节点(不复制标签内容)
+### 2. 如果括号参数为true，则是深度拷贝，会复制节点本身以及里面所有的子节点
+## 
+### 三种动态创建元素区别
+### 1. document.write()
+### 2. element.innerHTML
+### 3. document.createElement()
+### 区别
+### 1. document.write 是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘(开启新页面写入内容)
+### 2. innerHTML 是将内容写入某个DOM节点，不会导致页面全部重绘
+### 3. innerHTML 创建多个元素效率更高(不要拼接字符串，采取数组形式拼接)，结构稍微复杂
+### 4. createElement() 创建多个元素效率稍低一点点，但是结构更清晰
+### 总结：不同浏览器下，innerHTML 效率要比 createElement 高
+## 
+### DOM重点核心
+### 文档对象模型(Document Object Model,简称DOM),是W3C组织推荐的处理可扩展标记语言(HTML或者XML)的标准编程接口
+### W3C已经定义了一系列的DOM接口，通过这些DOM接口可以改变网页的内容、结构和样式
+### 1. 对于JS，为了能够使JS操作HTML，JS2就有了一套自己的DOM编程接口
+### 2. 对于HTML，DOM使得HTML形成一颗DOM树。包含文档、元素、节点
+### 我们获取过来的DOM元素是一个对象(object)，所以称为 文档对象模型
+### 关于DOM操作，我们主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作
+### 创建
+### 1. document.write        document.write('<div>123</div>')  直接往页面后面新建一个 123的div
+### 2. innerHTML            var 变量     变量.innerHTML  = '<span>天下无双</span>'   往一个变量里面添加一个span标签以及标签内容
+### 3. createElement         var 变量 = document.createElement('div')    往一个变量里面添加一个标签
+### 增
+### 1. appendChild       var 变量     变量.appendChild(标签名) 不带引号    往变量后面添加一个标签内容
+### 2. insertBefore       var 变量     变量.insertBefore(标签名,变量.children[0])    往变量里的元素中索引号为0的元素前面加一个标签
+### 删
+### removeChild          var 变量   变量.removeChild(变量.children[i])  通过索引号删除变量里的子元素
+### 改
+### 主要修改DOM的元素属性，DOM元素的内容、属性、表单的值等
+### 1. 修改元素属性：src、href、title等          img.src = 'img/1.png'  可以将图片更换为 1.png 
+### 2. 修改普通元素内容：innerHTML、innerText      var 变量   变量.innerHTML = 'hello,world'  innerHTML更换的是变量里面的原有属性
+### 3. 修改表单元素：value、type、disabled等       value、type、disabled前面加的是符合它们的标签名  比如input.value='文本内容'  button.disabled =true / false
+### 4. 修改元素样式：style、className           此类应用其标签的样式    例如  var 变量  变量.style.width = '12px'  变量.style.color = 'red'  如若引用大量的style格式的话  可以先在style 建立一个class的类名   例如 .box{w:10px h:10px}   var 变量  变量.className = 'box' 即可全部引用class里面设置的样式
+### 查
+### 主要获取查询DOM的元素
+### 1. DOM提供的API方法：getElementById、getElementsByTagName 古老用法不太推荐    var 变量 = document.getElementById('li')  获取标签名li的元素
+### 2. H5提供的新方法：querySelector、querySelectorAll 提倡     var 变量 = document.querySelector('a')  获取第一个标签a里面的内容
+### 3. 利用节点操作获取元素：父(parentNode)、子(children)、兄(previousElementSibling)、弟(nextElementSibling)  兄表示同级的上一个元素 弟表示同级的下一个元素
+### 属性操作
+### 主要针对于自定义属性
+### 1. setAttribute: 设置DOM的属性值     var 变量  变量.setAttribute('class','box')  或者 变量.setAttribute('giao',666)    
+### 2. getAttribute: 得到DOM的属性值    var 变量  变量.getAttribute('value')   或者 变量.getAttribute('giao')  getAttribute可以获得自定义的属性名里的内容
+### 3. removeAttribute移除属性          var 变量  变量.removeAttribute('class')  或者  变量.removeAttribute('giao')  可以移除定义的属性名及内容
+### 事件操作
+### 给元素注册事件，采取 事件源.事件类型 = 事件处理程序
+|鼠标事件|触发条件|
+|:-|:-|
+|onclick|鼠标点击左键触发|
+|onmouseover|鼠标经过触发|
+|onmouseout|鼠标离开触发|
+|onfocus|获取鼠标焦点触发|
+|onblur|失去鼠标焦点触发|
+|onmousemove|鼠标移动触发|
+|onmouseup|鼠标弹起触发|
+|onmousedown|鼠标按下触发|
+##
+### 注册事件(绑定事件)
+### 注册事件概述
+### 给元素添加事件，称为注册事件或者绑定事件
+### 注册事件有两种方式：传统方式和方法监听注册方式
+### 传统注册方式
+### 1. 利用on 开头的事件 onclick
+### 2. <button onclick = "alert('hi~')"></button>
+### 3. btn.onclick = function(){}
+### 4. 特点：注册事件的唯一性
+### 5. 同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数
+### 方法监听注册方式
+### 1. W3C标准 推荐方式
+### 2. addEventListener() 它是一个方法
+### 3. IE9之前的IE不支持此方法，可使用attachEvent()代替
+### 4. 特点：同一个元素同一个事件可以注册多个监听器
+### 5. 按注册顺序依次执行
+## 
+### addEventListener 事件监听方式
+### eventTarget.addEventListener(type,listener[,useCapture])       var 变量  变量.addEventListener('click',function(){alert('好好学习');})
+### eventTarget.addEventListener()方法将指定的监听器注册到eventTarget(目标对象)上，当该对象触发指定的对象时，就会执行事件处理函数
+### 该方法接收三个参数：
+### type:事件类型字符串，比如click、mouseover,注意这里不要带on     !!!!!!!!!
+### lister:事件处理函数，事件发生时，会调用该监听函数
+### useCapture:可选参数，是一个布尔值，默认是false。学完DOM事件流后，我们进一步学习
+## 
+### attachEvent 事件监听方式
+### eventTarget.attachEvent(eventNameWithOn,callback)
+### eventTarget.attachEvent()方法将指定的监听器注册到eventTarget(目标对象)上，当该对象触发指定的事件时，指定的回调函数就会被执行
+### 该方法接收两个参数：
+### eventNameWithOn：事件类型字符串，比如onclick、onmouseover,这里要带on
+### callback:事件处理函数，当目标触发事件时回调函数被调用
+## 
+### 注册事件兼容性解决方案
+### function addEventListener(element,evenName,fn){
+###   // 判断当前浏览器是否支持 addEventListener 方法
+###   if(element.addEventListener){
+###     element.addEventListener(eventName,fn); //第三个参数 默认是false
+###   } else if (element.attachEvent) {
+###     element.attachEvent('on' + eventName, fn);
+###   } else{
+###     // 相当于 element.onclick = fn;
+###     element['on' + eventName] = fn;
+###   }
+### }
+### 兼容性处理的原则：首先照顾大多数浏览器，再处理特殊浏览器
+## 
+### 删除事件(解绑事件)
+### 删除事件的方式
+### 传统注册方式  eventTarget.onclick = null;     var 变量  变量.onclick = function(){ }; 执行一次效果后   变量.onclick = null;
+### 方法监听注册方式  
+### 1. eventTarget.removeEventListener(type,listener[,useCapture]);   var 变量  function fn(){ } ; 执行一次效果后   变量.removeEventListener('click',fn);  fn不用加括号
+### 2. eventTarget.detachEvent(eventNameWithOn,callback)         var 变量  变量.attachEvent('onclick',fn1);  function fn1(){ 执行一次效果后;  变量.detachEvent('onclick',fn1)}
+## 
+### DOM事件流
+### 事件流描述的是从页面中接收事件的顺序
+### 事件发生时会在元素节点之间按照特定的顺序传播，这个传播过程即DOM事件流
+### DOM事件流分为3个阶段
+### 1. 捕获阶段
+### 2. 当前目标阶段
+### 3. 冒泡阶段
+### 注意：
+### 1. JS代码中只能执行捕获或者冒泡其中的一个阶段
+### 2. onclick 和 attachEvent 只能得到冒泡阶段
+### 3. addEventListener(type,listener[,useCapture])第三个参数如果是true,表示在事件捕获阶段调用事件处理程序；如果是false(不写默认就是false),表示在事件冒泡阶段调用事件处理程序
+### 4. 实际开发中我们很少使用事件捕获，我们更关注事件冒泡
+### 5. 有些事件是没有冒泡的，比如 onblur、onfocus、onmouseenter、onmouseleave
+### 6. 事件冒泡有时候会带来麻烦，有时候又会帮助很巧妙的做某些事，我们后面讲解
+## 
+### 事件对象
+### 什么是事件对象
+### eventTarget.onclick = function(event) {}
+### eventTarget.addEventListener('click',function(event){})   //这个event 就是事件对象 我们还喜欢的写成 e 或者 evt
+### 官方解释：event对象代表事件的状态，比如键盘按键的状态、鼠标的位置、鼠标按钮的状态
+### 简单理解：事件发生后，跟事件相关的一系列信息数据的集合都放到这个对象里面，这个对象就是事件对象event,它有很多属性和方法
+### 比如： 1. 谁绑定了这个事件  2. 鼠标触发事件的话，会得到鼠标的相关信息，如鼠标位置   3. 键盘触发事件的话，会得到键盘的相关信息，如按了哪个键
+### 事件对象的使用语法
+### eventTarget.onclick = function(event) {
+###   //这个event 就是事件对象，我们还喜欢写成 e 或者 evt
+### }
+### eventTarget.addEventListener('click',function(event) {
+###   //这个event 就是事件对象，我们还喜欢的写成 e 或者 evt
+### })
+### 这个event 是个形参，系统帮我们设定为事件对象，不需要传递实参过去
+### 当我们注册事件时，event对象就会被系统自动创建，并依次传递给事件监听器(事件处理函数)
+## 
+### 事件对象的常见属性和方法
+|事件对象属性方法|说明|
+|:-|:-|
+|e.target|返回触发事件的对象  标准|
+|e.srcElement|返回触发事件的对象  非标准 ie6-8使用|
+|e.type|返回事件的类型 比如click mouseover 不带on|
+|e.cancelBubble|该属性阻止冒泡 非标准 ie6-8使用|
+|e.returnValue|该属性 阻止默认事件(默认行为) 非标准 ie6-8使用 比如不让链接跳转|
+|e.preventDefault()|该方法 阻止默认事件(默认行为) 标准 比如不让链接跳转|
+|e.stopPropagation()|阻止冒泡 标准|
+## 
+### 阻止事件冒泡的两种方法
+### 事件冒泡：开始时由最具体的元素接收，然后逐级向上传播到DOM最顶层节点
+### 事件冒泡本身的特性，会带来的坏处，也会带来好处，需要我们灵活掌握
+### 阻止事件冒泡
+### 标准写法:利用事件对象里面的stopPropagation()方法
+### e.stopPropagation()
+### 非标准写法:IE6-8利用事件对象cancelBubble属性
+### e.cancelPropagation = true;
+### 阻止事件冒泡的兼容性解决方案
+### if ( e && e.stopPropagation){
+###   e.stopPropagation();
+### } else{
+###   window.event.cancelBubble = true;
+### }
+## 
+### 事件委托 (代理、委派)
+### 事件委托也称为事件代理，在JQuery里面称为事件委派
+### 事件委托的原理
+### 不是每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点
+### 事件委托的作用
+### 我们只操作了以此DOM，提高了程序的性能
+## 
+### 常用的鼠标事件
+### 1. 禁止鼠标右键菜单
+### contextmenu 主要控制应该何时显示上下文菜单，主要用于程序员取消默认的上下文菜单
+### 语法: document.addEventListener('contextmenu',function(e){
+###   e.preventDefault();
+### })
+### 2. 禁止鼠标选中(selectstart 开始选中)
+### 语法： document.addEventListener('selectstart',function(e){
+###   e.preventDefault();
+### })
+## 
+### 鼠标事件对象
+### event对象代表事件的状态，跟事件相关的一系列信息的集合。现阶段我们主要是用鼠标事件对象MouseEvent 和 键盘鼠标事件 KeyboardEvent
+|鼠标事件对象|说明|
+|:-|:-|
+|e.clientX|返回鼠标相对于浏览器窗口可视区的X坐标|    var x = e.clientX
+|e.clientY|返回鼠标相对于浏览器窗口可视区的Y坐标|
+|e.pageX|返回鼠标相对于文档页面的X坐标 IE9+支持|
+|e.pageY|返回鼠标相对于文档页面的Y坐标 IE9+支持|
+|e.ScreenX|返回鼠标相对于电脑屏幕的X坐标|
+|e.ScreenY|返回鼠标相对于电脑屏幕的Y坐标|
+## 
+### 常用键盘事件
+### 事件除了使用鼠标触发，还可以使用键盘触发
+|键盘事件|触发条件|
+|:-|:-|
+|onkeyup|某个键盘按键被松开时触发|
+|onkeydown|某个键盘按键被按下时触发|
+|onkeypress|某个键盘按键被按下时触发 但是它不识别功能键 比如 ctrl shift 箭头等|
+### 注意：
+### 1. 如果使用addEventListener 不需要加 on
+### 2. onkeypress 和前面2个的区别是，它不识别功能键，比如左右箭头，shift等
+### 3. 三个事件的执行顺序  keydown -- keypress -- keyup
+### 注意:keydown 和 keypress 在文本框里面的特点:他们两个事件触发的时候，文字还没有落入文本框中
+###      keyup事件触发的时候，文字已经落入文本框里面了
+## 
+### 键盘事件对象
+|键盘事件对象属性|说明|
+|:-|:-|
+|keyCode|返回该键的ASCII值|
+### 注意：onkeydown 和 onkeyup 不区分字母大小写，onkeypress区分字母大小写
+### 在我们实际开发中，我们更多的使用keydown和keyup,它能识别所有键(包含功能键)
+### keypress不识别功能键，但是keyCode属性能区分大小写，返回不同的ASCII值
+## 
+### BOM 概述
+### 什么是BOM
+### BOM(Browser Object Model) 即浏览器对象模型，它提供了独立于内容而与浏览器窗口进行交互的对象，其核心对象是window
+### BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性
+### BOM缺乏标准，JS语法的标准化组织是ECMA，DOM的标准化组织是W3C，BOM最初是Netscape浏览器标准的一部分
+### DOM
+### 文档对象模型
+### DOM就是把[文档] 当做一个 [对象]来看待
+### DOM的顶级对象是document
+### DOM主要学习的是操作页面元素
+### DOM是W3C标准规范
+### BOM
+### 浏览器对象模型
+### 把[浏览器]当做一个[对象]来看待
+### BOM的顶级对象是window
+### BOM学习的是浏览器窗口交互的一些对象
+### BOM是浏览器厂商在各自浏览器上定义的，兼容性较差
+## 
+### BOM的构成
+### BOM比DOM更大，它包含DOM
+### window对象是浏览器的顶级对象，它具有双重角色
+### 1. 它是JS访问浏览器窗口的一个接口
+### 2. 它是一个全局对象。定义在全局作用域中的变量、函数都会变成window对象的属性和方法
+### 3. 在调用的时候可以省略window，前面学习的对话框都属于window对象方法。如alert()、prompt()等
+### 注意：window下的一个特殊属性window.name
+## 
+### window对象的常见事件
+### 窗口加载事件
+### window.onload = function(){}
+### 或者
+### window.addEventListener('load',function(){});
+### window.onload是窗口(页面)加载事件，当文档内容完全加载完成会触发该事件(包括图像、脚本文件、CSS文件等)，就调用的处理函数
+### 注意：
+### 1. 有了window.onload就可以把JS代码写到页面元素的上方，因为onload是等页面内容全部加载完毕，再去执行处理函数
+### 2. window.onload 传统注册事件方式只能写一次，如果有多个，会以最后一个window.onload为准
+### 3. 如果使用addEventListener 则没有限制
+### document.addEventListener('DOMContentLoaded',function(){})
+### DOMContentLoaded事件触发时，仅当DOM加载完成，不包括样式表，图片，flash等等    ie9以上才支持
+### 如果页面的图片很多的话，从用户访问到onload触发可能需要较长的时间，交互效果就不能实现，必然影响用户的体验，此时用DOMContentLoaded事件比较合适
+## 
+### 调整窗口大小事件
+### window.onresize = function(){}
+### window.addEventListener('resize',function(){});
+### window.onresize 是调整窗口大小加载事件，当触发时就调用的处理函数
+### 注意：
+### 1. 只要窗口大小发生像素变化，就会触发这个事件
+### 2. 我们经常利用这个事件完成响应式布局。window.innerWidth 当前屏幕的宽度
+## 
+### 定时器
+### 两种定时器
+### window对象给我们提供了2个非常好用的方法-定时器
+### 1. setTimeout()
+### 2. setInterval()
+### setTimeout()定时器
+### window.setTimeout(调用函数，延迟的毫秒数);
+### setTimeout()方法用于设置一个定时器，该定时器在定时器到期后执行调用函数
+### 注意：
+### 1. window可以省略
+### 2. 这个调用函数可以直接写函数，或者写函数名或者采取字符串 '函数名()'三种形式。第三种不推荐
+### 3. 延迟的毫秒数省略默认是0，如果写，必须是毫秒
+### 4. 因为定时器可能有很多，所以我们经常给定时器赋值一个标识符
+## 
+### 停止setTimeout()定时器
+### window.clearTimeout(timeoutID)
+### clearTimeout()方法取消了先前通过调用setTimeout()建立的定时器
+### 注意：
+### 1. window可以省略
+### 2. 里面的参数就是定时器的标识符
+## 
+### setInterval()定时器
+### window.setInterval(回调函数，间隔的毫秒数);
+### setInterval()方法重复调用一个函数，每隔这个时间，就去调用一次回调函数
+### 注意：
+### 1. window可以省略
+### 2. 这个调用函数可以直接写函数，或者写函数名或者采取字符串'函数名()'三种方式
+### 3. 间隔的毫秒数可以省略默认是0，如果写，必须是毫秒，表示每个多少毫秒就自动调用这个函数
+### 4. 因为定时器肯有很多，所以我们经常给定时器赋值一个标识符
+### window.clearInterval(intervalID);
+### clearInterval() 方法取消了先前通过调用 setInterval() 建立的定时器
+### 注意：
+### 1. window 可以省略
+### 2. 里面的参数就是定时器的标识符
+## 
+### this
+### this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，一般情况下this的最终指向的是那个调用它的对象
+### 现阶段，我们先了解一下几个this指向
+### 1. 全局作用域或者普通函数中this指向全局对象window(注意定时器里面的this指向window)
+### 2. 方法调用中的this指向调用对象   var a = { }      在这里面的this 指向的是 a
+### 3. 构造函数中的this指向函数的实例对象       unction Fun(){}  var fun = new Fun()  这里的this指向fun实例对象
+## 
+### JS执行机制
+### JS是单线程
+### JS语言的一大特点就是单线程，也就是说，同一时间只能做一件事。这是因为JS这门脚本语言诞生的使命所致——JS是为处理页面中用户的交互，以及操作DOM而诞生的。比如我们对某个DOM元素进行添加和删除操作，不能同时进行。应该先进行添加，之后再删除
+### 单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。这样所导致的问题是：如果JS执行的时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉
+### 同步和异步
+### 为了解决一个任务等待另一个任务太长时间，利用多核CPU的计算能力，HTML5提出Web Worker 标准，允许JS脚本创建多个线程。于是,JS中出现了同步和异步
+### 同步任务
+### 同步任务都在主线程上执行，形成一个执行栈
+### 异步任务
+### JS的异步是通过回调函数实现的
+### 一般而言，异步任务有以下三种类型
+### 1. 普通事件，如click、resize等
+### 2. 资源加载，如load、error等
+### 3. 定时器，包括setInterval、setTimeout等
+### 异步任务相关回调函数添加到任务队列中(任务队列也称为消息队列)
+### JS执行机制
+### 1. 先执行执行栈中的同步任务
+### 2. 异步任务(回调函数)放入任务队列中
+### 3. 一旦执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行
+### 由于主线程不断的重复获得任务、执行任务、再获取任务、再执行。所以这种机制被称为事件循环(event loop)
+## 
+### location对象
+### 什么是location对象
+### window对象给我们提供了一个location属性用于获取或设置窗口的URL，并且可以用于解析URL。因为这个属性返回的是一个对象，所以我们将这个属性也称为location对象
+### URL
+### 统一资源定位符(Uniform Resource Location,URL)是互联网上标准资源的地址。互联网上的每个文件都有一个唯一的URL，它包含的信息指出文件的位置以及浏览器应该怎么处理它
+## 
+### URL的一般语法格式为：
+### protocol://host[:port]/path/[?query]#fragment
+### http://www.itcast.cn/index.html?name=andy&age=18#link
+|组成|说明| 
+|:-|:-| 
+|protocol|通信协议 常用的http,ftp,maito等| 
+|host|主机(域名) www.itheima.com| 
+|port|端口号 可选，省略时使用方案的默认端口如http的默认端口为80| 
+|path|路径 由零或多个'/'符号隔开的字符串，一般用来表示主机上的一个目录或文件地址| 
+|query|参数 以键值对的形式，通过&符号分隔开来| 
+|fragment|片段 #后面内容 常见于链接 锚点| 
+## 
+### location对象的属性
+|location对象属性|返回值|
+|:-|:-|
+|location.href|获取或者设置整个URL|
+|location.host|返回主机(域名) www.sp.com|
+|location.port|返回端口号 如果未写 返回空字符串|
+|location.pathname|返回路径|
+|location.search|返回参数|
+|location.hash|返回片段 #后面内容 常见于链接 锚点|
+## 
+### location对象的方法
+|location对象方法|返回值|
+|:-|:-|
+|location.assign()|跟href一样，可以跳转页面(也称为重定义页面)|
+|location.replace()|替换当前页面，因为不记录历史，所以不能后退页面|
+|location.reload()|重新加载页面，相当于刷新按钮或者f5 如果参数为true强制刷新ctrl+f5|
+## 
+### navigator对象
+### navigator对象包含有关浏览器的信息，它有很多属性，我们最常用的是 userAgent，该属性可以返回由客户机发送服务端的user-agent头部的值
+### 下面前端代码可以判断用户那个终端打开页面，实现跳转
+### if((navigator.userAgent.match(/(phone|pad|pod|iphone|ipod|ios|ipad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|SYmbian|Windows Phone)/i))){
+###   window.location.href = '';  //手机
+### } else{
+###   window.location.href = '';  //电脑
+### }
+## 
+### history对象
+### window对象给我们提供了一个history对象，与浏览器历史记录进行交互。该对象包含用户(在浏览器窗口中)访问过的URL
+|history对象方法|作用|
+|:-|:-|
+|back()|可以后退功能|
+|forward()|前进功能|
+|go(参数)|前进后退功能 参数如果是1 前进1个页面 如果是-1 后退1个页面|
+## 
+### 元素偏移量offset系列
+### offset概述
+### offset翻译过来就是偏移量，我们使用offset系列相关属性可以动态的得到该元素的位置(偏移)、大小等
+### 注意：返回的数值都不带单位
+### offset系列常用属性：
+|offset系列属性|作用|
+|:-|:-|
+|element.offsetParent|返回作为该元素带有定位的父级元素 如果父级都没有定位则返回body|
+|element.offsetTop|返回元素相对带有定位父级元素上方的偏移|
+|element.offsetLeft|返回元素相对带有定位父级元素左边框的偏移|
+|element.offsetWidth|返回自身包括padding、边框、内容区的宽度，返回数值不带单位|
+|element.offsetHeight|返回自身包括padding、边框、内容区的高度，返回数值不带单位|
+
+### offset 与 style 区别
+### offset
+### 1. offset可以得到任意样式表中的样式值
+### 2. offset系列获得的数值是没有单位的
+### 3. offsetWidth 包含padding + border + width
+### 4. offsetWidth等属性是只读属性，只能获取不能赋值
+### 5. 所以，我们想要获取元素大小位置，用offset更合适
+### style
+### 1. style只能得到行内样式表中的样式值
+### 2. style.width获得的是带有单位的字符串
+### 3. style.width获得不包含padding和border的值
+### 4. style.width是可读写属性，可以获取也可以赋值
+### 5. 所以，我们想要给元素更改值，则需要用style改变
+## 
+### 元素可视区client系列
+### client翻译过来就是客户端，我们使用client系列的相关属性来获取元素可视区的相关信息。通过client系列的相关属性可以动态的得到该元素的边框大小、元素大小等
+|client系列属性|作用|
+|:-|:-|
+|element.clientTop|返回元素上边框的大小|
+|element.clientLeft|返回元素左边框的大小|
+|element.clientWidth|返回自身包括padding、内容区的宽度，不包边框，返回数值不带单位|
+|element.clientHeight|返回自身包括padding、内容区的高度，不包边框，返回数值不带单位|
+## 
+### 立即执行函数(function() {} ())
+### 主要作用：创建一个独立的作用域
+## 
+### 元素滚动scroll系列
+### 元素scroll系列属性
+### scroll翻译过来就是滚动的，我们使用scroll系列的相关属性可以动态的得到该元素的大小、滚动距离等
+|scroll系列属性|作用|
+|:-|:-|
+|element.scrollTop|返回被卷去的上侧距离，返回数值不带单位|
+|element.scrollLeft|返回被卷去的左侧距离，返回数值不带单位|
+|element.scrollWidth|返回自身实际的宽度，不含边框，返回数值不带单位|
+|element.scrollHeight|返回自身实际的高度，不含边框，返回数值不带单位|
+### window.pageYOffset  表示整个页面的垂直方向被滚动条卷去的距离
+## 
+### 注意：
+### 1. offset系列经常用于获得元素位置 offsetLeft offSetTop
+### 2. client经常用于获取元素大小 clientWidth clientHeight
+### 3. scroll经常用于获取滚动距离 scrollTop scrollLeft
+### 4. 注意页面滚动的距离通过 window.pageXOffset 获得
+## 
+### mouseenter 和 mouseover的区别
+### 1. 当鼠标移动到元素上时就会触发mouseenter事件
+### 2. 类似mouseover，它们两者之间的差别是 mouseover鼠标经过自身盒子会触发他，经过子盒子还会触发。mouseenter 只会经过自身盒子触发 之所以这样，就是因为mouseenter不会冒泡
+### 3. 跟mouseenter搭配 鼠标离开 mouseleave 同样不会冒泡
+## 
+### 动画函数封装
+### 动画实现原理
+### 核心原理：通过定时器setInterval()不断移动盒子位置
+### 实现步骤：
+### 1. 获得盒子当前位置
+### 2. 让盒子在当前位置加上1个移动距离
+### 3. 利用定时器不断重复执行这个操作
+### 4. 加一个结束定时器的条件
+### 5. 注意此元素需要添加定位，才能使用element.style.left
+## 
+### 动画函数简单封装
+### 注意函数需要传递2个参数，动画对象和移动到的距离
+### function animate(obj,target){    //target表示目标位置
+###   里面写函数执行编码
+### }
+### 调用函数  animate(对象,位置(数字))
+## 
+### 缓动效果原理
+### 缓动动画就是让元素运动速度有所变化，最常见的是让速度慢慢停下来
+### 思路：
+### 1. 让盒子每次移动的距离慢慢减小，速度就会慢慢落下来
+### 2. 核心算法:(目标值-现在的位置) / 10 作为每次移动的距离步长
+### 3. 停止的条件是：让当前盒子位置等于目标位置就停止定时器
+## 
+### 动画函数多个目标值之间移动
+### 可以让动画函数从800移动到500
+### 当我们点击按钮时候，判断步长是正值还是负值
+### 1. 如果是正值，则步长往大了取整 Math.ceil()
+### 2. 如果是负值，则步长往小了取整 Math.floor()
+
+
+
+
+
 
