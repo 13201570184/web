@@ -1948,287 +1948,286 @@
 |hasClass(class)|$('div').hasClass("protected")|检查当前的元素是否含有某个特定的类，如果有，则返回true|
 |eq(index)|$("li").eq(2);|相当于$("li:eq(2)"),index 从0开始|
 ### 重点记住：parent() children() find() siblings() eq()
-
-链式编程
-链式编程是为了节省代码量，看起来更优雅
-$(this).css('color','red').sibling().css('color','')
-使用链式编程一定注意是哪个对象执行样式
-
-jQuery样式操作
-操作css方法
-jQuery可以使用css方法来修改简单元素样式；也可以操作类，修改多个样式
-1. 参数只写属性名，则返回属性值
-$(this).css('color');
-2. 参数是属性名，属性值，逗号分隔，是设置一组样式，属性必须加引号，值如果是数字可以不用跟单位和引号
-$(this).css('color','red');
-3. 参数可以是对象形式，方便设置多组样式。属性名和属性值用冒号隔开，属性可以不用加引号   //如果有background-color需采用驼峰命名法backgroundColor
-$(this).css({
-  color : 'red',
-  width : 100
-})
-
-设置类样式方法
-作用等同于以前的classList，可以操作类样式，注意操作类里面的参数不要加点
-1. 添加类
-$('div').addClass('current');
-2. 移除类
-$('div').removeClass('current');
-3. 切换类
-$('div').toggleClass('current');
-
-类操作与className区别
-原生JS中className会覆盖元素原先里面的类名
-jQuery里面类操作只是对指定类进行操作，不影响原先的类名
-
-jQuery效果
-显示语法规范 ：  show([speed],[easing],[fn])
-显示参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-隐藏语法规范 ：  hide([speed],[easing],[fn])
-隐藏参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-切换语法规范 ：  toggle([speed],[easing],[fn])
-切换参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-滑动效果
-下滑效果语法规范 :  slideDown([speed],[easing],[fn])
-下拉效果参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-上滑效果语法规范 :  slideUp([speed],[easing],[fn])
-上拉效果参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-滑动切换效果语法规范 ： slideToggle([speed],[easing],[fn])
-滑动切换效果参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-事件切换 ：hover([over,]out)
-1. over:鼠标移到元素上要触发的函数(相当于mouseenter)
-2. out:鼠标移出元素要触发的函数(相当于mouseleave)
-事件切换 hover 如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数
-例如: $(".nav>li").hover(function(){
-    $(this).children("ul").slideToggle();
-})
-
-动画队列及其停止排队方法
-动画或效果队列
-动画或者效果一旦触发就会执行，如果多次触发，就造成多个动画或者效果排队执行
-停止排队：  stop()
-1. stop()方法用于停止动画或效果
-2. 注意：stop()写到动画或者效果的前面，相当于停止结束上一次的动画
-// stop()必须写到动画前面
-例如：   $(".nav>li").hover(function(){
-    $(this).children("ul").stop().slideToggle();
-})
-
-淡入淡出效果
-淡入效果语法规范 ：  fadeIn([speed],[easing],[fn])
-淡入效果参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-淡出效果语法规范 ：  fadeOut([speed],[easing],[fn])
-淡出效果参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-淡入淡出切换效果语法规范 ：  fadeToggle([speed],[easing],[fn])
-淡入淡出切换效果参数
-1. 参数可以省略，无动画直接显示
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-渐进方式调整到指定的不透明度
-fadeTo([ [speed],opacity,[easing],[fn] ])
-效果参数
-1. opacity透明度必须写，取值 0~1 之间
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)  必须写
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-自定义动画 animate
-语法：  animate(params,[speed],[easing],[fn])
-参数
-1. params:想要更改的样式属性，以对象形式传递，必须写。属性名可以不用带引号，如果是复合属性则需要采取驼峰命名法 borderLeft.其余参数都可以省略
-2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000) 
-3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
-4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
-
-jQuery属性操作
-设置或获取元素应有位置固有属性值 prop();
-所谓元素固有属性就是元素本身自带的属性。比如\<a>元素里面的href，比如\<input>元素里面的type
-获取属性语法 ：  prop("属性")
-设置属性语法 ：  prop("属性","属性值")
-
-设置或获取元素自定义属性值 attr()
-用户自己给元素添加属性，我们称为自定义属性。比如给div添加index = "1"
-获取属性语法 ：  attr("属性")   //类似原生getAttribute()
-设置属性语法 ：  attr("属性","属性值")   //类似原生setAttribute()
-该方法也可以获取H5自定义属性
-
-数据缓存 data()
-data()方法可以在指定的元素上存取数据，并不会修改DOM元素结构。一旦页面刷新，之前存放的数据都将被移除
-附加数据语法 ：   data("name","value")   // 向被选元素附加数据
-获取数据语法 ：   data("name")    // 向被选元素获取数据
-同时，还可以读取HTML5自定义属性 data-index，得到的是数字型
-
-jQuery 内容文本值
-主要针对元素的内容还有表单的值操作
-普通元素内容 html() (相当于原生innerHTML)
-html()    //获取元素的内容
-html("内容")    //设置元素的内容
-普通元素文本内容text()  (相当于原生innerText)
-text()    //获取元素的文本内容
-text("文本内容")    //设置元素的文本内容
-表单的值 val()  (相当于原生value)
-val()   //获取表单元素的value值
-val("文本内容")   //修改表单元素的value值 
-补充： .parents("上级元素的class类名")          .toFixed(数字) 里面数字表示小数点后面保留几位小数
-
-jQuery元素操作
-主要是遍历、创建、添加、删除元素操作
-遍历元素
-jQuery隐式迭代是对同一类元素做了同样的操作。如果想要给同一类元素做不同操作，就需要用到遍历
-语法1 ：   $("div").each(function (index,domEle) {   })
-1. each() 方法遍历匹配的每一个元素。主要用DOM处理。each每一个
-2. 里面的回调函数有2个参数： index 是每个元素的索引号；domEle是每个DOM元素对象，不同jQuery对象
-3. 所以要想使用jQuery方法，需要给这个dom元素转换为jQuery对象 $(domEle)
-
-语法2 ：
-$.each(object,function(index,element) {   })
-1. $.each() 方法可用于遍历任何对象。主要用于数据处理，比如数值，对象
-2. 里面的函数有2个参数：index是每个元素的索引号；element遍历内容
-
-创建元素
-语法： $("\<li>\</li>")
-动态的创建了一个\<li>    var li = $("\<li>\</li>")
-
-添加元素
-内部添加  
-语法： element.append("内容")
-把内容放入匹配元素内部最后面，类似原生appendChild
-      element.prepend("内容")
-把内容放入匹配元素内部最前面面，类似原生prependChild
-
-外部添加 
-element.after("内容")    //把内容放入目标元素后面
-element.before("内容")    //把内容放入目标元素前面
-1. 内部添加元素，生成之后，它们是父子关系
-2. 外部添加元素，生成之后，他们是兄弟关系
-
-删除元素
-element.remove()   //删除匹配的元素(本身)
-element.empty()    // 删除匹配的元素集合中所有的子节点
-element.html("")    // 清空匹配的元素内容
-
-jQuery尺寸、位置操作
-jQuery尺寸 
+## 
+### 链式编程
+### 链式编程是为了节省代码量，看起来更优雅
+### $(this).css('color','red').sibling().css('color','')
+### 使用链式编程一定注意是哪个对象执行样式
+## 
+### jQuery样式操作
+### 操作css方法
+### jQuery可以使用css方法来修改简单元素样式；也可以操作类，修改多个样式
+### 1. 参数只写属性名，则返回属性值
+### $(this).css('color');
+### 2. 参数是属性名，属性值，逗号分隔，是设置一组样式，属性必须加引号，值如果是数字可以不用跟单位和引号
+### $(this).css('color','red');
+### 3. 参数可以是对象形式，方便设置多组样式。属性名和属性值用冒号隔开，属性可以不用加引号   //如果有background-color需采用驼峰命名法backgroundColor
+### $(this).css({
+###   color : 'red',
+###   width : 100
+### })
+## 
+### 设置类样式方法
+### 作用等同于以前的classList，可以操作类样式，注意操作类里面的参数不要加点
+### 1. 添加类
+### $('div').addClass('current');
+### 2. 移除类
+### $('div').removeClass('current');
+### 3. 切换类
+### $('div').toggleClass('current');
+## 
+### 类操作与className区别
+### 原生JS中className会覆盖元素原先里面的类名
+### jQuery里面类操作只是对指定类进行操作，不影响原先的类名
+## 
+### jQuery效果
+### 显示语法规范 ：  show([speed],[easing],[fn])
+### 显示参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 隐藏语法规范 ：  hide([speed],[easing],[fn])
+### 隐藏参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 切换语法规范 ：  toggle([speed],[easing],[fn])
+### 切换参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 滑动效果
+### 下滑效果语法规范 :  slideDown([speed],[easing],[fn])
+### 下拉效果参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 上滑效果语法规范 :  slideUp([speed],[easing],[fn])
+### 上拉效果参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 滑动切换效果语法规范 ： slideToggle([speed],[easing],[fn])
+### 滑动切换效果参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 事件切换 ：hover([over,]out)
+### 1. over:鼠标移到元素上要触发的函数(相当于mouseenter)
+### 2. out:鼠标移出元素要触发的函数(相当于mouseleave)
+### 事件切换 hover 如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数
+### 例如: $(".nav>li").hover(function(){
+###     $(this).children("ul").slideToggle();
+### })
+## 
+### 动画队列及其停止排队方法
+### 动画或效果队列
+### 动画或者效果一旦触发就会执行，如果多次触发，就造成多个动画或者效果排队执行
+### 停止排队：  stop()
+### 1. stop()方法用于停止动画或效果
+### 2. 注意：stop()写到动画或者效果的前面，相当于停止结束上一次的动画
+### // stop()必须写到动画前面
+### 例如：   $(".nav>li").hover(function(){
+###     $(this).children("ul").stop().slideToggle();
+### })
+## 
+### 淡入淡出效果
+### 淡入效果语法规范 ：  fadeIn([speed],[easing],[fn])
+### 淡入效果参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 淡出效果语法规范 ：  fadeOut([speed],[easing],[fn])
+### 淡出效果参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 淡入淡出切换效果语法规范 ：  fadeToggle([speed],[easing],[fn])
+### 淡入淡出切换效果参数
+### 1. 参数可以省略，无动画直接显示
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 渐进方式调整到指定的不透明度
+### fadeTo([ [speed],opacity,[easing],[fn] ])
+### 效果参数
+### 1. opacity透明度必须写，取值 0~1 之间
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000)  必须写
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### 自定义动画 animate
+### 语法：  animate(params,[speed],[easing],[fn])
+### 参数
+### 1. params:想要更改的样式属性，以对象形式传递，必须写。属性名可以不用带引号，如果是复合属性则需要采取驼峰命名法 borderLeft.其余参数都可以省略
+### 2. speed：三种预定速度之一的字符串("slow","normal",or "fast")或表示动画时长的毫秒数值(如：1000) 
+### 3. easing：(Optional)用来指定切换效果，。默认是"swing",可用参数"linear"
+### 4. fn：回调函数，在动画完成时执行的函数，每个元素执行一次
+## 
+### jQuery属性操作
+### 设置或获取元素应有位置固有属性值 prop();
+### 所谓元素固有属性就是元素本身自带的属性。比如\<a>元素里面的href，比如\<input>元素里面的type
+### 获取属性语法 ：  prop("属性")
+### 设置属性语法 ：  prop("属性","属性值")
+## 
+### 设置或获取元素自定义属性值 attr()
+### 用户自己给元素添加属性，我们称为自定义属性。比如给div添加index = "1"
+### 获取属性语法 ：  attr("属性")   //类似原生getAttribute()
+### 设置属性语法 ：  attr("属性","属性值")   //类似原生setAttribute()
+### 该方法也可以获取H5自定义属性
+## 
+### 数据缓存 data()
+### data()方法可以在指定的元素上存取数据，并不会修改DOM元素结构。一旦页面刷新，之前存放的数据都将被移除
+### 附加数据语法 ：   data("name","value")   // 向被选元素附加数据
+### 获取数据语法 ：   data("name")    // 向被选元素获取数据
+### 同时，还可以读取HTML5自定义属性 data-index，得到的是数字型
+## 
+### jQuery 内容文本值
+### 主要针对元素的内容还有表单的值操作
+### 普通元素内容 html() (相当于原生innerHTML)
+### html()    //获取元素的内容
+### html("内容")    //设置元素的内容
+### 普通元素文本内容text()  (相当于原生innerText)
+### text()    //获取元素的文本内容
+### text("文本内容")    //设置元素的文本内容
+### 表单的值 val()  (相当于原生value)
+### val()   //获取表单元素的value值
+### val("文本内容")   //修改表单元素的value值 
+### 补充： .parents("上级元素的class类名")          .toFixed(数字) 里面数字表示小数点后面保留几位小数
+## 
+### jQuery元素操作
+### 主要是遍历、创建、添加、删除元素操作
+### 遍历元素
+### jQuery隐式迭代是对同一类元素做了同样的操作。如果想要给同一类元素做不同操作，就需要用到遍历
+### 语法1 ：   $("div").each(function (index,domEle) {   })
+### 1. each() 方法遍历匹配的每一个元素。主要用DOM处理。each每一个
+### 2. 里面的回调函数有2个参数： index 是每个元素的索引号；domEle是每个DOM元素对象，不同jQuery对象
+### 3. 所以要想使用jQuery方法，需要给这个dom元素转换为jQuery对象 $(domEle)
+## 
+### 语法2 ：
+### $.each(object,function(index,element) {   })
+### 1. $.each() 方法可用于遍历任何对象。主要用于数据处理，比如数值，对象
+### 2. 里面的函数有2个参数：index是每个元素的索引号；element遍历内容
+## 
+### 创建元素
+### 语法： $("\<li>\</li>")
+### 动态的创建了一个\<li>    var li = $("\<li>\</li>")
+## 
+### 添加元素
+### 内部添加  
+### 语法： element.append("内容")
+### 把内容放入匹配元素内部最后面，类似原生appendChild
+###       element.prepend("内容")
+### 把内容放入匹配元素内部最前面面，类似原生prependChild
+## 
+### 外部添加 
+### element.after("内容")    //把内容放入目标元素后面
+### element.before("内容")    //把内容放入目标元素前面
+### 1. 内部添加元素，生成之后，它们是父子关系
+### 2. 外部添加元素，生成之后，他们是兄弟关系
+## 
+### 删除元素
+### element.remove()   //删除匹配的元素(本身)
+### element.empty()    // 删除匹配的元素集合中所有的子节点
+### element.html("")    // 清空匹配的元素内容
+## 
+### jQuery尺寸、位置操作
+### jQuery尺寸 
 |语法|用法|
 |:-|:-|
 |width()/height()|取得匹配元素宽度和高度值 只算width/height|
 |innerWidth()/innerHeight()|取得匹配元素宽度和高度值 包含padding|
 |outerWidth()/outerHeight()|取得匹配元素宽度和高度值 包含padding、border|
 |outerWidth(true)/outerHeight(true)|取得匹配元素宽度和高度值 包含padding、border、margin|
-以上参数为空，则是获取相应值，返回的是数字型
-如果参数为数字，则是修改相应值
-参数可以不必写单位
-
-jQuery单位
-位置主要有三个：offset()、position()、scrollTop()/scrollLeft()
-offset()设置或获取元素偏移
-1. offset()方法设置或返回被选元素相对于 文档 的偏移坐标，跟父级没有关系
-2. 该方法有2个属性left、top。offset().top 用于获取距离文档顶部的距离，offset().left 用于获取距离文档左侧的距离
-3. 可以设置元素的偏移：offset({ top:10, left:20});
-position()获取元素偏移
-1. position()方法用于返回被选元素相对于 带有定位的父级 偏移坐标，如果父级都没有定位，则以文档为准
-2. 该方法只能获取不能设置偏移
-scrollTop()/scrollLeft()设置或获取元素被卷去的头部和左侧
-1. scrollTop()方法设置或返回被选元素被卷去的头部
-
-jQuery事件注册
-单个事件注册
-语法： 
-element.事件(function(){})
-$("div").click(function(){ 事件处理程序})
-其他事件和原生JS基本一致 比如 mouseover、mouseout、blur、focus、 change、 keydown 、keyup、 resize、 scroll等
-
-事件处理on() 绑定事件
-on() 方法在匹配元素上绑定一个或多个事件的事件处理函数
-语法：
-element.on(events,[selector],fn)
-1. events:一个或多个用空格分隔的事件类型，如 "click"或 "keydown"
-2. selector：元素的子元素选择器
-3. fn：回调函数 即绑定在元素身上的侦听函数
-
-on()方法优势1：
-可以绑定多个事件，多个处理事件处理程序
-$("div").on ({
-  mouseover: function(){},
-   mouseout: function(){},
-   click: function(){}
-});
-如果事件处理程序相同：
-$("div").on("mouseover mouseout",function() {
-  $(this).toggleClass("current");
-});
-
-on()方法优势2：
-可以事件委派操作。事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素
-$('ul').on('click','li',function(){
-  alert('hello world!')
-});
-
-on()方法优势3：
-动态创建的元素，click()没有办法绑定事件，on()可以给动态生成的元素绑定事件
-
-事件处理off()解绑事件
-off()方法可以移除通过on()方法添加的事件处理程序
-$("p").off()   // 解绑p元素所有事件处理程序
-$("p").off("click")   //解绑p元素上面的点击事件 后面的 off 是侦听函数名称
-$("ul").off("click","li");   //解绑事件委托
-如果有的事件只想触发一次，可以使用 one()来解绑事件
-
-自动触发事件trigger()
-有些事件希望自动触发，比如轮播图自动播放功能跟点击右键按钮一致，可以利用定时器自动触发右侧按钮点击事件，不必鼠标点击触发
-element.click()   //第一种简写形式              会触发元素的默认行为
-element.trigger("type")    //第二种自动触发模式       会触发元素的默认行为
-element.triggerHandler("type")    //第三种自动触发模式   不会触发元素的默认行为  不会造成鼠标操作后的显示
-$("p").on("click",function(){
-  alert("hi~");
-})
-$("p").trigger("click");   //此时自动触发点击事件，不需要鼠标点击
-
-jQuery事件对象
-element.on(events,[selector],function(event){})
-阻止默认行为:event.preventDefault() 或者return false   写到函数{  }里面
-阻止冒泡： event.stopPropagation()
-
+### 以上参数为空，则是获取相应值，返回的是数字型
+### 如果参数为数字，则是修改相应值
+### 参数可以不必写单位
+## 
+### jQuery单位
+### 位置主要有三个：offset()、position()、scrollTop()/scrollLeft()
+### offset()设置或获取元素偏移
+### 1. offset()方法设置或返回被选元素相对于 文档 的偏移坐标，跟父级没有关系
+### 2. 该方法有2个属性left、top。offset().top 用于获取距离文档顶部的距离，offset().left 用于获取距离文档左侧的距离
+### 3. 可以设置元素的偏移：offset({ top:10, left:20});
+### position()获取元素偏移
+### 1. position()方法用于返回被选元素相对于 带有定位的父级 偏移坐标，如果父级都没有定位，则以文档为准
+### 2. 该方法只能获取不能设置偏移
+### scrollTop()/scrollLeft()设置或获取元素被卷去的头部和左侧
+### 1. scrollTop()方法设置或返回被选元素被卷去的头部
+## 
+### jQuery事件注册
+### 单个事件注册
+### 语法： 
+### element.事件(function(){})
+### $("div").click(function(){ 事件处理程序})
+### 其他事件和原生JS基本一致 比如 mouseover、mouseout、blur、focus、 change、 keydown 、keyup、 resize、 scroll等
+## 
+### 事件处理on() 绑定事件
+### on() 方法在匹配元素上绑定一个或多个事件的事件处理函数
+### 语法：
+### element.on(events,[selector],fn)
+### 1. events:一个或多个用空格分隔的事件类型，如 "click"或 "keydown"
+### 2. selector：元素的子元素选择器
+### 3. fn：回调函数 即绑定在元素身上的侦听函数
+## 
+### on()方法优势1：
+### 可以绑定多个事件，多个处理事件处理程序
+### $("div").on ({
+###   mouseover: function(){},
+###    mouseout: function(){},
+###    click: function(){}
+### });
+### 如果事件处理程序相同：
+### $("div").on("mouseover mouseout",function() {
+###   $(this).toggleClass("current");
+### });
+## 
+### on()方法优势2：
+### 可以事件委派操作。事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素
+### $('ul').on('click','li',function(){
+###   alert('hello world!')
+### });
+## 
+### on()方法优势3：
+### 动态创建的元素，click()没有办法绑定事件，on()可以给动态生成的元素绑定事件
+### 
+### 事件处理off()解绑事件
+### off()方法可以移除通过on()方法添加的事件处理程序
+### $("p").off()   // 解绑p元素所有事件处理程序
+### $("p").off("click")   //解绑p元素上面的点击事件 后面的 off 是侦听函数名称
+### $("ul").off("click","li");   //解绑事件委托
+### 如果有的事件只想触发一次，可以使用 one()来解绑事件
+## 
+### 自动触发事件trigger()
+### 有些事件希望自动触发，比如轮播图自动播放功能跟点击右键按钮一致，可以利用定时器自动触发右侧按钮点击事件，不必鼠标点击触发
+### element.click()   //第一种简写形式              会触发元素的默认行为
+### element.trigger("type")    //第二种自动触发模式       会触发元素的默认行为
+### element.triggerHandler("type")    //第三种自动触发模式   不会触发元素的默认行为  不会造成鼠标操作后的显示
+### $("p").on("click",function(){
+###   alert("hi~");
+### })
+### $("p").trigger("click");   //此时自动触发点击事件，不需要鼠标点击
+## 
+### jQuery事件对象
+### element.on(events,[selector],function(event){})
+### 阻止默认行为:event.preventDefault() 或者return false   写到函数{  }里面
+### 阻止冒泡： event.stopPropagation()
 
 
