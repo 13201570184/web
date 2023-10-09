@@ -2230,4 +2230,118 @@
 ### 阻止默认行为:event.preventDefault() 或者return false   写到函数{  }里面
 ### 阻止冒泡： event.stopPropagation()
 
-
+### jQuery对象拷贝
+### 如果想要把某个对象拷贝(合并)给另外一个对象使用，此时可以使用$.extend()方法
+### 语法： $.extend([deep],target,object1,[objectN])
+### 1. deep:如果设有true为深拷贝，默认为false浅拷贝
+### 2. target：要拷贝的对象
+### 3. object1:带拷贝到第一个对象的对象
+### 4. objectN:带拷贝到第N个对象的对象
+### 5. 浅拷贝是把被拷贝的对象复杂数据类型中的地址拷贝给目标对象，修改目标对象会影响被拷贝的对象
+### 6. 深拷贝，前面加true，完全克隆(拷贝的对象，不是地址)，修改目标对象不会影响被拷贝对象
+## 
+### jQuery多库共存
+### 问题概述：
+### jQuery使用$作为标识符，随着jQuery的流行，其它JS库也会用这$作为标识符，这样一起使用会引起冲突
+### 客观需求：
+### 需要一个解决方案，让jQuery和其他JS库不存在冲突，可以同时存在，这就叫做多库共存
+### jQuery解决方案：
+### 1. 把里面的$符号 统一改为jQuery 比如jQuery("div")
+### 2. jQuery变量规定新的名称：$.noConflict()   例如 var xx = $.noConflict();
+## 
+### jQuery插件
+### jQuery功能比较有限，想要更复杂的特效效果，可以借助于jQuery插件完成
+### 注意：这些插件也是依赖于jQuery来完成的，所以必须要先引入jQuery文件，因此也称为jQuery插件
+### jQuery插件常用网站：
+### 1. jQuery插件库 http://www.jq22.com/
+### 2. jQuery之家  http://www.htmleaf.com/
+### jQuery插件使用步骤
+### 1. 引入相关文件 (jQuery文件 和 插件文件)
+### 2. 复制相关html、css、js(调用插件)
+## 
+### jQuery插件演示
+### 1. 瀑布流
+### 2. 图片懒加载(图片使用延迟加载可提高网页下载速度。它也能帮助减轻服务器负载) 当我们页面滑动到可视区域，再显示图片
+### 我们使用jQuery插件库 EasyLazyLoad.注意，此时的JS引入文件和JS调用必须写到DOM元素(图片)最后面
+### 3. 全屏滚动(fullPage.js)
+###   gitHub:  https://github.com/alvarotrigo/fullPage.js
+###   中文翻译网站： http://www.dowebok.com/demo/2014/77/
+## 
+### bootstrapJS插件
+### bootstrap框架也是依赖于jQuery开发的，因此里面的JS插件使用，也必须引入jQuery文件
+## 
+### 什么是数据可视化
+### 数据可视化主要目的：借助于图形化手段，清晰有效地传达与沟通信息
+### 数据可视化可以把数据从冰冷的数字转换成图形，揭示蕴含在数据中的规律和道理
+## 
+### 数据可视化的场景
+### 目前互联网公司通常有这么几大类的可视化需求：
+### 通用报表  移动端图标  大屏可视化  图编辑&图分析  地理可视化
+## 
+### 常见的数据可视化库
+### 1. D3.js 目前Web 端评价最高的 JS 可视化工具库(入手难)
+### 2. ECharts.js  百度出品的一个开源 JS 数据可视化库
+### 3. HighCharts.js  国外的前端数据可视化库，非商用免费，被许多国外大公司所使用
+### 4. AntV 蚂蚁金服全新一代数据可视化解决方案
+### 等等
+## 
+### 小结
+### 数据可视化主要目的：借助于图形化手段，清晰有效地传达与沟通信息
+### 数据可视化在我们互联网公司中经常用于通用数据报表，移动端图表，大屏可视化，图编辑等
+### 数据可视化库有很多，接下来我们重点学习ECharts
+## 
+### 数据可视化项目概述
+### 项目目的
+### 市场需求：应对现在数据可视化的趋势，越来越多企业需要在很多场景(营销数据，生成数据，用户数据)下使用，可视化图表来展示体现数据，让数据更加直观，数据特点更加突出
+### 学习阶段的需求：项目对我们同学来说，起着承上启下的作用
+### 承上： 1. 复习以前学习内容    2. HTML5 + CSS3布局相关技术    3. JS/ jQuery 相关技术
+### 启下： 1. 为学习服务器编程做铺垫  2. 如何把服务器里面的数据渲染到页面中
+## 
+### 项目技术
+### 1. HTML5 + CSS3 布局
+### 2. CSS动画、渐变
+### 3. jQuery库 + 原生 JS
+### 4. flex布局 和 rem 适配方案
+### 5. 图片边框 border-image
+### 6. ES6模板字符
+### 7. ECharts 可视化库等等
+## 
+### ECharts简介
+### ECharts是一个使用JS实现的开源可视化库，可以流畅的运行在PC和移动设备上，兼容当前绝大部分浏览器,底层依赖矢量图形库ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表
+### 官网地址: https://www.echartsjs.com/zh/index.html
+### 优点
+### 1. 丰富的可视化类型
+### 2. 多种数据格式支持
+### 3. 流数据支持
+### 4. 移动端优化
+### 5. 跨平台使用
+### 6. 绚丽的特效
+### 7. 详细的文档说明
+### ECharts能满足绝大多数可视化图表实现，使用方便，功能强大，是实现数据可视化的最优选择之一
+## 
+### ECharts的基本使用
+### ECharts使用五步曲
+### 1. 下载并引入echarts.js文件     图表依赖这个js库
+### 2. 准备一个具备大小的DOM容器     生成的图表会放入这个容器内
+### 3. 初始化echarts实例对象        实例化echarts对象    var 变量 = echarts.init(document.querySelector(''))     
+### 4. 指定配置项和数据(option)     根据具体需求修改配置选项    声明  var option
+### 5. 将配置项设置给echarts实例对象      让echarts对象根据修改好的配置生效   变量.setOption(option);  
+## 
+### 相关配置讲解
+### title:标题组件              title:{ text:名称}     填写图表名称
+### tooltip:提示框组件          tooltip:{trigger:'axis'}      鼠标放到图像上提示相应内容
+### legend:图例组件             legend:{data:['线1','线2','线3']}  上方显示每个图标代表什么事件
+### toolbox：工具栏       toolbox:{feature:{saveAsImage:{}}}
+### grid:直角坐标系内绘图网格       grid:{left:3%  ,right:3% ,bottom:3%,containLabel:true}   百分比表示图表的位置占比  containLabel:true表示刻度值也算到图表占的百分比里面
+### xAxis:直角坐标系grid中的 x 轴    xAxis:{ type:'category', boundaryGap:false,data:['day1','day2','day3']}   type:'category'关系填写的数轴data    boundaryGap:false表示分隔符下面填写名称  
+### yAxis:直角坐标系grid中的 y 轴       yAxis:{type : "value"};
+### series:系列列表。每个系列通过type决定自己的图表类型(什么类型的图表)      series:[{name:'',type:'',stack:'',data:[1,2,3] }]
+### color:调色盘颜色列表     color:['green','red','blue']
+### 先了解以上9个配置的作用，其余配置还有具体细节我们查阅文档：文档菜单——配置项手册学echarts关键在于学会查阅文档，根据需求修改配置
+### series：系列列表
+### type: 类型(什么类型的图表) 比如 line 是折线 bar 柱形等
+### name：系列名称，用于tooltip的显示，legend的图例筛选 变化
+### stack：数据堆叠。 如果设置相同值有，则会数据堆叠
+###       数据堆叠： 第二个数据值 = 第一个数据值 + 第二个数据值
+###                 第三个数据值 = 第二个数据值 + 第三个数据值…… 依次叠加
+### 如果给stack指定不同值或者去掉这个属性则不会发生数据叠加
