@@ -21,6 +21,5 @@ function animate(obj, target, callback) {
         }
         // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10
         obj.style.left = obj.offsetLeft + step + 'px';
-
     }, 15);
 }

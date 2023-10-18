@@ -19,18 +19,15 @@
 <body>
     <div class="box"></div>
     <script>
-        // 我们在盒子内点击， 想要得到鼠标距离盒子左右的距离。
-        // 首先得到鼠标在页面中的坐标（ e.pageX, e.pageY）
-        // 其次得到盒子在页面中的距离(box.offsetLeft, box.offsetTop)
-        // 用鼠标距离页面的坐标减去盒子在页面中的距离， 得到 鼠标在盒子内的坐标
-        var box = document.querySelector('.box');
-        box.addEventListener('mousemove', function(e) {
-            // console.log(e.pageX);
-            // console.log(e.pageY);
-            // console.log(box.offsetLeft);
-            var x = e.pageX - this.offsetLeft;
-            var y = e.pageY - this.offsetTop;
-            this.innerHTML = 'x坐标是' + x + ' y坐标是' + y;
+        var box = document.querySelector('.box') //获取元素
+        box.addEventListener('mousemove',function(e){   //设置鼠标经过事件， e代表事件对象
+          var X = box.offsetLeft;       //offsetLeft 可以获取前面元素对象在水平方向上的位置
+          var Y = box.offsetTop;       //offsetTop 可以获取前面元素对象在垂直方向上的位置
+          var x = e.pageX - X;      //e.pageX可以获取这个触发条件的在网页中的水平方向位置
+          var y = e.pageY - Y;      //e.pageY可以获取这个触发条件在网页中的垂直方向位置
+          console.log(x);
+          console.log(y);   
+          this.innerText = 'x轴的坐标是'+ x + 'y轴的坐标是'+ y;
         })
     </script>
 </body>

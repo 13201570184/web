@@ -32,17 +32,24 @@
   <p class="text">请输入6~16位密码</p>
 </div>
 <script>
-  var btn = document.querySelector('input')
-  var text = document.querySelector('.text')
-  btn.onblur = function(){
-    if(this.value.length<6 || this.value.length>16){
-      text.className = 'text wrong';
-      text.innerHTML = '输入错误,请输入6~16位数'
-    }else{
-      text.className = 'text right';
-      text.innerHTML = '输入正确,请牢记密码'
+  //获取元素
+  var pwd = document.querySelector("input")
+  var text = document.querySelector(".text");
+  // 给pwd添加鼠标失去焦点的事件
+  pwd.addEventListener("blur",function(){
+    //如果pwd输入的没人的字符长度大于6并且小于16
+    if(this.value.length>=6&&this.value.length<=16){
+      //给text设置类名 text 和 right 
+      text.className = "text right";
+      //修改text里的内容
+      text.innerHTML = "输入正确,请牢记密码"
+    } else{
+      //给text设置类名 text 和 wrong 
+      text.className = "text wrong"
+         //修改text里的内容
+      text.innerHTML = "密码格数有误,请重新输入"
     }
-  }
+  })
 </script>
 </body>
 </html>

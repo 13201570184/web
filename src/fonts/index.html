@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* ul{
+      width: 234px;
+      height: 234px;
+      margin:234px auto;
+      list-style: none;
+    }
+    li{
+      float: left;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: red;
+      margin-left: 15px;
+    }
+    .bkg{
+      background-color: blue;
+    } */
+  div{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    margin: 200px auto;
+  }
+  </style>
+</head>
+<body>
+  <!-- <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul> -->
+
+  <div></div>
+</body>
+<script>
+  // var lis = document.querySelectorAll("li")
+  // for(var i = 0;i<lis.length;i++){
+  //   lis[i].addEventListener("click",function(){
+  //     for( var i = 0; i < lis.length; i++){
+  //       lis[i].className = '';
+  //       this.className = "bkg";
+  //     }
+  //   });
+  // }
+
+  var div = document.querySelector("div");
+  var ofx = div.offsetLeft;
+  var ofy = div.offsetTop;
+  var clx = div.clientLeft;
+  var cly = div.clientTop
+  var scx = div.screen
+  console.log(ofx);
+  console.log(ofy)
+</script>
+</html>

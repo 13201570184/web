@@ -40,16 +40,29 @@
     </style>
     <script src="jquery.min.js"></script>
     <script>
-        $(function() {
-            //鼠标进入的时候,其他的li标签透明度：0.5
-            $(".wrap li").hover(function() {
-                $(this).siblings().stop().fadeTo(400, 0.5);
-            }, function() {
-                // 鼠标离开，其他li 透明度改为 1
-                $(this).siblings().stop().fadeTo(400, 1);
-            })
+        // $(function() {
+        //     //鼠标进入的时候,其他的li标签透明度：0.5
+        //     $(".wrap li").hover(function() {
+        //         $(this).siblings().stop().fadeTo(400, 0.5);
+        //     }, function() {
+        //         // 鼠标离开，其他li 透明度改为 1
+        //         $(this).siblings().stop().fadeTo(400, 1);
+        //     })
 
-        });
+        // });
+        
+       // 编写入口函数
+        $(function(){
+          //存放小图片的li里面发生鼠标hover 执行函数
+          $(".wrap li").hover(function(){
+            //将覆盖的元素的兄弟元素全部设置变暗
+            $(this).siblings().stop().fadeTo(400, 0.5)
+          })
+          //创建函数，但鼠标离开的时候，所有装有图片的li设置为原来的颜色
+          $(".wrap li").on("mouseout",function(){
+             $(this).siblings().stop().fadeTo(400, 1);
+          })
+        })
     </script>
 </head>
 

@@ -31,23 +31,20 @@
     <div></div>
     <span>夏雨荷</span>
     <script>
-        // 简单动画函数封装obj目标对象 target 目标位置
-        function animate(obj, target) {
-            var timer = setInterval(function() {
-                if (obj.offsetLeft >= target) {
-                    // 停止动画 本质是停止定时器
-                    clearInterval(timer);
-                }
-                obj.style.left = obj.offsetLeft + 1 + 'px';
- 
-            }, 30);
-        }
- 
-        var div = document.querySelector('div');
-        var span = document.querySelector('span');
-        // 调用函数
-        animate(div, 300);
-        animate(span, 200);
+      var div = document.querySelector('div');      //获取body里面的元素
+      var span = document.querySelector('span');
+        function animate(obj,target){           //封装一个动画函数(obj,target)
+          clearInterval(obj.timer)          //清除定时器
+          obj.timer = setInterval(function(){     //给定时器命名
+            if(obj.offsetLeft >= target){       //如果元素的左侧距离大于等于指定的距离 则此时停止定时器
+              clearInterval(obj.timer);
+            }else{            //否则 每隔20ms给元素向右移动2像素的负距离
+              obj.style.left = obj.offsetLeft + 2 + 'px';
+            }
+          }, 20);   
+        };
+        animate(span,300);      //span调用动画函数
+        animate(div,300);       //div调用动画函数
     </script>
 </body>
  

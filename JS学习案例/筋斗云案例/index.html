@@ -64,28 +64,62 @@
     </style>
     <script src="animate.js"></script>
     <script>
-        window.addEventListener('load', function() {
-            // 1. 获取元素
-            var cloud = document.querySelector('.cloud');
-            var c_nav = document.querySelector('.c-nav');
-            var lis = c_nav.querySelectorAll('li');
-            // 2. 给所有的小li绑定事件 
-            // 这个current 做为筋斗云的起始位置
+      // //window.addEventListener('load',function(){})   等待网页加载完，执行JS代码
+      //   window.addEventListener('load', function() {
+      //       // 1. 获取元素
+      //       var cloud = document.querySelector('.cloud');
+      //       var c_nav = document.querySelector('.c-nav');
+      //       var lis = c_nav.querySelectorAll('li');
+      //       // 2. 给所有的小li绑定事件 
+      //       // 这个current 做为筋斗云的起始位置
+      //       var current = 0;
+      //       for (var i = 0; i < lis.length; i++) {
+      //           // (1) 鼠标经过把当前小li 的位置做为目标值
+      //           lis[i].addEventListener('mouseenter', function() {
+      //               animate(cloud, this.offsetLeft);
+      //           });
+      //           // (2) 鼠标离开就回到起始的位置 
+      //           lis[i].addEventListener('mouseleave', function() {
+      //               animate(cloud, current);
+      //           });
+      //           // (3) 当我们鼠标点击，就把当前位置做为目标值
+      //           lis[i].addEventListener('click', function() {
+      //               current = this.offsetLeft;
+      //           });
+      //       }
+      //   })
+
+
+        // 设置一个等页面加载出来,再执行JS代码
+        window.addEventListener("load",function(){
+          // 获取元素
+          var cloud = document.querySelector(".cloud");
+          var lis = document.querySelectorAll("li");
+          var c_nav = document.querySelector(".c-nav");
+          //通过遍历来找到所有li对应的索引号
+          for(i = 0;i<lis.length;i++){
+            // 声明一个变量,使得鼠标默认位置在首页这一栏
             var current = 0;
-            for (var i = 0; i < lis.length; i++) {
-                // (1) 鼠标经过把当前小li 的位置做为目标值
-                lis[i].addEventListener('mouseenter', function() {
-                    animate(cloud, this.offsetLeft);
-                });
-                // (2) 鼠标离开就回到起始的位置 
-                lis[i].addEventListener('mouseleave', function() {
-                    animate(cloud, current);
-                });
-                // (3) 当我们鼠标点击，就把当前位置做为目标值
-                lis[i].addEventListener('click', function() {
-                    current = this.offsetLeft;
-                });
-            }
+            // 给lis[i]添加一个鼠标经过事件,当鼠标放到一个i上面,让图片跑到当前这个li上来
+            lis[i].addEventListener("mouseenter",function(){
+              // 调用动画 这个动画的对象是cloud(即是让哪个东西运动的那个对象),设置位置为鼠标当前移动过的地方
+              animate(cloud,this.offsetLeft);
+            })
+            // 给lis[i]声明一个鼠标离开的事件
+            lis[i].addEventListener("mouseleave",function(){
+              //调用动画函数 调用的对象上cloud 当离开是把云的坐标放到0处,即div的开头位置
+              animate(cloud,current)
+            });
+            //给lis[i]设置一个点击事件
+            lis[i].addEventListener("click",function(){
+              //当点击了哪个li就使cloud 的坐标改为点击的li所对应的位置 通过修改current的位置
+              current = this.offsetLeft;
+              for(var i =0; i<lis.length;i++){
+                lis[i].className = "";
+              }
+              this.className = "current"
+            })
+          }
         })
     </script>
 </head>

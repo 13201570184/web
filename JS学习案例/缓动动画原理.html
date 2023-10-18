@@ -31,35 +31,23 @@
     <button>点击夏雨荷才走</button>
     <span>夏雨荷</span>
     <script>
-        // 缓动动画函数封装obj目标对象 target 目标位置
-        // 思路：
-        // 1. 让盒子每次移动的距离慢慢变小， 速度就会慢慢落下来。
-        // 2. 核心算法：(目标值 - 现在的位置) / 10 做为每次移动的距离 步长
-        // 3. 停止的条件是： 让当前盒子位置等于目标位置就停止定时器
-        function animate(obj, target) {
-            // 先清除以前的定时器，只保留当前的一个定时器执行
-            clearInterval(obj.timer);
-            obj.timer = setInterval(function() {
-                // 步长值写到定时器的里面
-                var step = (target - obj.offsetLeft) / 10;
-                if (obj.offsetLeft == target) {
-                    // 停止动画 本质是停止定时器
-                    clearInterval(obj.timer);
+            var btn = document.querySelector('button');     //获取body里面的元素
+            var span = document.querySelector('span')
+            function animate(obj,target){       //封装动画函数 (obj,target)
+              clearInterval(obj.timer);       //清除定时器
+              obj.timer = setInterval(function(){     //给定时器命名 obj.timer
+                var step = (target - obj.offsetLeft) / 10;     //必须将缓动 step 写到定时器里面，每次运行后，再去执行step 才能实现缓动的效果
+              step = Math.ceil(step);         //当数字大于0 的时候应该向向取整
+                if(obj.offsetLeft == target){     //设置条件，如果指定的位置和元素当前位置相同时，应该取消定时器
+                  clearInterval(obj.timer)        
+                }else{        //否则的话，没执行一次定时器，给元素当前的位置加上一次计算的缓动距离  加单位px
+                  obj.style.left = obj.offsetLeft + step + 'px';
                 }
-                // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10
-                obj.style.left = obj.offsetLeft + step + 'px';
- 
-            }, 15);
-        }
-        var span = document.querySelector('span');
-        var btn = document.querySelector('button');
- 
-        btn.addEventListener('click', function() {
-                // 调用函数
-                animate(span, 500);
+              },15)  //每15ms 执行一次计时器
+            }
+            btn.addEventListener('click',function(){   //给btn设置一个点击事件 ，点击了之后，执行动画函数
+              animate(span,500)
             })
-            // 匀速动画 就是 盒子是当前的位置 +  固定的值 10 
-            // 缓动动画就是  盒子当前的位置 + 变化的值(目标值 - 现在的位置) / 10）
     </script>
 </body>
  

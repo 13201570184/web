@@ -34,20 +34,40 @@
     <input type="password">
   </div>
   <script>
-    var img = document.querySelector('img');
-    var input = document.querySelector('input');
-    var flag = 1;
-    img.onclick = function() {
-      if(flag == 1){
-        img.src = 'img/open.png';
-        input.type = 'text';
-        flag = 0;
-      }else{
-        img.src = 'img/close.png';
-        input.type = 'password';
-        flag = 1;
-      }
-    }
+    // var img = document.querySelector('img');
+    // var input = document.querySelector('input');
+    // var flag = 1;
+    // img.onclick = function() {
+    //   if(flag == 1){
+    //     img.src = 'img/open.png';
+    //     input.type = 'text';
+    //     flag = 0;
+    //   }else{
+    //     img.src = 'img/close.png';
+    //     input.type = 'password';
+    //     flag = 1;
+    //   }
+    // }
+
+// 获取元素
+var img = document.querySelector("img");
+var text = document.querySelector("input");
+// 设置一个开关,判断一次来判断点击后切换图片
+var eyes = true;
+// 当点击了小眼睛图标,转换
+img.addEventListener("click",function(){
+  if(eyes){
+    // 当eyes为true的时候,切换img里面的图片,将input的type设置为文本内容 执行完之后,将开关设置为false
+    img.src = 'img/open.png';
+    text.type = 'text';
+    eyes = false;
+  }else{
+    // 当开关为false时,点击之后将图片切换为close ,将input的type设置为密码格式,执行完之后再将开关设置为true
+    img.src = 'img/close.png';
+    text.type = 'password';
+    eyes = true;
+  }
+});
   </script>
 </body>
 </html>

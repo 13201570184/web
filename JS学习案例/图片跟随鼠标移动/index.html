@@ -13,13 +13,17 @@
 <body>
   <img src="img/angel.gif" alt="">
   <script> 
-   var img = document.querySelector('img')
-   document.addEventListener('mousemove',function(e){
-   var x = e.clientX;
-   var y = e.clientY;
-    //一定要加单位px
-   img.style.left = x -45 + 'px';
-   img.style.top = y -40 + 'px';
+
+   //获取元素
+   var img = document.querySelector("img");
+   //设置一个鼠标移动事件
+   document.addEventListener("mousemove",function(e){
+    //获取鼠标在页面中的 x坐标轴 和 y坐标轴
+    var x = e.pageX;
+    var y = e.pageY;
+    //将得到的鼠标在页面的坐标赋值给图片,此时图片的左上角处于鼠标位置,将图片向上和左移动图片的一半长度像素
+    img.style.left = x - 40 + 'px';
+    img.style.top = y - 45 + 'px';
    })
    </script>
 

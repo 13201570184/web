@@ -38,27 +38,58 @@
 
     </ul>
     <script>
-      var text = document.querySelector('textarea')
-      var btn = document.querySelector('button')
-      var ul = document.querySelector('ul')
-        btn.onclick = function(){
-          if(text.value == ''){
-            alert('您没有输入内容')
-            return false;
-          } else{
-            var li = document.createElement('li');
-            li.innerHTML = text.value + "<a href='javascript:;'>删除</a>"
-            ul.insertBefore(li , ul.children[0]);
-            var as = document.querySelectorAll('a')
-          for(i = 0;i < as.length;i++){
-            as[i].onclick = function(){
-              ul.removeChild(this.parentNode);
-            }
-          }
-          }
+      // var text = document.querySelector('textarea')
+      // var btn = document.querySelector('button')
+      // var ul = document.querySelector('ul')
+      //   btn.onclick = function(){
+      //     if(text.value == ''){
+      //       alert('您没有输入内容')
+      //       return false;
+      //     } else{
+      //       var li = document.createElement('li');
+      //       li.innerHTML = text.value + "<a href='javascript:;'>删除</a>"
+      //       ul.insertBefore(li , ul.children[0]);
+      //       var as = document.querySelectorAll('a')
+      //     for(i = 0;i < as.length;i++){
+      //       as[i].onclick = function(){
+      //         ul.removeChild(this.parentNode);
+      //       }
+      //     }
+      //     }
+      //   }
+
+    // 首先获取元素
+    var text = document.querySelector("textarea");
+    var btn = document.querySelector("button");
+    var ul = document.querySelector("ul");
+    // 设置点击事件
+        btn.addEventListener("click",function(){
+           // 设置点击条件,如果输入为空时,点击发布,提示用户输入内容
+      if(text.value == ""){
+        alert("请输入您要发布的内容");
+        // return 返回后停止下面的所有代码 防止后面的代码可能会影响
+        return false;
+        // 如果输入的内容不为空的话
+      }else{
+        // 创建节点元素 li 里面存放输入的内容
+        var li = document.createElement("li");
+        //给li 添加文本框里的内容 后面再添加一个 a 标签 里面显示删除
+        li.innerHTML = text.value + "<a href = 'javascript::'>删除</a>";
+        // 将li里存放到内容添加到ul里面,并作为ul里面的第一个子元素
+        ul.insertBefore(li,ul.children[0]);
+        text.value = null;
+            //当点击了删除按键移除里面的li
+    var as = document.querySelectorAll("a");
+    //设置一个遍历,以此来获取相应元素的索引号
+    for(i = 0 ; i< as.length;i++){
+       // 对a创建一个点击事件 ,as[i]代表当前点击的是哪一个a
+      as[i].addEventListener("click",function(){
+        //将当前点击的a的父节点li移除
+        ul.removeChild(this.parentNode)
+          });
         }
-
-
+      }
+    });
     </script>
 </body>
 </html>

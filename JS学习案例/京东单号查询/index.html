@@ -41,26 +41,56 @@
     <input type="text" placeholder="请输入您的快递单号" class="jd">
   </div>
   <script>
-    var con = document.querySelector('.con');
-    var jd = document.querySelector('.jd')
-    jd.addEventListener('keyup',function(){
-      if(this.value == ''){
-        con.style.display = 'none';
-      }else{
-        con.style.display = 'block';
-        con.innerHTML = this.value;
-      }
-    })
-    //当我们失去焦点，就隐藏这个con盒子
-    jd.addEventListener('blur',function(){
-      con.style.display = 'none';
-    })
-    //当我们获得焦点，就显示这个con盒子
-    jd.addEventListener('focus',function(){
-      if(this.value !== ''){
-        con.style.display = 'block';
-      }
-    })
+    // var con = document.querySelector('.con');
+    // var jd = document.querySelector('.jd')
+    // jd.addEventListener('keyup',function(){
+    //   if(this.value == ''){
+    //     con.style.display = 'none';
+    //   }else{
+    //     con.style.display = 'block';
+    //     con.innerHTML = this.value;
+    //   }
+    // })
+    // //当我们失去焦点，就隐藏这个con盒子
+    // jd.addEventListener('blur',function(){
+    //   con.style.display = 'none';
+    // })
+    // //当我们获得焦点，就显示这个con盒子
+    // jd.addEventListener('focus',function(){
+    //   if(this.value !== ''){
+    //     con.style.display = 'block';
+    //   }
+    // })
+
+    // 声明一次等网页加载出来后,执行JS代码
+    window.addEventListener("load",function(){
+      // 获取元素
+      var text = document.querySelector(".jd");
+      var con =document.querySelector(".con");
+      //给底层输入框添加一个键盘弹起事件
+      text.addEventListener("keyup",function(){
+        if(text.value == ''){
+          con.style.display = "none";
+        }else{
+          con.style.display = "block"
+          con.innerHTML = text.value;
+        }
+      });
+      //当底层输入框设置函数,当失去焦点时,隐藏con这个提示框
+      text.addEventListener("blur",function(){
+        con.style.display = "none";
+      })
+      //当底层输入框设置函数,当获得焦点时
+      text.addEventListener("focus",function(){
+        // 如果底层输入框为空的时候,即使获得焦点,也得隐藏这个提示框
+        if(this.value == ""){
+          con.style.display = "none";
+          //如果不为空,则显示这个提示框
+        }else{
+          con.style.display = "block";
+        }
+      })
+    });
   </script>
 </body>
 </html>

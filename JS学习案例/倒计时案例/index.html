@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,24 +14,28 @@
   </style>
 </head>
 <body>
-  <span class="day">0</span>
-  <span class="hour">1</span>
-  <span class="minute">2</span>
-  <span class="second">3</span>
+  <span class="day">00</span>
+  <span class="hour">00</span>
+  <span class="minute">00</span>
+  <span class="second">00</span>
   <script>
+    //声明变量获取天数，小时数，分钟数和秒数
     var day = document.querySelector('.day');
     var hour = document.querySelector('.hour');
     var minute = document.querySelector('.minute');
     var second = document.querySelector('.second');
-    var inputTime = +new Date('2023-11-11 00:00:00')
-    countDown();
-    setInterval(countDown,1000);
-    function countDown(){
-      var nowTime = +new Date();
-      var times = (inputTime - nowTime) / 1000;
-      var d = parseInt(times / 60 / 60 / 24);
-      d = d < 10 ? '0' + d : d;
-      day.innerHTML = d;
+    var inputTime = new Date('2023-10-11 10:48:00')    //声明一个input变量。填写指定的某一时间
+    countDown();  //首先打开页面就调用一次函数
+    setInterval(countDown,1000);   //利用定时器，定时器里是一个函数，每个一秒，让这个函数执行一次
+    function countDown(){       //封装一个函数
+      var nowTime = new Date();    //声明一个变量 nowTime 里面存放的是当前的时间       
+      if(inputTime - nowTime <= 0){    //如果填入的时间减去当前的时间小于0的时候，即当前时间以超过指定时间，则停止这个定时器
+        clearInterval;
+      }else{
+        var times = (inputTime - nowTime) / 1000;  //如果还没有到指定时间，则给距离指定时间的总数除以1000  因为 +new Date() 里面的时间是以毫秒数总记的 声明变量得到距离指定时间的总秒数
+      var d = parseInt(times / 60 / 60 / 24);    //总的秒数除以60(代表分钟数)再除以60(代表小时数)再除以24(代表天数)  parseInt()表示向下取整数 得到完整的剩余天数
+      d = d < 10 ? '0' + d : d;         //利用三元表达式，如果计算所得天数小于10 则个数字前面加0  效果为 7——07/6——06
+      day.innerHTML = d;          //将筛选出来的d填入类名为day里面
       var h = parseInt(times / 60 / 60 % 24);
       h = h < 10 ? '0' + h : h;
       hour.innerHTML = h;
@@ -41,6 +45,7 @@
       var s = parseInt(times  % 60);
       s = s < 10 ? '0' + s : s;
       second.innerHTML = s;
+      }     
     }
   </script>
 </body>

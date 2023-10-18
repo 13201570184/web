@@ -19,6 +19,9 @@
             text-decoration: none;
         }
         
+        .backColor{
+          background: red;
+        }
         .wrapper {
             width: 250px;
             height: 248px;
@@ -33,9 +36,9 @@
             float: left;
         }
         
-        #left li {
+        /* #left li {
             background: url(images/lili.jpg) repeat-x;
-        }
+        } */
         
         #left li a {
             display: block;
@@ -58,20 +61,32 @@
     </style>
     <script src="jquery.min.js"></script>
     <script>
-        $(function() {
-            // 1. 鼠标经过左侧的小li 
-            $("#left li").mouseover(function() {
-                // 2. 得到当前小li 的索引号
-                var index = $(this).index();
-                console.log(index);
-                // 3. 让我们右侧的盒子相应索引号的图片显示出来就好了
-                // $("#content div").eq(index).show();
-                // 4. 让其余的图片（就是其他的兄弟）隐藏起来
-                // $("#content div").eq(index).siblings().hide();
-                // 链式编程
-                $("#content div").eq(index).show().siblings().hide();
+        // $(function() {
+        //     // 1. 鼠标经过左侧的小li 
+        //     $("#left li").mouseover(function() {
+        //         // 2. 得到当前小li 的索引号
+        //         var index = $(this).index();
+        //         console.log(index);
+        //         // 3. 让我们右侧的盒子相应索引号的图片显示出来就好了
+        //         // $("#content div").eq(index).show();
+        //         // 4. 让其余的图片（就是其他的兄弟）隐藏起来
+        //         // $("#content div").eq(index).siblings().hide();
+        //         // 链式编程
+        //         $("#content div").eq(index).show().siblings().hide();
 
-            })
+        //     })
+        // })
+
+        
+        //填写入口函数
+        $(function(){
+          //给导航栏所有的li添加鼠标覆盖事件
+          $("#left li").hover(function(){
+            //当鼠标经过时，图片里对应的索引号的图品就显示出来，其他的同级图片隐藏
+            $("#content div").eq($(this).index()).show().siblings().hide();
+            // 鼠标经过哪一个导航栏，该导航栏的颜色改为红色，移除同级导航栏的颜色，通过类名添加
+           $(this).addClass("backColor").siblings().removeClass();
+          })
         })
     </script>
 </head>

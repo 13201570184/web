@@ -32,33 +32,23 @@
     <div></div>
     <span>夏雨荷</span>
     <script>
-        // var obj = {};
-        // obj.name = 'andy';
-        // 简单动画函数封装obj目标对象 target 目标位置
-        // 给不同的元素指定了不同的定时器
-        function animate(obj, target) {
-            // 当我们不断的点击按钮，这个元素的速度会越来越快，因为开启了太多的定时器
-            // 解决方案就是 让我们元素只有一个定时器执行
-            // 先清除以前的定时器，只保留当前的一个定时器执行
-            clearInterval(obj.timer);
-            obj.timer = setInterval(function() {
-                if (obj.offsetLeft >= target) {
-                    // 停止动画 本质是停止定时器
-                    clearInterval(obj.timer);
-                }
-                obj.style.left = obj.offsetLeft + 1 + 'px';
- 
-            }, 30);
-        }
- 
-        var div = document.querySelector('div');
-        var span = document.querySelector('span');
-        var btn = document.querySelector('button');
-        // 调用函数
-        animate(div, 300);
-        btn.addEventListener('click', function() {
-            animate(span, 200);
-        })
+      var div = document.querySelector('div');     //获取body里面的元素
+      var btn = document.querySelector('button');
+      var span = document.querySelector('span')
+      function animate(obj,target){       // 封装一个动画函数 (obj,target)   obj表示调用者，target表示距离 条件
+        clearInterval(obj.timer);         // 清除定时器  obj.timer代表定时器的名称
+        obj.timer = setInterval(function(){     //声明一个变量obj.timer给定时器，该定时器没30ms执行一次，如果调用者距左侧距离大于设定条件时，停止这个定时器
+          if(obj.offsetLeft>=target){
+            clearInterval(obj.timer)
+          }else{
+            obj.style.left = obj.offsetLeft + 1 + 'px'        //否则这个调用者的左侧距离就每个30ms，向右移动1像素
+          }
+        },30);
+      }
+      animate(div,200);    //给div 调用动画。并设置距离target为200像素
+      btn.addEventListener('click',function(){   //btn这个按钮设定点击事件，当按下这个按钮时，给span设定动画，
+        animate(span,200)
+      });
     </script>
 </body>
  

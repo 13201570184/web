@@ -24,11 +24,14 @@
   </div>
 
   <script>
-    var box = document.querySelector('.box');
-    var button = document.querySelector('button')
-    button.onclick = function(){
-      box.style.display = 'none';
-    }
+    //获取元素
+    var btn = document.querySelector("button")
+    var box = document.querySelector(".box")
+    //给btn设置点击事件
+    btn.addEventListener("click",function(){
+      //点击了之后设置隐藏这个box
+      box.style.display = "none"
+    })
   </script>
 </body>
 </html>

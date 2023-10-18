@@ -8,22 +8,43 @@
 <body>
   <input type="number"> <button>发送</button>
   <script>
-    var btn = document.querySelector('button')
+    // var btn = document.querySelector('button')
+    // var time = 3;
+    // btn.addEventListener('click',function(){
+    //   btn.disabled = true;
+    //   var timer = setInterval(function(){
+    //     if(time == 0){
+    //       clearTimeout = (timer);
+    //       btn.disabled = false;
+    //       time = 3;
+    //       btn.innerHTML = '发送';
+    //   }else{
+    //     btn.innerHTML = '请于' + time + '秒后尝试';
+    //     time--;
+    //    }
+    //   }, 1000)
+    // }) 
+
+    //先把按钮获取过来
+    var btn = document.querySelector("button")
+    //获取一个time 
     var time = 3;
-    btn.addEventListener('click',function(){
-      btn.disabled = true;
-      var timer = setInterval(function(){
-        if(time == 0){
-          clearTimeout = (timer);
+    btn.addEventListener("click",function(){
+      btn.innerHTML = "请于"+ 4 +"秒后尝试"
+      btn.disabled = true;  
+      // clearInterval(timer)
+      timer = setInterval(function(){
+        if(time === 0){
+          clearInterval(timer);
           btn.disabled = false;
           time = 3;
-          btn.innerHTML = '发送';
-      }else{
-        btn.innerHTML = '请于' + time + '秒后尝试';
-        time--;
-       }
-      }, 1000)
-    }) 
+          btn.innerHTML = "发送"
+        }else{
+          btn.innerHTML = "请于"+ time +"秒后尝试";
+          time--;
+        }
+      },1000)
+    });
   </script>
 </body>
 </html>

@@ -18,20 +18,22 @@
   <label for=""></label>
   <input type="text" value="手机">
   <script>
-    var btn = document.querySelector('input');
-    btn.onfocus = function(){
-      if(this.value ==='手机'){
-        this.value = '';
+    // 获取元素
+    var search = document.querySelector("input");
+    // 给输入框添加获得鼠标焦点事件
+    search.addEventListener("focus",function(){
+      // 如果输入的内容为手机,则输入框获得焦点时,清除里面的内容
+      if(this.value === "手机"){
+        this.value =""
       }
-      this.style.color = '#333'
-
-    }
-    btn.onblur = function(){
-      if(this.value === ''){
-        this.value = '手机';
+    })
+    //给输入框添加失去鼠标焦点事件
+    search.addEventListener("blur",function(){
+      //如果鼠标失去时,里面的内容为空,则自动添加手机这个搜索物品
+      if(this.value === ""){
+        this.value = "手机"
       }
-      this.style.color = '#999'
-    }
+    })
   </script>
 </body>
 </html>

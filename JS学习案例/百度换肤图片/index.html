@@ -27,9 +27,17 @@
     <img src="imgs/4.jpg" alt="">
   </div>
   <script>
-    var imgs = document.querySelectorAll('img')
-      for(i = 0;i<imgs.length;i++){
-        imgs[i].onclick = function(){
+    // var imgs = document.querySelectorAll('img')
+    //   for( var i = 0;i<imgs.length;i++){
+    //     imgs[i].onclick = function(){
+    //     document.body.style.backgroundImage = "url('+ this.src +')";
+    //   }
+    // }
+
+    //获取元素
+    var imgs = document.querySelectorAll("img")
+    for(var i = 0;i < imgs.length;i++){
+      imgs[i].onclick = function(){
         document.body.style.backgroundImage = 'url('+ this.src +')';
       }
     }

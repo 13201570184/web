@@ -71,22 +71,36 @@
 <body>
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
-        $(function() {
-            // 鼠标经过某个小li 有两步操作：
-            $(".king li").mouseenter(function() {
-                // 1.当前小li 宽度变为 224px， 同时里面的小图片淡出，大图片淡入
-                $(this).stop().animate({
-                    width: 224
-                }).find(".small").stop().fadeOut().siblings(".big").stop().fadeIn();
-                // 2.其余兄弟小li宽度变为69px， 小图片淡入， 大图片淡出
-                $(this).siblings("li").stop().animate({
-                    width: 69
-                }).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
-            })
+        // $(function() {
+        //     // 鼠标经过某个小li 有两步操作：
+        //     $(".king li").mouseenter(function() {
+        //         // 1.当前小li 宽度变为 224px， 同时里面的小图片淡出，大图片淡入
+        //         $(this).stop().animate({
+        //             width: 224
+        //         }).find(".small").stop().fadeOut().siblings(".big").stop().fadeIn();
+        //         // 2.其余兄弟小li宽度变为69px， 小图片淡入， 大图片淡出
+        //         $(this).siblings("li").stop().animate({
+        //             width: 69
+        //         }).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
+        //     })
 
 
 
-        });
+        // });
+
+        $(function(){
+          //给每个存放图片的li标签里面设置一个鼠标经过事件
+          $(".king li").mouseenter(function(){
+            // 此时为了将大图片完全显示出来，更改li的宽度
+            $(this).stop().stop().animate({
+              width:224
+            }).find(".big").stop().fadeIn().siblings().stop().fadeOut();    //将当前照片框里的大图片显示出来，小图片隐藏起来
+            // 将其余的li的宽度修改为69px                      
+          $(this).siblings().stop().animate({
+            width:69
+          }).find(".big").stop().fadeOut().siblings().stop().fadeIn();    //将除当前照片框意外的所有框里的大图片隐藏，小图片显示
+          })
+        })
     </script>
     <div class="king">
         <ul>

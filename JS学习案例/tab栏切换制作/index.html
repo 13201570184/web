@@ -22,6 +22,7 @@
       font-size: 24px;
       line-height: 24px;
       list-style: none;
+      cursor: pointer;
     }
     .bkgd{
       background-color: red;
@@ -31,6 +32,7 @@
       font-size: 24px;
       margin-left: 500px;
       margin-top: 15px;
+      display: none;
     }
   </style>
 </head>
@@ -43,26 +45,36 @@
     <li>手机社区</li>
   </ul>
   <div class="item" style="display:block">该商品的介绍……</div>
-  <div class="item" style="display:none">该商品的规格和包装……</div>
-  <div class="item"  style="display:none">该商品的售后服务……</div>
-  <div class="item"  style="display:none">该商品的评价……</div>
-  <div class="item"  style="display:none">更多手机咨询……</div>
+  <div class="item">该商品的规格和包装……</div>
+  <div class="item">该商品的售后服务……</div>
+  <div class="item">该商品的评价……</div>
+  <div class="item">更多手机咨询……</div>
   <script>
-    var lis = document.querySelectorAll('li');
-    var items = document.querySelectorAll('.item');
-    for(i = 0 ;i<lis.length;i++){
-      lis[i].setAttribute('index',i);
-      lis[i].onclick = function(){
+
+    //获取元素
+    var lis = document.querySelectorAll("li");
+    var items = document.querySelectorAll(".item")
+    //利用遍历获取索引号
+    for(var i = 0;i<lis.length;i++){
+      // 给每个li里自定义一个属性index(即是索引号)
+      lis[i].setAttribute("index",i)
+      //给lis里面的每一个li添加点击事件
+      lis[i].addEventListener("click",function(){
+        //利用遍历完成排他操作
         for(var i =0;i<lis.length;i++){
-          lis[i].className = '';
+          // 所有的li的class都为空,给点击的那个li添加类名
+          lis[i].className = "";
+          this.className = "bkgd"
         }
-        this.className = 'bkgd';
-        var index =this.getAttribute('index');
-        for(var i =0;i<lis.length;i++){
-          items[i].style.display = 'none'
+        // 获取这个li对应的索引号值,index
+        var index = this.getAttribute("index")
+        // 利用遍历将所有item都隐藏
+        for(var i =0;i<items.length;i++){
+          items[i].style.display = "none";
         }
-        items[index].style.display = 'block'
-      }
+        // 将点击了的li对应的item显示出来
+        items[index].style.display = "block";
+      })
     }
   </script>
 </body>

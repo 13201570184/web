@@ -18,6 +18,9 @@
       padding: 12px 30px;
       border: 1px solid #666;
     }
+    tr th{
+      cursor: pointer;
+    }
     tbody td{
       height: 30px;
       background-color: #fff;
@@ -29,7 +32,7 @@
     <thead>
     <tr>
       <th>姓名</th>
-      <th>科目</th></th>
+      <th>科目</th>
       <th>成绩</th>
       <th>操作</th>
     </tr>
@@ -57,28 +60,64 @@
     score:77
   }
   ];
-  // 往tbody 里面创建行： 有几个人（通过数组的长度）我们就创建几行
-  var tbody = document.querySelector('tbody');
-  for(var i =0;i< datas.length;i++){    // 外面的for循环管行 tr
-    // 创建tr 行
-    var tr = document.createElement('tr');
+  // // 往tbody 里面创建行： 有几个人（通过数组的长度）我们就创建几行
+  // var tbody = document.querySelector('tbody');
+  // for(var i =0;i< datas.length;i++){    // 外面的for循环管行 tr
+  //   // 创建tr 行
+  //   var tr = document.createElement('tr');
+  //   tbody.appendChild(tr);
+  //   // 行里面创建单元格 td 单元格的数量取决于每个对象里面的属性个数 for循环遍历对象 datas[i]
+  //   for(var k in datas[i]){   //里面的for循环管列td
+  //     //创建单元格
+  //     var td = document.createElement('td');
+  //     td.innerHTML = datas[i][k];
+  //     tr.appendChild(td);
+  //   }
+  //   var td = document.createElement('td');
+  //   td.innerHTML = '<a href ="javascript:;">删除</a>';
+  //   tr.appendChild(td);
+  // }
+  // var as = document.querySelectorAll('a');
+  // for(var i = 0;i<as.length;i++){
+  //   as[i].onclick = function(){
+  //     tbody.removeChild(this.parentNode.parentNode);
+  //   }
+  // }
+
+
+ //首先获取表单框架
+  var tbody = document.querySelector("tbody")
+  //要将datas里面的元素提取出来用到for循环
+  for(var i = 0; i<datas.length;i++){
+    // 声明一个变量tr tr就为创建一个节点(新标签) tr 行标签
+    var tr = document.createElement("tr")
+    // 将获得到的tr行标签加入到tbody里面
     tbody.appendChild(tr);
-    // 行里面创建单元格 td 单元格的数量取决于每个对象里面的属性个数 for循环遍历对象 datas[i]
-    for(var k in datas[i]){   //里面的for循环管列td
-      //创建单元格
-      var td = document.createElement('td');
-      td.innerHTML = datas[i][k];
+    // 将datas里面的对象里面的元素的属性值
+    for(var k in datas[i]){
+      //这里创建一个节点(新标签)，每行里的每个内容
+      var td = document.createElement("td")
+      // 这里将对象里的内容填到td里面
+      td.innerHTML= datas[i][k];
+      // 将td添加到tr里面
       tr.appendChild(td);
     }
-    var td = document.createElement('td');
-    td.innerHTML = '<a href ="javascript:;">删除</a>';
+    // 给每每行的最后一个td 后面再新建立一个节点(新标签)td
+    var td = document.createElement("td");
+    // 给td里添加一个标签 <a href="javascript:;">删除</a>
+    td.innerHTML = "<a href='javascript:;'>删除</a>"
+    // 将创建的标签即里面的内容添加到行tr里面
     tr.appendChild(td);
   }
-  var as = document.querySelectorAll('a');
-  for(var i = 0;i<as.length;i++){
-    as[i].onclick = function(){
+  // 声明一个变量获取网页里面所有创建的a标签
+  var as = document.querySelectorAll("a");
+  //设置一个遍历，获取点击了的元素的索引号
+  for(var i = 0 ;i<datas.length;i++){
+    // 当as里面有一个a标签被点击了，则对这个被点击了的a设置一个函数
+    as[i].addEventListener("click",function(){
+    //   移除tbody里面a所对应的那一行，通过a 的父节点(td)的父节点(tr)
       tbody.removeChild(this.parentNode.parentNode);
-    }
+    });
   }
 </script>
 </body>
