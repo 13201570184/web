@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <button class="btn1">选项A</button>
+  <button class="btn2">选项B</button>
+  <script>
+function message(a,b,type){
+  return new Promise((resolve,reject)=>{
+    if (type === "+") {
+      resolve(a+b)
+    }else{
+      reject(a-b)
+    }
+  })
+}
+message(200,100,"+").then((res)=>{
+  console.log("求和：", res);
+}).catch((res)=>{
+  console.log("求差：", res);
+})
+message(400,500,"-").then((res)=>{
+  console.log("求和：", res);
+}).catch((res)=>{
+  console.log("求差：", res);
+})
+
+function add(a,b,c,d){
+  return new Promise((resolve,reject)=>{
+    if(d===0){
+      resolve(a*b*c)
+    }else{
+      reject(a*b*c*d)
+    }
+  })
+}
+add(1,2,3,0).then((cheng)=>{
+  console.log(cheng)
+}).catch((jia)=>{
+  console.log(jia)
+})
+add(1,2,3,4).then((cheng)=>{
+  console.log(cheng)
+}).catch((jia)=>{
+  console.log(jia)
+})
+
+
+var btn1 = document.querySelector('.btn1')
+var btn2 = document.querySelector('.btn2')
+function btnList(btn1,btn2,name){
+  return new Promise((resolve,reject)=>{
+    console.log(name.textContent)
+    if('选项A' === btn1.textContent){
+      resolve(3)
+    }else{
+      reject(6)
+    }
+  })
+}
+
+btn1.addEventListener("click",function(){
+  btnList(btn1,btn2,this).then((three)=>{
+  alert('123'+three)
+}).catch((six)=>{
+  alert(six)
+})
+})
+btn2.addEventListener("click",function(){
+  btnList(btn1,btn2,this).then((three)=>{
+  alert('123'+three)
+}).catch((six)=>{
+  alert(six)
+})
+})
+
+
+
+
+
+function math(){
+  return new Promise((resolve,reject)=>{
+    if(){
+      resolve()
+    }else{
+      reject()
+    }
+  })
+}
+math().then(()=>{
+
+}).catch(()=>{
+
+})
+
+
+
+
+  </script>
+</body>
+</html>

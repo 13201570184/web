@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+  <script src="message.js"></script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .box1,.box2,.box3,.box4,.box5{
+      width: 234px;
+      height: 100px;
+      background-color: lightskyblue;
+      margin: 66px auto;
+      cursor: pointer;
+      padding: 45px 66px;
+    }
+    .introduce {
+        position: fixed;
+        width: 420px;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        margin-top: -68px;
+        margin-left: -210px;
+        padding: 0 15px;
+        z-index: 999;
+        display: none;
+        padding-bottom: 10px;
+        border-radius: 5px;
+      }
+      .introduce h4{
+        font-size: 18px;
+        color: #303133;
+        padding: 11px 0;
+        font-weight: normal;
+        /* line-height: 36px; */
+      }
+      .introduce a {
+        float: right;
+        display: block;
+        margin-top: -38px;
+        font-weight:300;
+        /* margin-right: 15px; */
+        font-size: 24px;
+        text-decoration: none;
+        color: #909399;
+      }
+      .introduce a:hover {
+        color: skyblue;
+      }
+      .introduce p{
+        color:#606266;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 8px 0;
+      }
+      .list{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 6px;
+      }
+      .list .false{
+        background: #fff;
+        font-size: 12px;
+        margin-right: 10px;
+        border-radius: 3px;
+        padding: 4px 16px;
+        cursor: pointer;
+        border: 1px solid #dcdfe6;
+      }
+
+      .list .true{
+        color: #fff;
+        background-color: #409eff;
+        font-size: 12px;
+        border: none;
+        border-radius: 3px;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+
+      .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+      /* .buttonCenter{
+       display: flex;
+       justify-content: center;
+      }
+      .titleCenter {
+        text-align: center;
+      }
+      .titleCenterP {
+        margin-top: 25px;
+        text-align: center;
+      } */
+  </style>
+</head>
+<body>
+  <div class="box1">单确定键</div>
+  <div class="box2">取消弹窗</div></div>
+  <div class="box3">更改按键内容</div>
+  <div class="box4">字体居中</div>
+  <div class="box5"></div>
+  <script>
+    $(function(){
+
+      $(".box1").on("click",function(){
+        messageBox('标题名称', '这是一段内容',cancel1,Determine1,false, "", "", false);
+      });
+
+      $(".box2").on("click",function(){
+        messageBox('提示', '此操作将永久删除该文件, 是否继续?',cancel2,Determine2);
+      });
+
+      //字体居中
+      $(".box3").on("click",function(){
+        messageBox('确认信息', '检测到未保存的内容，是否在离开页面前保存修改？',cancel3,Determine3,false,'放弃修改','保存');
+      })
+
+      //更改按键内容
+      $(".box4").on("click",function(){
+
+        messageBox('提示', '此操作将永久删除该文件, 是否继续?',cancel4,Determine4,true,'取消','确定');
+      })
+
+      function cancel1(){
+        // alert("取消成功")
+      }
+      function cancel2(){
+        alert("取消删除")
+      }
+      function cancel3(){
+        alert("已放弃修改")
+      }
+      function cancel4(){
+        alert("取消成功")
+      }
+      function Determine1(){
+        alert("已确定")
+      }
+      function Determine2(){
+        alert("已删除")
+      }
+      function Determine3(){
+        alert("已保存")
+      }
+      function Determine4(){
+        alert("已删除成功")
+      }
+    })
+  </script>
+</body>
+</html>

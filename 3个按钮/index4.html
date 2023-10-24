@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+  <style>
+    .btnList {
+      width: 150px;
+      height: 20px;
+      margin: 123px auto;
+    }
+    .introduce {
+      position: fixed;
+      width: 300px;
+      height: 150px;
+      background-color: #f4f4f4;
+      top: 50%;
+      left: 50%;
+      margin-top: -75px;
+      margin-left: -150px;
+      z-index: 999;
+      display: none;
+      border-radius: 5px;
+    }
+    .introduce h4 {
+      float: left;
+      margin-left: 15px;
+    }
+    .introduce a {
+      float: right;
+      margin-top: 20px;
+      margin-right: 20px;
+      text-decoration: none;
+      color: #777;
+    }
+    .introduce a:hover {
+      color: skyblue;
+    }
+    .introduce p {
+      margin-top: 70px;
+      margin-left: 15px;
+    }
+    .introduce button {
+      float: right;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="btnList">
+    <button>第一</button>
+    <button>第二</button>
+    <button>第三</button>
+  </div>
+  <script>
+    $(function(){
+      var body = document.querySelector("body")
+  var div = $('<div class="introduce">'
+  +  '<h4>'+ '标题' + '</h4>'
+  + '<a href="javascript:;">'+ 'X' +'</a>'
+  + '<p>' + '内容' +'</p>'
+  + '<button class= "true">' + '确定' + '</button>'
+  + '<button class= "false">' + '取消' + '</button>'
+  + '</div>'
+  + '<div class="mask">' + '</div>');
+  $(body).append($(div));
+  
+  $(".btnList button").on("click",function(){
+    // 点击了之后,显示提示栏和遮罩层
+    $(".introduce").fadeIn();
+    $(".mask").fadeIn();
+    $("span").remove()
+
+   $(".introduce h4").html()
+   $(".introduce p").html()
+  })
+  $(".true,a").on("click",function(){
+    $(".introduce").fadeOut();
+    $(".mask").fadeOut();
+  })
+  $(".false").on("click",function(){
+    $(".introduce").fadeOut();
+    $(".mask").fadeOut();
+    callback&&callback()
+  })
+  function callback(){
+    $(body).append($('<span>取消</span>'));
+  }
+
+
+
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    /* 首页弹出层 */
+    .confirm-tips{width:100%; height:100%; background:url(apher.png); position:fixed; top:0; z-index:999999999;overflow: auto;}
+    .confirm-tips-box{width:500px; height:334px; background:#FFF; position:absolute;top:25%;}
+    .confirm-tips-box h2{display:block; margin-top:50px; text-align:center; font-size:36px; font-weight:normal; color:#3881eb;}
+    .confirm-tips-box p{font-size:20px; color:#757c8a; text-align:center; display:block; margin-top:36px;}
+    .autobut a.submissionqx{display:inline-block; width:188px; height:60px; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; border:1px solid #3881eb; text-align:center; line-height:60px; color:#3881eb; margin:0 auto; margin-top:60px; margin-bottom:50px; margin-left:45px; margin-right:30px;}
+    .autobut a.submission{display:inline-block; width:188px; height:60px; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; background:#3881eb; text-align:center; line-height:60px; color:#FFF; margin:0 auto; margin-top:60px; margin-bottom:50px;}
+</style>
+</head>
+<body>
+<input id='alter_btn' type='button' value='弹窗确定取消按钮'/>
+<span id='msg'></span>
+<script>
+
+$.confirm_tips = function(obj){
+    if(obj && obj.msg != ''){
+        if(!obj.title){
+            obj.title = '系统提示';
+        }
+        var left = parseFloat(($(document).width()-500)/2);
+        var tips_html = '<div class="confirm-tips confirm-tips-common" >' +
+            '<div class="confirm-tips-box" style="left:'+left+'px;">\n' +
+            '        <h2>'+obj.title+'</h2>\n' +
+            '        <p style="padding: 0 15px">'+obj.msg+'</p>\n' +
+            '        <div class="autobut">\n' +
+            '        <a href="javascript:;" class="submissionqx confirm-tips-cancelbtn">取消</a>\n' +
+            '        <a href="javascript:;" class="submission confirm-tips-confirmbtn">确定</a>\n' +
+            '        </div>\n' +
+            '    </div></div>';
+        if($('.confirm-tips-common').length <= 0){
+            $('body').append(tips_html);
+        }
+        $('.confirm-tips-confirmbtn').click(function(){
+            if(obj.confirm){
+                obj.confirm();
+            }
+            $('.confirm-tips-common').remove();
+            $('.confirm-tips-confirmbtn').unbind();
+        })
+        $('.confirm-tips-cancelbtn').click(function(){
+            if(obj.cancel){
+                obj.cancel();
+            }
+            $('.confirm-tips-common').remove();
+            $('.confirm-tips-cancelbtn').unbind();
+        })
+    }
+}
+
+$('#alter_btn').click(function(){
+    var option = {
+        title:'标题',
+        msg:'内容',
+        confirm:function(){
+            $('#msg').text('确定');
+        },
+        cancel:function(){
+            $('#msg').text('取消');
+        }
+    };
+    $.confirm_tips(option);
+})
+</script>
+</body>
+</html>

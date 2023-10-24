@@ -45,7 +45,6 @@
 // });
 // $(this).addClass("current").siblings().removeClass();  //点击到哪，给当前的li添加元素，其余的元素移除颜色
 // });
-
 // });
 
 
